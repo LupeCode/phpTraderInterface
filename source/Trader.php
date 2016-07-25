@@ -1580,6 +1580,7 @@ class Trader
      *
      * @param array    $real       Array of real values.
      * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int      $mAType     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
