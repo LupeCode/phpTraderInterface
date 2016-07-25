@@ -290,7 +290,7 @@ class Trader
      */
     public static function bop(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_bop($open, $high, $low, $close);
     }
 
     /**
@@ -305,7 +305,7 @@ class Trader
      */
     public static function cci(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-
+        return trader_cci($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -1687,7 +1687,7 @@ class Trader
      */
     public static function maxindex(array $real, integer $timePeriod = null): array
     {
-        return trader_max($real, $timePeriod);
+        return trader_maxindex($real, $timePeriod);
     }
 
     /**
