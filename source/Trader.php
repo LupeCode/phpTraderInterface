@@ -308,314 +308,940 @@ class Trader
 
     }
 
-    public static function cdl2crows()
+    /**
+     * Two Crows
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl2crows(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl2crows($open, $high, $low, $close);
     }
 
-    public static function cdl3blackcrows()
+    /**
+     * Three Black Crows
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3blackcrows(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3blackcrows($open, $high, $low, $close);
     }
 
-    public static function cdl3inside()
+    /**
+     * Three Inside Up/Down
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3inside(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3inside($open, $high, $low, $close);
     }
 
-    public static function cdl3linestrike()
+    /**
+     * Three-Line Strike
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3linestrike(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3linestrike($open, $high, $low, $close);
     }
 
-    public static function cdl3outside()
+    /**
+     * Three Outside Up/Down
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3outside(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3outside($open, $high, $low, $close);
     }
 
-    public static function cdl3starsinsouth()
+    /**
+     * Three Stars In The South
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3starsinsouth(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3starsinsouth($open, $high, $low, $close);
     }
 
-    public static function cdl3whitesoldiers()
+    /**
+     * Three Advancing White Soldiers
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdl3whitesoldiers(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdl3whitesoldiers($open, $high, $low, $close);
     }
 
-    public static function cdlabandonedbaby()
+    /**
+     * Abandoned Baby
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdladvanceblock()
+    /**
+     * Advance Block
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdladvanceblock(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdladvanceblock($open, $high, $low, $close);
     }
 
-    public static function cdlbelthold()
+    /**
+     * Belt-hold
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlbelthold(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlbelthold($open, $high, $low, $close);
     }
 
-    public static function cdlbreakaway()
+    /**
+     * Breakaway
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlbreakaway(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlbreakaway($open, $high, $low, $close);
     }
 
-    public static function cdlclosingmarubozu()
+    /**
+     * Closing Marubozu
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlclosingmarubozu(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlclosingmarubozu($open, $high, $low, $close);
     }
 
-    public static function cdlconcealbabyswall()
+    /**
+     * Concealing Baby Swallow
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlconcealbabyswall(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlconcealbabyswall($open, $high, $low, $close);
     }
 
-    public static function cdlcounterattack()
+    /**
+     * Counterattack
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlcounterattack(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlcounterattack($open, $high, $low, $close);
     }
 
-    public static function cdldarkcloudcover()
+    /**
+     * Dark Cloud Cover
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdldoji()
+    /**
+     * Doji
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdldoji(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdldoji($open, $high, $low, $close);
     }
 
-    public static function cdldojistar()
+    /**
+     * Doji Star
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdldojistar(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdldojistar($open, $high, $low, $close);
     }
 
-    public static function cdldragonflydoji()
+    /**
+     * Dragonfly Doji
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdldragonflydoji(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdldragonflydoji($open, $high, $low, $close);
     }
 
-    public static function cdlengulfing()
+    /**
+     * Engulfing Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlengulfing(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlengulfing($open, $high, $low, $close);
     }
 
-    public static function cdleveningdojistar()
+    /**
+     * Evening Doji Star
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdleveningstar()
+    /**
+     * Evening Star
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdleveningstar($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdlgapsidesidewhite()
+    /**
+     * Up/Down-gap side-by-side white lines
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlgapsidesidewhite(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlgapsidesidewhite($open, $high, $low, $close);
     }
 
-    public static function cdlgravestonedoji()
+    /**
+     * Gravestone Doji
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlgravestonedoji(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlgravestonedoji($open, $high, $low, $close);
     }
 
-    public static function cdlhammer()
+    /**
+     * Hammer
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhammer(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhammer($open, $high, $low, $close);
     }
 
-    public static function cdlhangingman()
+    /**
+     * Hanging Man
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhangingman(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhangingman($open, $high, $low, $close);
     }
 
-    public static function cdlharami()
+    /**
+     * Harami Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlharami(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlharami($open, $high, $low, $close);
     }
 
-    public static function cdlharamicross()
+    /**
+     * Harami Cross Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlharamicross(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlharamicross($open, $high, $low, $close);
     }
 
-    public static function cdlhighwave()
+    /**
+     * High-Wave Candle
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhighwave(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhighwave($open, $high, $low, $close);
     }
 
-    public static function cdlhikkake()
+    /**
+     * Hikkake Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhikkake(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhikkake($open, $high, $low, $close);
     }
 
-    public static function cdlhikkakemod()
+    /**
+     * Modified Hikkake Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhikkakemod(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhikkakemod($open, $high, $low, $close);
     }
 
-    public static function cdlhomingpigeon()
+    /**
+     * Homing Pigeon
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlhomingpigeon(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlhomingpigeon($open, $high, $low, $close);
     }
 
-    public static function cdlidentical3crows()
+    /**
+     * Identical Three Crows
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlidentical3crows(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlidentical3crows($open, $high, $low, $close);
     }
 
-    public static function cdlinneck()
+    /**
+     * In-Neck Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlinneck(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlinneck($open, $high, $low, $close);
     }
 
-    public static function cdlinvertedhammer()
+    /**
+     * Inverted Hammer
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlinvertedhammer(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlinvertedhammer($open, $high, $low, $close);
     }
 
-    public static function cdlkicking()
+    /**
+     * Kicking
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlkicking(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlkicking($open, $high, $low, $close);
     }
 
-    public static function cdlkickingbylength()
+    /**
+     * Kicking - bull/bear determined by the longer marubozu
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlkickingbylength(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlkickingbylength($open, $high, $low, $close);
     }
 
-    public static function cdlladderbottom()
+    /**
+     * Ladder Bottom
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlladderbottom(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlladderbottom($open, $high, $low, $close);
     }
 
-    public static function cdllongleggeddoji()
+    /**
+     * Long Legged Doji
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdllongleggeddoji(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdllongleggeddoji($open, $high, $low, $close);
     }
 
-    public static function cdllongline()
+    /**
+     * Long Line Candle
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdllongline(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdllongline($open, $high, $low, $close);
     }
 
-    public static function cdlmarubozu()
+    /**
+     * Marubozu
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlmarubozu(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlmarubozu($open, $high, $low, $close);
     }
 
-    public static function cdlmatchinglow()
+    /**
+     * Matching Low
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlmatchinglow(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlmatchinglow($open, $high, $low, $close);
     }
 
-    public static function cdlmathold()
+    /**
+     * Mat Hold
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdlmathold($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdlmorningdojistar()
+    /**
+     * Morning Doji Star
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdlmorningstar()
+    /**
+     * Morning Star
+     *
+     * @param array $open        Opening price, array of real values.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param float $penetration Percentage of penetration of a candle within another candle.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-
+        return trader_cdlmorningstar($open, $high, $low, $close, $penetration);
     }
 
-    public static function cdlonneck()
+    /**
+     * On-Neck Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlonneck(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlonneck($open, $high, $low, $close);
     }
 
-    public static function cdlpiercing()
+    /**
+     * Piercing Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlpiercing(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlpiercing($open, $high, $low, $close);
     }
 
-    public static function cdlrickshawman()
+    /**
+     * Rickshaw Man
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlrickshawman(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlrickshawman($open, $high, $low, $close);
     }
 
-    public static function cdlrisefall3methods()
+    /**
+     * Rising/Falling Three Methods
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlrisefall3methods(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlrisefall3methods($open, $high, $low, $close);
     }
 
-    public static function cdlseparatinglines()
+    /**
+     * Separating Lines
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlseparatinglines(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlseparatinglines($open, $high, $low, $close);
     }
 
-    public static function cdlshootingstar()
+    /**
+     * Shooting Star
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlshootingstar(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlshootingstar($open, $high, $low, $close);
     }
 
-    public static function cdlshortline()
+    /**
+     * Short Line Candle
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlshortline(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlshortline($open, $high, $low, $close);
     }
 
-    public static function cdlspinningtop()
+    /**
+     * Spinning Top
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlspinningtop(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlspinningtop($open, $high, $low, $close);
     }
 
-    public static function cdlstalledpattern()
+    /**
+     * Stalled Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlstalledpattern(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlstalledpattern($open, $high, $low, $close);
     }
 
-    public static function cdlsticksandwich()
+    /**
+     * Stick Sandwich
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlsticksandwich(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlsticksandwich($open, $high, $low, $close);
     }
 
-    public static function cdltakuri()
+    /**
+     * Takuri (Dragonfly Doji with very long lower shadow)
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdltakuri(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdltakuri($open, $high, $low, $close);
     }
 
-    public static function cdltasukigap()
+    /**
+     * Tasuki Gap
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdltasukigap(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdltasukigap($open, $high, $low, $close);
     }
 
-    public static function cdlthrusting()
+    /**
+     * Thrusting Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlthrusting(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlthrusting($open, $high, $low, $close);
     }
 
-    public static function cdltristar()
-    {
 
+    /**
+     * Tristar Pattern
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdltristar(array $open, array $high, array $low, array $close): array
+    {
+        return trader_cdltristar($open, $high, $low, $close);
     }
 
-    public static function cdlunique3river()
+    /**
+     * Unique 3 River
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlunique3river(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlunique3river($open, $high, $low, $close);
     }
 
-    public static function cdlupsidegap2crows()
+    /**
+     * Upside Gap Two Crows
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlupsidegap2crows(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlupsidegap2crows($open, $high, $low, $close);
     }
 
-    public static function cdlxsidegap3methods()
+    /**
+     * Upside/Downside Gap Three Methods
+     *
+     * @param array $open  Opening price, array of real values.
+     * @param array $high  High price, array of real values.
+     * @param array $low   Low price, array of real values.
+     * @param array $close Closing price, array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function cdlxsidegap3methods(array $open, array $high, array $low, array $close): array
     {
-
+        return trader_cdlxsidegap3methods($open, $high, $low, $close);
     }
 
-    public static function ceil()
+    /**
+     * Vector Ceil
+     * Calculates the arc tangent for each value in real and returns the resulting array.
+     *
+     * @param array $real Array of real values.
+     *
+     * @return array Returns an array with calculated data or false on failure.
+     */
+    public static function ceil(array $real): array
     {
-
+        return trader_ceil($real);
     }
 
     public static function cmo()
