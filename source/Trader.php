@@ -2,80 +2,42 @@
 
 namespace LupeCode\phpTraderInterface;
 
+/**
+ * Class Trader
+ *
+ * This class extends the original extension to include friendlier names.
+ *
+ * @package LupeCode\phpTraderInterface
+ */
 class Trader
 {
 
-    const TRADER_MA_TYPE_SMA                   = 0;
-    const TRADER_MA_TYPE_EMA                   = 1;
-    const TRADER_MA_TYPE_WMA                   = 2;
-    const TRADER_MA_TYPE_DEMA                  = 3;
-    const TRADER_MA_TYPE_TEMA                  = 4;
-    const TRADER_MA_TYPE_TRIMA                 = 5;
-    const TRADER_MA_TYPE_KAMA                  = 6;
-    const TRADER_MA_TYPE_MAMA                  = 7;
-    const TRADER_MA_TYPE_T3                    = 8;
-    const TRADER_REAL_MIN                      = -3.0000000000000002E+37;
-    const TRADER_REAL_MAX                      = 3.0000000000000002E+37;
-    const TRADER_FUNC_UNST_ADX                 = 0;
-    const TRADER_FUNC_UNST_ADXR                = 1;
-    const TRADER_FUNC_UNST_ATR                 = 2;
-    const TRADER_FUNC_UNST_CMO                 = 3;
-    const TRADER_FUNC_UNST_DX                  = 4;
-    const TRADER_FUNC_UNST_EMA                 = 5;
-    const TRADER_FUNC_UNST_HT_DCPERIOD         = 6;
-    const TRADER_FUNC_UNST_HT_DCPHASE          = 7;
-    const TRADER_FUNC_UNST_HT_PHASOR           = 8;
-    const TRADER_FUNC_UNST_HT_TRENDLINE        = 10;
-    const TRADER_FUNC_UNST_HT_TRENDMODE        = 11;
-    const TRADER_FUNC_UNST_KAMA                = 12;
-    const TRADER_FUNC_UNST_MAMA                = 13;
-    const TRADER_FUNC_UNST_MFI                 = 14;
-    const TRADER_FUNC_UNST_MINUS_DI            = 15;
-    const TRADER_FUNC_UNST_MINUS_DM            = 16;
-    const TRADER_FUNC_UNST_NATR                = 17;
-    const TRADER_FUNC_UNST_PLUS_DI             = 18;
-    const TRADER_FUNC_UNST_PLUS_DM             = 19;
-    const TRADER_FUNC_UNST_RSI                 = 20;
-    const TRADER_FUNC_UNST_STOCHRSI            = 21;
-    const TRADER_FUNC_UNST_T3                  = 22;
-    const TRADER_FUNC_UNST_ALL                 = 23;
-    const TRADER_FUNC_UNST_NONE                = -1;
-    const TRADER_COMPATIBILITY_DEFAULT         = 0;
-    const TRADER_COMPATIBILITY_METASTOCK       = 1;
-    const TRADER_ERR_SUCCESS                   = 0;
-    const TRADER_ERR_LIB_NOT_INITIALIZE        = 1;
-    const TRADER_ERR_BAD_PARAM                 = 2;
-    const TRADER_ERR_ALLOC_ERR                 = 3;
-    const TRADER_ERR_GROUP_NOT_FOUND           = 4;
-    const TRADER_ERR_FUNC_NOT_FOUND            = 5;
-    const TRADER_ERR_INVALID_HANDLE            = 6;
-    const TRADER_ERR_INVALID_PARAM_HOLDER      = 7;
-    const TRADER_ERR_INVALID_PARAM_HOLDER_TYPE = 8;
-    const TRADER_ERR_INVALID_PARAM_FUNCTION    = 9;
-    const TRADER_ERR_INPUT_NOT_ALL_INITIALIZE  = 10;
-    const TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE = 11;
-    const TRADER_ERR_OUT_OF_RANGE_START_INDEX  = 12;
-    const TRADER_ERR_OUT_OF_RANGE_END_INDEX    = 13;
-    const TRADER_ERR_INVALID_LIST_TYPE         = 14;
-    const TRADER_ERR_BAD_OBJECT                = 15;
-    const TRADER_ERR_NOT_SUPPORTED             = 16;
-    const TRADER_ERR_INTERNAL_ERROR            = 5000;
-    const TRADER_ERR_UNKNOWN_ERROR             = 65535;
+    use TraderTrait;
 
     /**
+     * Vector arc cosine
      * Calculates the arc cosine for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function acos(array $real): array
+    public static function mathArcCosine(array $real): array
     {
         return trader_acos($real);
     }
 
     /**
-     * Chaikin A/D Line
+     * Chaikin Accumulation Distribution Line
+     *
+     * This indicator is a volume based indicator developed by Marc Chaikin which measures the cumulative flow of money into and out of an instrument.
+     * The A/D line is calculated by multiplying the specific period’s volume with a multiplier that is based on the relationship of the closing price to the high-low range.
+     * The A/D Line is formed by the running total of the Money Flow Volume. This indicator can be used to assert an underlying trend or to predict reversals.
+     *
+     * The combination of a high positive multiplier value and high volume indicates buying pressure.
+     * So even with a downtrend in prices when there is an uptrend in the Accumulation Distribution Line there is indication for buying pressure (accumulation) that may result to a bullish reversal.
+     *
+     * Conversely a low negative multiplier value combined with, again, high volumes indicates selling pressure (distribution).
      *
      * @param array $high   High price, array of real values.
      * @param array $low    Low price, array of real values.
@@ -84,7 +46,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ad(array $high, array $low, array $close, array $volume): array
+    public static function chaikinAccumulationDistributionLine(array $high, array $low, array $close, array $volume): array
     {
         return trader_ad($high, $low, $close, $volume);
     }
@@ -97,13 +59,22 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function add(array $real0, array $real1): array
+    public static function mathAddition(array $real0, array $real1): array
     {
         return trader_add($real0, $real1);
     }
 
     /**
-     * Chaikin A/D Oscillator
+     * Chaikin Accumulation Distribution Oscillator
+     *
+     * Chaikin Oscillator is positive when the 3-day EMA moves higher than the 10-day EMA and vice versa.
+     *
+     * The Chaikin Oscillator is the continuation of the Chaikin A/D Line and is used to observe changes in the A/D Line.
+     *
+     * The oscillator is based on the difference between the 3-day Exponential Moving Average (EMA) of the A/D Line and the 10-day EMA of the A/D Line and hence adds momentum to the A/D Line.
+     * It is helpful for investors to use the Oscillator in order to determine the appropriate timing of trend reversals.
+     *
+     * When the Chaikin Oscillator turns positive there is indication that the A/D Line will increase and hence a Bullish (buy) signal will be generated. On the other hand a move into negative territory indicates a Bearish (sell) signal.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -114,13 +85,24 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adosc(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
+    public static function chaikinAccumulationDistributionOscillator(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
     {
         return trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
     }
 
     /**
      * Average Directional Movement Index
+     *
+     * Developed by J. Welles Wilder and described in his book “New Concepts in Technical Trading Systems”, the Average Directional Movement Index (ADX) is a technical indicator that describes if a market or a financial instrument is trending or not.
+     *
+     * The ADX is a combination of two other indicators developed by Wilder, the positive directional indicator (+DI) and the negative directional indicator (-DI).
+     *
+     * Wilder recommends buying when +DI is higher than -DI, and selling when +DI is lower than -DI.
+     *
+     * The ADX indicates trend strength, not trend direction, and it is a lagging indicator.
+     *
+     * ADX range is between 0 and 100. Generally ADX readings below 20 indicate trend weakness, and readings above 40 indicate trend strength.
+     * An extremely strong trend is indicated by readings above 50.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -129,7 +111,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adx(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageDirectionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_adx($high, $low, $close, $timePeriod);
     }
@@ -2387,5 +2369,6 @@ class Trader
     {
         return trader_wma($real, $timePeriod);
     }
+
 
 }
