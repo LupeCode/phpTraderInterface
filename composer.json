@@ -1,7 +1,7 @@
 {
   "name": "lupecode/php-trader-interface",
   "description": "An interface to the PHP Trader extension.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "type": "library",
   "license": "GNU GPLv3",
   "authors":[
