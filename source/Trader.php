@@ -126,7 +126,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adxr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageDirectionalMovementIndexRating(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_adxr($high, $low, $close, $timePeriod);
     }
@@ -141,7 +141,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function apo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function absolutePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
         return trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
     }
@@ -169,7 +169,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function arronosc(array $high, array $low, integer $timePeriod = null): array
+    public static function arronOscillator(array $high, array $low, integer $timePeriod = null): array
     {
         return trader_aroonosc($high, $low, $timePeriod);
     }
@@ -182,7 +182,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function asin(array $real): array
+    public static function mathArcSine(array $real): array
     {
         return trader_asin($real);
     }
@@ -195,7 +195,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function atan(array $real): array
+    public static function mathArcTangent(array $real): array
     {
         return trader_atan($real);
     }
@@ -210,7 +210,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function atr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_atr($high, $low, $close, $timePeriod);
     }
@@ -225,7 +225,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function avgprice(array $open, array $high, array $low, array $close): array
+    public static function averagePrice(array $open, array $high, array $low, array $close): array
     {
         return trader_avgprice($open, $high, $low, $close);
     }
@@ -241,7 +241,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function bbands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
+    public static function bollingerBands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
     {
         return trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
     }
@@ -270,7 +270,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function bop(array $open, array $high, array $low, array $close): array
+    public static function balanceOfPower(array $open, array $high, array $low, array $close): array
     {
         return trader_bop($open, $high, $low, $close);
     }
@@ -285,7 +285,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cci(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function commodityChannelIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_cci($high, $low, $close, $timePeriod);
     }
@@ -300,7 +300,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl2crows(array $open, array $high, array $low, array $close): array
+    public static function candleTwoCrows(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl2crows($open, $high, $low, $close);
     }
@@ -315,7 +315,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3blackcrows(array $open, array $high, array $low, array $close): array
+    public static function candleThreeBlackCrows(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3blackcrows($open, $high, $low, $close);
     }
@@ -330,7 +330,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3inside(array $open, array $high, array $low, array $close): array
+    public static function candleThreeInsideUpDown(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3inside($open, $high, $low, $close);
     }
@@ -345,7 +345,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3linestrike(array $open, array $high, array $low, array $close): array
+    public static function candleThreeLineStrike(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3linestrike($open, $high, $low, $close);
     }
@@ -360,7 +360,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3outside(array $open, array $high, array $low, array $close): array
+    public static function candleThreeOutsideUpDown(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3outside($open, $high, $low, $close);
     }
@@ -375,7 +375,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3starsinsouth(array $open, array $high, array $low, array $close): array
+    public static function candleThreeStarsInTheSouth(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3starsinsouth($open, $high, $low, $close);
     }
@@ -390,7 +390,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdl3whitesoldiers(array $open, array $high, array $low, array $close): array
+    public static function candleThreeWhiteSoldiers(array $open, array $high, array $low, array $close): array
     {
         return trader_cdl3whitesoldiers($open, $high, $low, $close);
     }
@@ -406,7 +406,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleAbandonedBaby(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
     }
@@ -421,7 +421,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdladvanceblock(array $open, array $high, array $low, array $close): array
+    public static function candleAdvanceBlock(array $open, array $high, array $low, array $close): array
     {
         return trader_cdladvanceblock($open, $high, $low, $close);
     }
@@ -436,7 +436,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlbelthold(array $open, array $high, array $low, array $close): array
+    public static function candleBeltHold(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlbelthold($open, $high, $low, $close);
     }
@@ -451,7 +451,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlbreakaway(array $open, array $high, array $low, array $close): array
+    public static function candleBreakaway(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlbreakaway($open, $high, $low, $close);
     }
@@ -466,7 +466,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlclosingmarubozu(array $open, array $high, array $low, array $close): array
+    public static function candleClosingMarubozu(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlclosingmarubozu($open, $high, $low, $close);
     }
@@ -481,7 +481,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlconcealbabyswall(array $open, array $high, array $low, array $close): array
+    public static function candleConcealingBabySwallow(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlconcealbabyswall($open, $high, $low, $close);
     }
@@ -496,7 +496,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlcounterattack(array $open, array $high, array $low, array $close): array
+    public static function candleCounterattack(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlcounterattack($open, $high, $low, $close);
     }
@@ -512,7 +512,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleDarkCloudCover(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
     }
@@ -527,7 +527,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdldoji(array $open, array $high, array $low, array $close): array
+    public static function candleDoji(array $open, array $high, array $low, array $close): array
     {
         return trader_cdldoji($open, $high, $low, $close);
     }
@@ -542,7 +542,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdldojistar(array $open, array $high, array $low, array $close): array
+    public static function candleDojiStar(array $open, array $high, array $low, array $close): array
     {
         return trader_cdldojistar($open, $high, $low, $close);
     }
@@ -557,7 +557,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdldragonflydoji(array $open, array $high, array $low, array $close): array
+    public static function candleDragonflyDoji(array $open, array $high, array $low, array $close): array
     {
         return trader_cdldragonflydoji($open, $high, $low, $close);
     }
@@ -572,7 +572,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlengulfing(array $open, array $high, array $low, array $close): array
+    public static function candleEngulfingPattern(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlengulfing($open, $high, $low, $close);
     }
@@ -588,7 +588,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleEveningDojiStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
     }
@@ -604,7 +604,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleEveningStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdleveningstar($open, $high, $low, $close, $penetration);
     }
@@ -619,7 +619,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlgapsidesidewhite(array $open, array $high, array $low, array $close): array
+    public static function candleUpDownGapsSideBySideWhiteLines(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlgapsidesidewhite($open, $high, $low, $close);
     }
@@ -634,7 +634,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlgravestonedoji(array $open, array $high, array $low, array $close): array
+    public static function candleGravestoneDoji(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlgravestonedoji($open, $high, $low, $close);
     }
@@ -649,7 +649,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhammer(array $open, array $high, array $low, array $close): array
+    public static function candleHammer(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhammer($open, $high, $low, $close);
     }
@@ -664,7 +664,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhangingman(array $open, array $high, array $low, array $close): array
+    public static function candleHangingMan(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhangingman($open, $high, $low, $close);
     }
@@ -679,7 +679,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlharami(array $open, array $high, array $low, array $close): array
+    public static function candleHarami(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlharami($open, $high, $low, $close);
     }
@@ -694,7 +694,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlharamicross(array $open, array $high, array $low, array $close): array
+    public static function candleHaramiCross(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlharamicross($open, $high, $low, $close);
     }
@@ -709,7 +709,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhighwave(array $open, array $high, array $low, array $close): array
+    public static function candleHighWave(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhighwave($open, $high, $low, $close);
     }
@@ -724,7 +724,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhikkake(array $open, array $high, array $low, array $close): array
+    public static function candleHikkake(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhikkake($open, $high, $low, $close);
     }
@@ -739,7 +739,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhikkakemod(array $open, array $high, array $low, array $close): array
+    public static function candleModifiedHikkake(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhikkakemod($open, $high, $low, $close);
     }
@@ -754,7 +754,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlhomingpigeon(array $open, array $high, array $low, array $close): array
+    public static function candleHomingPigeon(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlhomingpigeon($open, $high, $low, $close);
     }
@@ -769,7 +769,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlidentical3crows(array $open, array $high, array $low, array $close): array
+    public static function candleIdenticalThreeCrows(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlidentical3crows($open, $high, $low, $close);
     }
@@ -784,7 +784,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlinneck(array $open, array $high, array $low, array $close): array
+    public static function candleInNeck(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlinneck($open, $high, $low, $close);
     }
@@ -799,7 +799,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlinvertedhammer(array $open, array $high, array $low, array $close): array
+    public static function candleInvertedHammer(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlinvertedhammer($open, $high, $low, $close);
     }
@@ -814,7 +814,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlkicking(array $open, array $high, array $low, array $close): array
+    public static function candleKicking(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlkicking($open, $high, $low, $close);
     }
@@ -829,7 +829,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlkickingbylength(array $open, array $high, array $low, array $close): array
+    public static function candleKickingByLength(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlkickingbylength($open, $high, $low, $close);
     }
@@ -844,7 +844,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlladderbottom(array $open, array $high, array $low, array $close): array
+    public static function candleLadderBottom(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlladderbottom($open, $high, $low, $close);
     }
@@ -859,7 +859,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdllongleggeddoji(array $open, array $high, array $low, array $close): array
+    public static function candleLongLeggedDoji(array $open, array $high, array $low, array $close): array
     {
         return trader_cdllongleggeddoji($open, $high, $low, $close);
     }
@@ -874,7 +874,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdllongline(array $open, array $high, array $low, array $close): array
+    public static function candleLongLine(array $open, array $high, array $low, array $close): array
     {
         return trader_cdllongline($open, $high, $low, $close);
     }
@@ -889,7 +889,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmarubozu(array $open, array $high, array $low, array $close): array
+    public static function candleMarubozu(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlmarubozu($open, $high, $low, $close);
     }
@@ -904,7 +904,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmatchinglow(array $open, array $high, array $low, array $close): array
+    public static function candleMatchingLow(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlmatchinglow($open, $high, $low, $close);
     }
@@ -920,7 +920,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleMatHold(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdlmathold($open, $high, $low, $close, $penetration);
     }
@@ -936,7 +936,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleMorningDojiStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
     }
@@ -952,7 +952,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function candleMorningStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
         return trader_cdlmorningstar($open, $high, $low, $close, $penetration);
     }
@@ -967,7 +967,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlonneck(array $open, array $high, array $low, array $close): array
+    public static function candleOnNeck(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlonneck($open, $high, $low, $close);
     }
@@ -982,7 +982,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlpiercing(array $open, array $high, array $low, array $close): array
+    public static function candlePiercing(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlpiercing($open, $high, $low, $close);
     }
@@ -997,7 +997,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlrickshawman(array $open, array $high, array $low, array $close): array
+    public static function candleRickshawMan(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlrickshawman($open, $high, $low, $close);
     }
@@ -1012,7 +1012,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlrisefall3methods(array $open, array $high, array $low, array $close): array
+    public static function candleRisingFallingThreeMethods(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlrisefall3methods($open, $high, $low, $close);
     }
@@ -1027,7 +1027,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlseparatinglines(array $open, array $high, array $low, array $close): array
+    public static function candleSeparatingLines(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlseparatinglines($open, $high, $low, $close);
     }
@@ -1042,7 +1042,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlshootingstar(array $open, array $high, array $low, array $close): array
+    public static function candleShootingStar(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlshootingstar($open, $high, $low, $close);
     }
@@ -1057,7 +1057,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlshortline(array $open, array $high, array $low, array $close): array
+    public static function candleShortLine(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlshortline($open, $high, $low, $close);
     }
@@ -1072,7 +1072,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlspinningtop(array $open, array $high, array $low, array $close): array
+    public static function candleSpinningTop(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlspinningtop($open, $high, $low, $close);
     }
@@ -1087,7 +1087,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlstalledpattern(array $open, array $high, array $low, array $close): array
+    public static function candleStalled(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlstalledpattern($open, $high, $low, $close);
     }
@@ -1102,7 +1102,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlsticksandwich(array $open, array $high, array $low, array $close): array
+    public static function candleStickSandwich(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlsticksandwich($open, $high, $low, $close);
     }
@@ -1117,7 +1117,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdltakuri(array $open, array $high, array $low, array $close): array
+    public static function candleTakuri(array $open, array $high, array $low, array $close): array
     {
         return trader_cdltakuri($open, $high, $low, $close);
     }
@@ -1132,7 +1132,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdltasukigap(array $open, array $high, array $low, array $close): array
+    public static function candleTasukiGap(array $open, array $high, array $low, array $close): array
     {
         return trader_cdltasukigap($open, $high, $low, $close);
     }
@@ -1147,7 +1147,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlthrusting(array $open, array $high, array $low, array $close): array
+    public static function candleThrusting(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlthrusting($open, $high, $low, $close);
     }
@@ -1162,7 +1162,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdltristar(array $open, array $high, array $low, array $close): array
+    public static function candleTristar(array $open, array $high, array $low, array $close): array
     {
         return trader_cdltristar($open, $high, $low, $close);
     }
@@ -1177,7 +1177,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlunique3river(array $open, array $high, array $low, array $close): array
+    public static function candleUniqueThreeRiver(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlunique3river($open, $high, $low, $close);
     }
@@ -1192,7 +1192,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlupsidegap2crows(array $open, array $high, array $low, array $close): array
+    public static function candleUpsideGapTwoCrows(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlupsidegap2crows($open, $high, $low, $close);
     }
@@ -1207,7 +1207,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlxsidegap3methods(array $open, array $high, array $low, array $close): array
+    public static function candleUpsideDownsideGapThreeMethods(array $open, array $high, array $low, array $close): array
     {
         return trader_cdlxsidegap3methods($open, $high, $low, $close);
     }
@@ -1220,7 +1220,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ceil(array $real): array
+    public static function mathCeiling(array $real): array
     {
         return trader_ceil($real);
     }
@@ -1233,7 +1233,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cmo(array $real, integer $timePeriod): array
+    public static function chandeMomentumOscillator(array $real, integer $timePeriod): array
     {
         return trader_cmo($real, $timePeriod);
     }
@@ -1247,7 +1247,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function correl(array $real0, array $real1, integer $timePeriod = null): array
+    public static function pearsonCorrelationCoefficient(array $real0, array $real1, integer $timePeriod = null): array
     {
         return trader_correl($real0, $real1, $timePeriod);
     }
@@ -1260,7 +1260,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cos(array $real): array
+    public static function mathCosine(array $real): array
     {
         return trader_cos($real);
     }
@@ -1273,7 +1273,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cosh(array $real): array
+    public static function mathHyperbolicCosine(array $real): array
     {
         return trader_cosh($real);
     }
@@ -1286,7 +1286,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function dema(array $real, integer $timePeriod): array
+    public static function doubleExponentialMovingAverage(array $real, integer $timePeriod): array
     {
         return trader_dema($real, $timePeriod);
     }
@@ -1300,7 +1300,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function div(array $real0, array $real1): array
+    public static function mathDivision(array $real0, array $real1): array
     {
         return trader_div($real0, $real1);
     }
@@ -1315,7 +1315,7 @@ class Trader
      *
      * @return array  Returns an array with calculated data or false on failure.
      */
-    public static function dx(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function directionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_dx($high, $low, $close, $timePeriod);
     }
@@ -1328,7 +1328,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ema(array $real, integer $timePeriod): array
+    public static function exponentialMovingAverage(array $real, integer $timePeriod): array
     {
         return trader_ema($real, $timePeriod);
     }
@@ -1339,7 +1339,7 @@ class Trader
      *
      * @return int Returns the error code identified by one of the TRADER_ERR_* constants.
      */
-    public static function errno(): integer
+    public static function errorNumber(): integer
     {
         return trader_errno();
     }
@@ -1352,7 +1352,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function exp(array $real): array
+    public static function mathExponent(array $real): array
     {
         return trader_exp($real);
     }
@@ -1365,7 +1365,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function floor(array $real): array
+    public static function mathFloor(array $real): array
     {
         return trader_floor($real);
     }
@@ -1376,7 +1376,7 @@ class Trader
      *
      * @return int Returns the compatibility mode id which can be identified by TRADER_COMPATIBILITY_* series of constants.
      */
-    public static function get_compat(): integer
+    public static function getCompatibilityMode(): integer
     {
         return trader_get_compat();
     }
@@ -1389,7 +1389,7 @@ class Trader
      *
      * @return int Returns the unstable period factor for the corresponding function.
      */
-    public static function get_unstable_period(integer $functionId): integer
+    public static function getUnstablePeriod(integer $functionId): integer
     {
         return trader_get_unstable_period($functionId);
     }
@@ -1401,7 +1401,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_dcperiod(array $real): array
+    public static function hilbertTransformDominantCyclePeriod(array $real): array
     {
         return trader_ht_dcperiod($real);
     }
@@ -1413,7 +1413,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_dcphase(array $real): array
+    public static function hilbertTransformDominantCyclePhase(array $real): array
     {
         return trader_ht_dcphase($real);
     }
@@ -1425,7 +1425,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_phasor(array $real): array
+    public static function hilbertTransformPhasorComponents(array $real): array
     {
         return trader_ht_phasor($real);
     }
@@ -1437,19 +1437,19 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_sine(array $real): array
+    public static function hilbertTransformSineWave(array $real): array
     {
         return trader_ht_sine($real);
     }
 
     /**
-     * Hilbert Transform - Instantaneous Trendline
+     * Hilbert Transform - Instantaneous TrendLine
      *
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_trendline(array $real): array
+    public static function hilbertTransformInstantaneousTrendLine(array $real): array
     {
         return trader_ht_trendline($real);
     }
@@ -1461,7 +1461,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ht_trendmode(array $real): array
+    public static function hilbertTransformTrendVsCycleMode(array $real): array
     {
         return trader_ht_trendmode($real);
     }
@@ -1474,7 +1474,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function kama(array $real, integer $timePeriod = null): array
+    public static function kaufmanAdaptiveMovingAverage(array $real, integer $timePeriod = null): array
     {
         return trader_kama($real, $timePeriod);
     }
@@ -1487,7 +1487,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_angle(array $real, integer $timePeriod = null): array
+    public static function linearRegressionAnlge(array $real, integer $timePeriod = null): array
     {
         return trader_linearreg_angle($real, $timePeriod);
     }
@@ -1500,7 +1500,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_intercept(array $real, integer $timePeriod = null): array
+    public static function linearRegressionIntercept(array $real, integer $timePeriod = null): array
     {
         return trader_linearreg_intercept($real, $timePeriod);
     }
@@ -1513,7 +1513,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_slope(array $real, integer $timePeriod = null): array
+    public static function linearRegressionSlope(array $real, integer $timePeriod = null): array
     {
         return trader_linearreg_slope($real, $timePeriod);
     }
@@ -1526,7 +1526,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg(array $real, integer $timePeriod = null): array
+    public static function linearRegression(array $real, integer $timePeriod = null): array
     {
         return trader_linearreg($real, $timePeriod);
     }
@@ -1539,7 +1539,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ln(array $real): array
+    public static function mathLogarithmNatural(array $real): array
     {
         return trader_ln($real);
     }
@@ -1552,7 +1552,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function log10(array $real): array
+    public static function mathLogarithmBase10(array $real): array
     {
         return trader_log10($real);
     }
@@ -1566,7 +1566,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ma(array $real, integer $timePeriod = null, integer $mAType = null): array
+    public static function movingAverage(array $real, integer $timePeriod = null, integer $mAType = null): array
     {
         return trader_ma($real, $timePeriod, $mAType);
     }
@@ -1581,7 +1581,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macd(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergence(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
     {
         return trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
     }
@@ -1598,7 +1598,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macdext(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergenceExtended(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
     {
         return trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
     }
@@ -1611,7 +1611,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macdfix(array $real, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergenceFixed(array $real, integer $signalPeriod = null): array
     {
         return trader_macd($real, $signalPeriod);
     }
@@ -1625,7 +1625,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mama(array $real, float $fastLimit = null, float $slowLimit = null): array
+    public static function mesaAdaptiveMovingAverage(array $real, float $fastLimit = null, float $slowLimit = null): array
     {
         return trader_mama($real, $fastLimit, $slowLimit);
     }
@@ -1641,7 +1641,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mavp(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
+    public static function movingAverageVariablePeriod(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
     {
         return trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
     }
@@ -1654,7 +1654,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function max(array $real, integer $timePeriod = null): array
+    public static function mathMax(array $real, integer $timePeriod = null): array
     {
         return trader_max($real, $timePeriod);
     }
@@ -1667,7 +1667,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function maxindex(array $real, integer $timePeriod = null): array
+    public static function mathMaxIndex(array $real, integer $timePeriod = null): array
     {
         return trader_maxindex($real, $timePeriod);
     }
@@ -1680,7 +1680,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function medprice(array $high, array $low): array
+    public static function mathMedianPrice(array $high, array $low): array
     {
         return trader_medprice($high, $low);
     }
@@ -1696,7 +1696,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mfi(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
+    public static function moneyFlowIndex(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
     {
         return trader_mfi($high, $low, $close, $volume, $timePeriod);
     }
@@ -1723,7 +1723,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function midprice(array $high, array $low, integer $timePeriod = null)
+    public static function midpointPrice(array $high, array $low, integer $timePeriod = null)
     {
         return trader_midprice($high, $low, $timePeriod);
     }
@@ -1736,7 +1736,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function min(array $real, integer $timePeriod = null): array
+    public static function mathMin(array $real, integer $timePeriod = null): array
     {
         return trader_min($real, $timePeriod);
     }
@@ -1749,7 +1749,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minindex(array $real, integer $timePeriod = null): array
+    public static function mathMinIndex(array $real, integer $timePeriod = null): array
     {
         return trader_minindex($real, $timePeriod);
     }
@@ -1762,7 +1762,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minmax(array $real, integer $timePeriod = null): array
+    public static function mathMinMax(array $real, integer $timePeriod = null): array
     {
         return trader_minmax($real, $timePeriod);
     }
@@ -1775,7 +1775,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minmaxindex(array $real, integer $timePeriod = null): array
+    public static function mathMinMaxIndex(array $real, integer $timePeriod = null): array
     {
         return trader_minmaxindex($real, $timePeriod);
     }
@@ -1790,7 +1790,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minus_di(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function minusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_minus_di($high, $low, $close, $timePeriod);
     }
@@ -1804,7 +1804,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minus_dm(array $high, array $low, integer $timePeriod = null): array
+    public static function minusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
     {
         return trader_minus_dm($high, $low, $timePeriod);
     }
@@ -1817,7 +1817,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mom(array $real, integer $timePeriod = null): array
+    public static function momentum(array $real, integer $timePeriod = null): array
     {
         return trader_mom($real, $timePeriod);
     }
@@ -1831,7 +1831,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mult(array $real0, array $real1): array
+    public static function mathMultiply(array $real0, array $real1): array
     {
         return trader_mult($real0, $real1);
     }
@@ -1846,7 +1846,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function natr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function normalizedAverageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_natr($high, $low, $close, $timePeriod);
     }
@@ -1859,7 +1859,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function obv(array $real, array $volume): array
+    public static function onBalanceVolume(array $real, array $volume): array
     {
         return trader_obv($real, $volume);
     }
@@ -1874,7 +1874,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plus_di(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function plusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_plus_di($high, $low, $close, $timePeriod);
     }
@@ -1888,7 +1888,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plus_dm(array $high, array $low, integer $timePeriod = null): array
+    public static function plusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
     {
         return trader_plus_dm($high, $low, $timePeriod);
     }
@@ -1903,7 +1903,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ppo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function percentagePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
         return trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
     }
@@ -1916,7 +1916,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function roc(array $real, integer $timePeriod = null): array
+    public static function rateOfChange(array $real, integer $timePeriod = null): array
     {
         return trader_roc($real, $timePeriod);
     }
@@ -1929,7 +1929,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocp(array $real, integer $timePeriod = null): array
+    public static function rateOfChangePercentage(array $real, integer $timePeriod = null): array
     {
         return trader_rocp($real, $timePeriod);
     }
@@ -1942,7 +1942,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocr100(array $real, integer $timePeriod = null): array
+    public static function rateOfChangeRatio100(array $real, integer $timePeriod = null): array
     {
         return trader_rocr100($real, $timePeriod);
     }
@@ -1955,7 +1955,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocr(array $real, integer $timePeriod = null): array
+    public static function rateOfChangeRatio(array $real, integer $timePeriod = null): array
     {
         return trader_rocr($real, $timePeriod);
     }
@@ -1968,7 +1968,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rsi(array $real, integer $timePeriod = null): array
+    public static function relativeStrengthIndex(array $real, integer $timePeriod = null): array
     {
         return trader_rsi($real, $timePeriod);
     }
@@ -1983,7 +1983,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sar(array $high, array $low, float $acceleration = null, float $maximum = null): array
+    public static function parabolicSAR(array $high, array $low, float $acceleration = null, float $maximum = null): array
     {
         return trader_sar($high, $low, $acceleration, $maximum);
     }
@@ -2004,7 +2004,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sarext(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
+    public static function parabolicSARExtended(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
     {
         return trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
     }
@@ -2015,7 +2015,7 @@ class Trader
      *
      * @param int $compatId Compatibility Id. TRADER_COMPATIBILITY_* series of constants should be used.
      */
-    public static function set_compat(integer $compatId)
+    public static function setCompatibilityMode(integer $compatId)
     {
         return trader_set_compat($compatId);
     }
@@ -2027,7 +2027,7 @@ class Trader
      * @param int $functionId Function ID the factor should be set for. TRADER_FUNC_UNST_* constant series can be used to affect the corresponding function.
      * @param int $timePeriod Unstable period value.
      */
-    public static function set_unstable_period(integer $functionId, integer $timePeriod)
+    public static function setUnstablePeriod(integer $functionId, integer $timePeriod)
     {
         return trader_set_unstable_period($functionId, $timePeriod);
     }
@@ -2040,7 +2040,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sin(array $real): array
+    public static function mathSine(array $real): array
     {
         return trader_sin($real);
     }
@@ -2053,7 +2053,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sinh(array $real): array
+    public static function mathHyperbolicSine(array $real): array
     {
         return trader_sinh($real);
     }
@@ -2066,7 +2066,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sma(array $real, integer $timePeriod = null): array
+    public static function simpleMovingAverage(array $real, integer $timePeriod = null): array
     {
         return trader_sma($real, $timePeriod);
     }
@@ -2079,7 +2079,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sqrt(array $real): array
+    public static function mathSquareRoot(array $real): array
     {
         return trader_sqrt($real);
     }
@@ -2093,7 +2093,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stddev(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function standardDeviation(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
         return trader_stddev($real, $timePeriod, $nbDev);
     }
@@ -2112,7 +2112,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stoch(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
+    public static function stochastic(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
     {
         return trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
     }
@@ -2129,7 +2129,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochf(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochasticFast(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
         return trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
@@ -2145,7 +2145,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochrsi(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochasticRelativeStrengthIndex(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
         return trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
@@ -2159,7 +2159,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sub(array $real0, array $real1): array
+    public static function mathSubtraction(array $real0, array $real1): array
     {
         return trader_sub($real0, $real1);
     }
@@ -2172,7 +2172,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sum(array $real, integer $timePeriod = null): array
+    public static function mathSummation(array $real, integer $timePeriod = null): array
     {
         return trader_sum($real, $timePeriod);
     }
@@ -2186,7 +2186,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function t3(array $real, integer $timePeriod = null, float $vFactor = null): array
+    public static function tripleExponentialMovingAverageT3(array $real, integer $timePeriod = null, float $vFactor = null): array
     {
         return trader_t3($real, $timePeriod, $vFactor);
     }
@@ -2199,7 +2199,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tan(array $real): array
+    public static function mathTangent(array $real): array
     {
         return trader_tan($real);
     }
@@ -2212,7 +2212,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tanh(array $real): array
+    public static function mathHyperbolicTangent(array $real): array
     {
         return trader_tanh($real);
     }
@@ -2225,7 +2225,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tema(array $real, integer $timePeriod = null): array
+    public static function tripleExponentialMovingAverage(array $real, integer $timePeriod = null): array
     {
         return trader_tema($real, $timePeriod);
     }
@@ -2239,7 +2239,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function trange(array $high, array $low, array $close): array
+    public static function trueRange(array $high, array $low, array $close): array
     {
         return trader_trange($high, $low, $close);
     }
@@ -2252,7 +2252,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function trima(array $real, integer $timePeriod = null): array
+    public static function triangularMovingAverage(array $real, integer $timePeriod = null): array
     {
         return trader_trima($real, $timePeriod);
     }
@@ -2265,7 +2265,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function trix(array $real, integer $timePeriod = null): array
+    public static function tripleExponentialAverage(array $real, integer $timePeriod = null): array
     {
         return trader_trix($real, $timePeriod);
     }
@@ -2278,7 +2278,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tsf(array $real, integer $timePeriod = null): array
+    public static function timeSeriesForecast(array $real, integer $timePeriod = null): array
     {
         return trader_tsf($real, $timePeriod);
     }
@@ -2292,7 +2292,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function typprice(array $high, array $low, array $close): array
+    public static function typicalPrice(array $high, array $low, array $close): array
     {
         return trader_typprice($high, $low, $close);
     }
@@ -2309,7 +2309,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ultosc(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
+    public static function ultimateOscillator(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
     {
         return trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
     }
@@ -2323,7 +2323,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function var(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function variance(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
         return trader_var($real, $timePeriod, $nbDev);
     }
@@ -2337,7 +2337,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function wclprice(array $high, array $low, array $close): array
+    public static function weightedClosePrice(array $high, array $low, array $close): array
     {
         return trader_wclprice($high, $low, $close);
     }
@@ -2352,7 +2352,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function willr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function williamsR(array $high, array $low, array $close, integer $timePeriod = null): array
     {
         return trader_willr($high, $low, $close, $timePeriod);
     }
@@ -2365,7 +2365,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function wma(array $real, integer $timePeriod = null): array
+    public static function weightedMovingAverage(array $real, integer $timePeriod = null): array
     {
         return trader_wma($real, $timePeriod);
     }
