@@ -2,6 +2,8 @@
 
 namespace LupeCode\phpTraderInterface;
 
+require_once __DIR__ . '/TraderTrait.php';
+
 /**
  * Class Trader
  *
