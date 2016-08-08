@@ -116,8 +116,8 @@ trait TraderTrait
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
      * @param array    $volume     Volume traded, array of real values.
-     * @param int|null $fastPeriod Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -132,7 +132,7 @@ trait TraderTrait
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -147,7 +147,7 @@ trait TraderTrait
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -160,9 +160,9 @@ trait TraderTrait
      * Absolute Price Oscillator
      *
      * @param array    $real       Array of real values.
-     * @param int|null $fastPeriod Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $mAType     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int|null $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -176,7 +176,7 @@ trait TraderTrait
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -190,7 +190,7 @@ trait TraderTrait
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -231,7 +231,7 @@ trait TraderTrait
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -259,10 +259,10 @@ trait TraderTrait
      * Bollinger Bands
      *
      * @param array      $real       Array of real values.
-     * @param int|null   $timePeriod Number of period. Valid range from 2 to 100000.
-     * @param float|null $nbDevUp    Deviation multiplier for upper band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param float|null $nbDevDn    Deviation multiplier for lower band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param int|null   $mAType     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param float|null $nbDevUp    [OPTIONAL] Deviation multiplier for upper band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param float|null $nbDevDn    [OPTIONAL] Deviation multiplier for lower band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param int|null   $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -276,7 +276,7 @@ trait TraderTrait
      *
      * @param array    $real0      Array of real values.
      * @param array    $real1      Array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -306,7 +306,7 @@ trait TraderTrait
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -427,7 +427,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -533,7 +533,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -609,7 +609,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -625,7 +625,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -941,7 +941,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -957,7 +957,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -973,7 +973,7 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1253,12 +1253,12 @@ trait TraderTrait
     /**
      * Chande Momentum Oscillator
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param array    $real       Array of real values.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cmo(array $real, integer $timePeriod): array
+    public static function cmo(array $real, integer $timePeriod = null): array
     {
         return trader_cmo($real, $timePeriod);
     }
@@ -1268,7 +1268,7 @@ trait TraderTrait
      *
      * @param array    $real0      Array of real values.
      * @param array    $real1      Array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1307,7 +1307,7 @@ trait TraderTrait
      * Double Exponential Moving Average
      *
      * @param array $real       Array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1336,7 +1336,7 @@ trait TraderTrait
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
      * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array  Returns an array with calculated data or false on failure.
      */
@@ -1348,12 +1348,12 @@ trait TraderTrait
     /**
      * Exponential Moving Average
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param array    $real       Array of real values.
+     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ema(array $real, integer $timePeriod): array
+    public static function ema(array $real, integer $timePeriod = null): array
     {
         return trader_ema($real, $timePeriod);
     }
@@ -1495,7 +1495,7 @@ trait TraderTrait
      * Kaufman Adaptive Moving Average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1508,7 +1508,7 @@ trait TraderTrait
      * Linear Regression Angle
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1521,7 +1521,7 @@ trait TraderTrait
      * Linear Regression Angle
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1534,7 +1534,7 @@ trait TraderTrait
      * Linear Regression Slope
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1547,7 +1547,7 @@ trait TraderTrait
      * Linear Regression
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1586,8 +1586,8 @@ trait TraderTrait
      * Moving average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
-     * @param int      $mAType     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int      $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1600,9 +1600,9 @@ trait TraderTrait
      * Moving Average Convergence/Divergence
      *
      * @param array    $real         Array of real values.
-     * @param int|null $fastPeriod   Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod   Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $signalPeriod Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param int|null $fastPeriod   [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int|null $slowPeriod   [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1615,11 +1615,11 @@ trait TraderTrait
      * Moving Average Convergence/Divergence with controllable Moving Average type
      *
      * @param array    $real         Array of real values.
-     * @param int|null $fastPeriod   Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $fastMAType   Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $slowPeriod   Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $slowMAType   Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $signalPeriod Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param int|null $fastPeriod   [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int|null $fastMAType   [OPTIONAL] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $slowPeriod   [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int|null $slowMAType   [OPTIONAL] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1632,7 +1632,7 @@ trait TraderTrait
      * Moving Average Convergence/Divergence Fix 12/26
      *
      * @param array    $real         Array of real values.
-     * @param int|null $signalPeriod Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1645,8 +1645,8 @@ trait TraderTrait
      * MESA Adaptive Moving Average
      *
      * @param array      $real      Array of real values.
-     * @param float|null $fastLimit Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
-     * @param float|null $slowLimit Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+     * @param float|null $fastLimit [OPTIONAL] Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+     * @param float|null $slowLimit [OPTIONAL] Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1660,9 +1660,9 @@ trait TraderTrait
      *
      * @param array    $real      Array of real values.
      * @param array    $periods   Array of real values.
-     * @param int|null $minPeriod Value less than minimum will be changed to Minimum period. Valid range from 2 to 100000
-     * @param int|null $maxPeriod Value higher than maximum will be changed to Maximum period. Valid range from 2 to 100000
-     * @param int|null $mAType    Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $minPeriod [OPTIONAL] Value less than minimum will be changed to Minimum period. Valid range from 2 to 100000
+     * @param int|null $maxPeriod [OPTIONAL] Value higher than maximum will be changed to Maximum period. Valid range from 2 to 100000
+     * @param int|null $mAType    [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1675,7 +1675,7 @@ trait TraderTrait
      * Highest value over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1688,7 +1688,7 @@ trait TraderTrait
      * Index of highest value over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1717,7 +1717,7 @@ trait TraderTrait
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
      * @param array $volume     Volume traded, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1730,7 +1730,7 @@ trait TraderTrait
      * MidPoint over period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1744,7 +1744,7 @@ trait TraderTrait
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1757,7 +1757,7 @@ trait TraderTrait
      * Lowest value over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1770,7 +1770,7 @@ trait TraderTrait
      * Index of lowest value over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1783,7 +1783,7 @@ trait TraderTrait
      * Lowest and highest values over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1796,7 +1796,7 @@ trait TraderTrait
      * Indexes of lowest and highest values over a specified period
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1811,7 +1811,7 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1825,7 +1825,7 @@ trait TraderTrait
      *
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1838,7 +1838,7 @@ trait TraderTrait
      * Momentum
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1867,7 +1867,7 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1895,7 +1895,7 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1909,7 +1909,7 @@ trait TraderTrait
      *
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
-     * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1922,9 +1922,9 @@ trait TraderTrait
      * Percentage Price Oscillator
      *
      * @param array    $real       Array of real values.
-     * @param int|null $fastPeriod Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $mAType     Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int|null $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1937,7 +1937,7 @@ trait TraderTrait
      * Rate of change : ((price/prevPrice)-1)*100
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1950,7 +1950,7 @@ trait TraderTrait
      * Rate of change Percentage: (price-prevPrice)/prevPrice
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1963,7 +1963,7 @@ trait TraderTrait
      * Rate of change ratio 100 scale: (price/prevPrice)*100
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1976,7 +1976,7 @@ trait TraderTrait
      * Rate of change ratio: (price/prevPrice)
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -1989,7 +1989,7 @@ trait TraderTrait
      * Relative Strength Index
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2003,8 +2003,8 @@ trait TraderTrait
      *
      * @param array      $high         High price, array of real values.
      * @param array      $low          Low price, array of real values.
-     * @param float|null $acceleration Acceleration Factor used up to the Maximum value. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $maximum      Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $acceleration [OPTIONAL] Acceleration Factor used up to the Maximum value. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $maximum      [OPTIONAL] Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2018,14 +2018,14 @@ trait TraderTrait
      *
      * @param array      $high                  High price, array of real values.
      * @param array      $low                   Low price, array of real values.
-     * @param float|null $startValue            Start value and direction. 0 for Auto, >0 for Long, <0 for Short. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param float|null $offsetOnReverse       Percent offset added/removed to initial stop on short/long reversal. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationInitLong  Acceleration Factor initial value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationLong      Acceleration Factor for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationMaxLong   Acceleration Factor maximum value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationInitShort Acceleration Factor initial value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationShort     Acceleration Factor for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationMaxShort  Acceleration Factor maximum value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $startValue            [OPTIONAL] Start value and direction. 0 for Auto, >0 for Long, <0 for Short. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param float|null $offsetOnReverse       [OPTIONAL] Percent offset added/removed to initial stop on short/long reversal. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationInitLong  [OPTIONAL] Acceleration Factor initial value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationLong      [OPTIONAL] Acceleration Factor for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationMaxLong   [OPTIONAL] Acceleration Factor maximum value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationInitShort [OPTIONAL] Acceleration Factor initial value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationShort     [OPTIONAL] Acceleration Factor for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float|null $accelerationMaxShort  [OPTIONAL] Acceleration Factor maximum value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2087,7 +2087,7 @@ trait TraderTrait
      * Simple Moving Average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2113,8 +2113,8 @@ trait TraderTrait
      * Standard Deviation
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
-     * @param float    $nbDev
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param float    $nbDev      [OPTIONAL]
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2129,11 +2129,11 @@ trait TraderTrait
      * @param array    $high         High price, array of real values.
      * @param array    $low          Low price, array of real values.
      * @param array    $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastK_Period Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $slowK_Period Smoothing for making the Slow-K line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $slowK_MAType Type of Moving Average for Slow-K. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $slowD_Period Smoothing for making the Slow-D line. Valid range from 1 to 100000.
-     * @param int|null $slowD_MAType Type of Moving Average for Slow-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int|null $slowK_Period [OPTIONAL] Smoothing for making the Slow-K line. Valid range from 1 to 100000, usually set to 3.
+     * @param int|null $slowK_MAType [OPTIONAL] Type of Moving Average for Slow-K. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $slowD_Period [OPTIONAL] Smoothing for making the Slow-D line. Valid range from 1 to 100000.
+     * @param int|null $slowD_MAType [OPTIONAL] Type of Moving Average for Slow-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2148,9 +2148,9 @@ trait TraderTrait
      * @param array    $high         High price, array of real values.
      * @param array    $low          Low price, array of real values.
      * @param array    $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastK_Period Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastD_Period Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $fastD_MAType Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int|null $fastD_Period [OPTIONAL] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
+     * @param int|null $fastD_MAType [OPTIONAL] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2163,10 +2163,10 @@ trait TraderTrait
      * Stochastic Relative Strength Index
      *
      * @param array    $real         Array of real values.
-     * @param int|null $timePeriod   Number of period. Valid range from 2 to 100000.
-     * @param int|null $fastK_Period Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastD_Period Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $fastD_MAType Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int|null $timePeriod   [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int|null $fastD_Period [OPTIONAL] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
+     * @param int|null $fastD_MAType [OPTIONAL] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2193,7 +2193,7 @@ trait TraderTrait
      * Summation
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2206,8 +2206,8 @@ trait TraderTrait
      * Triple Exponential Moving Average (T3)
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
-     * @param float    $vFactor    Volume Factor. Valid range from 1 to 0.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param float    $vFactor    [OPTIONAL] Volume Factor. Valid range from 1 to 0.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2246,7 +2246,7 @@ trait TraderTrait
      * Triple Exponential Moving Average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2273,7 +2273,7 @@ trait TraderTrait
      * Triangular Moving Average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2286,7 +2286,7 @@ trait TraderTrait
      * 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2299,7 +2299,7 @@ trait TraderTrait
      * Time Series Forecast
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2328,9 +2328,9 @@ trait TraderTrait
      * @param array    $high        High price, array of real values.
      * @param array    $low         Low price, array of real values.
      * @param array    $close       Closing price, array of real values.
-     * @param int|null $timePeriod1 Number of bars for 1st period. Valid range from 1 to 100000.
-     * @param int|null $timePeriod2 Number of bars for 2nd period. Valid range from 1 to 100000.
-     * @param int|null $timePeriod3 Number of bars for 3rd period. Valid range from 1 to 100000.
+     * @param int|null $timePeriod1 [OPTIONAL] Number of bars for 1st period. Valid range from 1 to 100000.
+     * @param int|null $timePeriod2 [OPTIONAL] Number of bars for 2nd period. Valid range from 1 to 100000.
+     * @param int|null $timePeriod3 [OPTIONAL] Number of bars for 3rd period. Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2343,8 +2343,8 @@ trait TraderTrait
      * Variance
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
-     * @param float    $nbDev
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param float    $nbDev      [OPTIONAL]
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2370,10 +2370,10 @@ trait TraderTrait
     /**
      * Williams' %R
      *
-     * @param array $high  High price, array of real values.
-     * @param array $low   Low price, array of real values.
-     * @param array $close Closing price, array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param array    $high       High price, array of real values.
+     * @param array    $low        Low price, array of real values.
+     * @param array    $close      Closing price, array of real values.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2386,7 +2386,7 @@ trait TraderTrait
      * Weighted Moving Average
      *
      * @param array    $real       Array of real values.
-     * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
+     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
@@ -2394,6 +2394,5 @@ trait TraderTrait
     {
         return trader_wma($real, $timePeriod);
     }
-
 
 }
