@@ -18,6 +18,7 @@ class Trader
 
     /**
      * Vector arc cosine
+     *
      * Calculates the arc cosine for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -26,7 +27,7 @@ class Trader
      */
     public static function mathArcCosine(array $real): array
     {
-        return trader_acos($real);
+        return static::acos($real);
     }
 
     /**
@@ -50,7 +51,7 @@ class Trader
      */
     public static function chaikinAccumulationDistributionLine(array $high, array $low, array $close, array $volume): array
     {
-        return trader_ad($high, $low, $close, $volume);
+        return static::ad($high, $low, $close, $volume);
     }
 
     /**
@@ -63,7 +64,7 @@ class Trader
      */
     public static function mathAddition(array $real0, array $real1): array
     {
-        return trader_add($real0, $real1);
+        return static::add($real0, $real1);
     }
 
     /**
@@ -89,7 +90,7 @@ class Trader
      */
     public static function chaikinAccumulationDistributionOscillator(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
     {
-        return trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
+        return static::adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
     }
 
     /**
@@ -115,11 +116,17 @@ class Trader
      */
     public static function averageDirectionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_adx($high, $low, $close, $timePeriod);
+        return static::adx($high, $low, $close, $timePeriod);
     }
 
     /**
      * Average Directional Movement Index Rating
+     *
+     * The Average Directional Movement Index Rating (ADXR) measures the strength of the Average Directional Movement Index (ADX).
+     * It's calculated by taking the average of the current ADX and the ADX from one time period before (time periods can vary, but the most typical period used is 14 days).
+     *
+     * Like the ADX, the ADXR ranges from values of 0 to 100 and reflects strengthening and weakening trends.
+     * However, because it represents an average of ADX, values don't fluctuate as dramatically and some analysts believe the indicator helps better display trends in volatile markets.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -130,11 +137,20 @@ class Trader
      */
     public static function averageDirectionalMovementIndexRating(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_adxr($high, $low, $close, $timePeriod);
+        return static::adxr($high, $low, $close, $timePeriod);
     }
 
     /**
      * Absolute Price Oscillator
+     *
+     * The Absolute Price Oscillator (APO) is based on the absolute differences between two moving averages of different lengths, a ‘Fast’ and a ‘Slow’ moving average.
+     * A positive indicator value indicates an upward movement, while negative readings signal a downward trend.
+     *
+     * Divergences form when a new high or low in price is not confirmed by the Absolute Price Oscillator (APO).
+     * A bullish divergence forms when price make a lower low, but the APO forms a higher low.
+     * This indicates less downward momentum that could foreshadow a bullish reversal.
+     * A bearish divergence forms when price makes a higher high, but the APO forms a lower high.
+     * This shows less upward momentum that could foreshadow a bearish reversal.
      *
      * @param array    $real       Array of real values.
      * @param int|null $fastPeriod Number of period for the fast MA. Valid range from 2 to 100000.
@@ -145,11 +161,17 @@ class Trader
      */
     public static function absolutePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
-        return trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
+        return static::apo($real, $fastPeriod, $slowPeriod, $mAType);
     }
 
     /**
      * Aroon
+     *
+     * The Aroon indicator was developed by Tushar Chande in 1995.
+     *
+     * Both the Aroon up and the Aroon down fluctuate between zero and 100, with values close to 100 indicating a strong trend, and zero indicating a weak trend.
+     * The lower the Aroon up, the weaker the uptrend and the stronger the downtrend, and vice versa.
+     * The main assumption underlying this indicator is that a stock's price will close at record highs in an uptrend, and record lows in a downtrend.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -159,11 +181,14 @@ class Trader
      */
     public static function aroon(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_aroon($high, $low, $timePeriod);
+        return static::aroon($high, $low, $timePeriod);
     }
 
     /**
      * Aroon Oscillator
+     *
+     * The Aroon oscillator is calculated by subtracting Aroon down from Aroon up.
+     * Readings above zero indicate that an uptrend is present, while readings below zero indicate that a downtrend is present.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -173,11 +198,12 @@ class Trader
      */
     public static function arronOscillator(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_aroonosc($high, $low, $timePeriod);
+        return static::aroonosc($high, $low, $timePeriod);
     }
 
     /**
      * Vector Trigonometric ASin
+     *
      * Calculates the arc sine for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -186,11 +212,12 @@ class Trader
      */
     public static function mathArcSine(array $real): array
     {
-        return trader_asin($real);
+        return static::asin($real);
     }
 
     /**
      * Vector Trigonometric ATan
+     *
      * Calculates the arc tangent for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -199,11 +226,18 @@ class Trader
      */
     public static function mathArcTangent(array $real): array
     {
-        return trader_atan($real);
+        return static::atan($real);
     }
 
     /**
      * Average True Range
+     *
+     * The average true range (ATR) is a measure of volatility introduced by Welles Wilder in his book, "New Concepts in Technical Trading Systems."
+     * The true range indicator is the greatest of the following:
+     *      current high less the current low,
+     *      the absolute value of the current high less the previous close,
+     *      and the absolute value of the current low less the previous close.
+     * The average true range is a moving average, generally 14 days, of the true ranges.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -214,11 +248,14 @@ class Trader
      */
     public static function averageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_atr($high, $low, $close, $timePeriod);
+        return static::atr($high, $low, $close, $timePeriod);
     }
 
     /**
      * Average Price
+     *
+     * An average price is a representative measure of a range of prices that is calculated by taking the sum of the values and dividing it by the number of prices being examined.
+     * The average price reduces the range into a single value, which can then be compared to any point to determine if the value is higher or lower than what would be expected.
      *
      * @param array $open  Opening price, array of real values.
      * @param array $high  High price, array of real values.
@@ -229,11 +266,17 @@ class Trader
      */
     public static function averagePrice(array $open, array $high, array $low, array $close): array
     {
-        return trader_avgprice($open, $high, $low, $close);
+        return static::avgprice($open, $high, $low, $close);
     }
 
     /**
      * Bollinger Bands
+     *
+     * A Bollinger Band® is a band plotted two standard deviations away from a simple moving average, developed by famous technical trader John Bollinger.
+     *
+     * Because standard deviation is a measure of volatility, Bollinger Bands® adjust themselves to the market conditions.
+     * When the markets become more volatile, the bands widen (move further away from the average), and during less volatile periods, the bands contract (move closer to the average).
+     * The tightening of the bands is often used by technical traders as an early indication that the volatility is about to increase sharply.
      *
      * @param array      $real       Array of real values.
      * @param int|null   $timePeriod Number of period. Valid range from 2 to 100000.
@@ -245,11 +288,19 @@ class Trader
      */
     public static function bollingerBands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
     {
-        return trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
+        return static::bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
     }
 
     /**
      * Beta
+     *
+     * Beta is a measure of the volatility, or systematic risk, of a security or a portfolio in comparison to the market as a whole.
+     * Beta is used in the capital asset pricing model (CAPM), which calculates the expected return of an asset based on its beta and expected market returns.
+     * Beta is also known as the beta coefficient.
+     *
+     * A beta of 1 indicates that the security's price moves with the market.
+     * A beta of less than 1 means that the security is theoretically less volatile than the market.
+     * A beta of greater than 1 indicates that the security's price is theoretically more volatile than the market.
      *
      * @param array    $real0      Array of real values.
      * @param array    $real1      Array of real values.
@@ -259,7 +310,7 @@ class Trader
      */
     public static function beta(array $real0, array $real1, integer $timePeriod = null): array
     {
-        return trader_beta($real0, $real1, $timePeriod);
+        return static::beta($real0, $real1, $timePeriod);
     }
 
     /**
@@ -274,11 +325,14 @@ class Trader
      */
     public static function balanceOfPower(array $open, array $high, array $low, array $close): array
     {
-        return trader_bop($open, $high, $low, $close);
+        return static::bop($open, $high, $low, $close);
     }
 
     /**
      * Commodity Channel Index
+     *
+     * An oscillator used in technical analysis to help determine when an investment vehicle has been overbought and oversold.
+     * The Commodity Channel Index, first developed by Donald Lambert, quantifies the relationship between the asset's price, a moving average (MA) of the asset's price, and normal deviations (D) from that average.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -289,7 +343,7 @@ class Trader
      */
     public static function commodityChannelIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_cci($high, $low, $close, $timePeriod);
+        return static::cci($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -304,7 +358,7 @@ class Trader
      */
     public static function candleTwoCrows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl2crows($open, $high, $low, $close);
+        return static::cdl2crows($open, $high, $low, $close);
     }
 
     /**
@@ -319,7 +373,7 @@ class Trader
      */
     public static function candleThreeBlackCrows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3blackcrows($open, $high, $low, $close);
+        return static::cdl3blackcrows($open, $high, $low, $close);
     }
 
     /**
@@ -334,7 +388,7 @@ class Trader
      */
     public static function candleThreeInsideUpDown(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3inside($open, $high, $low, $close);
+        return static::cdl3inside($open, $high, $low, $close);
     }
 
     /**
@@ -349,7 +403,7 @@ class Trader
      */
     public static function candleThreeLineStrike(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3linestrike($open, $high, $low, $close);
+        return static::cdl3linestrike($open, $high, $low, $close);
     }
 
     /**
@@ -364,7 +418,7 @@ class Trader
      */
     public static function candleThreeOutsideUpDown(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3outside($open, $high, $low, $close);
+        return static::cdl3outside($open, $high, $low, $close);
     }
 
     /**
@@ -379,7 +433,7 @@ class Trader
      */
     public static function candleThreeStarsInTheSouth(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3starsinsouth($open, $high, $low, $close);
+        return static::cdl3starsinsouth($open, $high, $low, $close);
     }
 
     /**
@@ -394,7 +448,7 @@ class Trader
      */
     public static function candleThreeWhiteSoldiers(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3whitesoldiers($open, $high, $low, $close);
+        return static::cdl3whitesoldiers($open, $high, $low, $close);
     }
 
     /**
@@ -410,7 +464,7 @@ class Trader
      */
     public static function candleAbandonedBaby(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
+        return static::cdlabandonedbaby($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -425,7 +479,7 @@ class Trader
      */
     public static function candleAdvanceBlock(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdladvanceblock($open, $high, $low, $close);
+        return static::cdladvanceblock($open, $high, $low, $close);
     }
 
     /**
@@ -440,7 +494,7 @@ class Trader
      */
     public static function candleBeltHold(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlbelthold($open, $high, $low, $close);
+        return static::cdlbelthold($open, $high, $low, $close);
     }
 
     /**
@@ -455,7 +509,7 @@ class Trader
      */
     public static function candleBreakaway(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlbreakaway($open, $high, $low, $close);
+        return static::cdlbreakaway($open, $high, $low, $close);
     }
 
     /**
@@ -470,7 +524,7 @@ class Trader
      */
     public static function candleClosingMarubozu(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlclosingmarubozu($open, $high, $low, $close);
+        return static::cdlclosingmarubozu($open, $high, $low, $close);
     }
 
     /**
@@ -485,7 +539,7 @@ class Trader
      */
     public static function candleConcealingBabySwallow(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlconcealbabyswall($open, $high, $low, $close);
+        return static::cdlconcealbabyswall($open, $high, $low, $close);
     }
 
     /**
@@ -500,7 +554,7 @@ class Trader
      */
     public static function candleCounterattack(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlcounterattack($open, $high, $low, $close);
+        return static::cdlcounterattack($open, $high, $low, $close);
     }
 
     /**
@@ -516,7 +570,7 @@ class Trader
      */
     public static function candleDarkCloudCover(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
+        return static::cdldarkcloudcover($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -531,7 +585,7 @@ class Trader
      */
     public static function candleDoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldoji($open, $high, $low, $close);
+        return static::cdldoji($open, $high, $low, $close);
     }
 
     /**
@@ -546,7 +600,7 @@ class Trader
      */
     public static function candleDojiStar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldojistar($open, $high, $low, $close);
+        return static::cdldojistar($open, $high, $low, $close);
     }
 
     /**
@@ -561,7 +615,7 @@ class Trader
      */
     public static function candleDragonflyDoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldragonflydoji($open, $high, $low, $close);
+        return static::cdldragonflydoji($open, $high, $low, $close);
     }
 
     /**
@@ -576,7 +630,7 @@ class Trader
      */
     public static function candleEngulfingPattern(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlengulfing($open, $high, $low, $close);
+        return static::cdlengulfing($open, $high, $low, $close);
     }
 
     /**
@@ -592,7 +646,7 @@ class Trader
      */
     public static function candleEveningDojiStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
+        return static::cdleveningdojistar($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -608,7 +662,7 @@ class Trader
      */
     public static function candleEveningStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdleveningstar($open, $high, $low, $close, $penetration);
+        return static::cdleveningstar($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -623,7 +677,7 @@ class Trader
      */
     public static function candleUpDownGapsSideBySideWhiteLines(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlgapsidesidewhite($open, $high, $low, $close);
+        return static::cdlgapsidesidewhite($open, $high, $low, $close);
     }
 
     /**
@@ -638,7 +692,7 @@ class Trader
      */
     public static function candleGravestoneDoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlgravestonedoji($open, $high, $low, $close);
+        return static::cdlgravestonedoji($open, $high, $low, $close);
     }
 
     /**
@@ -653,7 +707,7 @@ class Trader
      */
     public static function candleHammer(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhammer($open, $high, $low, $close);
+        return static::cdlhammer($open, $high, $low, $close);
     }
 
     /**
@@ -668,7 +722,7 @@ class Trader
      */
     public static function candleHangingMan(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhangingman($open, $high, $low, $close);
+        return static::cdlhangingman($open, $high, $low, $close);
     }
 
     /**
@@ -683,7 +737,7 @@ class Trader
      */
     public static function candleHarami(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlharami($open, $high, $low, $close);
+        return static::cdlharami($open, $high, $low, $close);
     }
 
     /**
@@ -698,7 +752,7 @@ class Trader
      */
     public static function candleHaramiCross(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlharamicross($open, $high, $low, $close);
+        return static::cdlharamicross($open, $high, $low, $close);
     }
 
     /**
@@ -713,7 +767,7 @@ class Trader
      */
     public static function candleHighWave(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhighwave($open, $high, $low, $close);
+        return static::cdlhighwave($open, $high, $low, $close);
     }
 
     /**
@@ -728,7 +782,7 @@ class Trader
      */
     public static function candleHikkake(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhikkake($open, $high, $low, $close);
+        return static::cdlhikkake($open, $high, $low, $close);
     }
 
     /**
@@ -743,7 +797,7 @@ class Trader
      */
     public static function candleModifiedHikkake(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhikkakemod($open, $high, $low, $close);
+        return static::cdlhikkakemod($open, $high, $low, $close);
     }
 
     /**
@@ -758,7 +812,7 @@ class Trader
      */
     public static function candleHomingPigeon(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhomingpigeon($open, $high, $low, $close);
+        return static::cdlhomingpigeon($open, $high, $low, $close);
     }
 
     /**
@@ -773,7 +827,7 @@ class Trader
      */
     public static function candleIdenticalThreeCrows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlidentical3crows($open, $high, $low, $close);
+        return static::cdlidentical3crows($open, $high, $low, $close);
     }
 
     /**
@@ -788,7 +842,7 @@ class Trader
      */
     public static function candleInNeck(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlinneck($open, $high, $low, $close);
+        return static::cdlinneck($open, $high, $low, $close);
     }
 
     /**
@@ -803,7 +857,7 @@ class Trader
      */
     public static function candleInvertedHammer(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlinvertedhammer($open, $high, $low, $close);
+        return static::cdlinvertedhammer($open, $high, $low, $close);
     }
 
     /**
@@ -818,7 +872,7 @@ class Trader
      */
     public static function candleKicking(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlkicking($open, $high, $low, $close);
+        return static::cdlkicking($open, $high, $low, $close);
     }
 
     /**
@@ -833,7 +887,7 @@ class Trader
      */
     public static function candleKickingByLength(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlkickingbylength($open, $high, $low, $close);
+        return static::cdlkickingbylength($open, $high, $low, $close);
     }
 
     /**
@@ -848,7 +902,7 @@ class Trader
      */
     public static function candleLadderBottom(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlladderbottom($open, $high, $low, $close);
+        return static::cdlladderbottom($open, $high, $low, $close);
     }
 
     /**
@@ -863,7 +917,7 @@ class Trader
      */
     public static function candleLongLeggedDoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdllongleggeddoji($open, $high, $low, $close);
+        return static::cdllongleggeddoji($open, $high, $low, $close);
     }
 
     /**
@@ -878,7 +932,7 @@ class Trader
      */
     public static function candleLongLine(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdllongline($open, $high, $low, $close);
+        return static::cdllongline($open, $high, $low, $close);
     }
 
     /**
@@ -893,7 +947,7 @@ class Trader
      */
     public static function candleMarubozu(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlmarubozu($open, $high, $low, $close);
+        return static::cdlmarubozu($open, $high, $low, $close);
     }
 
     /**
@@ -908,7 +962,7 @@ class Trader
      */
     public static function candleMatchingLow(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlmatchinglow($open, $high, $low, $close);
+        return static::cdlmatchinglow($open, $high, $low, $close);
     }
 
     /**
@@ -924,7 +978,7 @@ class Trader
      */
     public static function candleMatHold(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmathold($open, $high, $low, $close, $penetration);
+        return static::cdlmathold($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -940,7 +994,7 @@ class Trader
      */
     public static function candleMorningDojiStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
+        return static::cdlmorningdojistar($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -956,7 +1010,7 @@ class Trader
      */
     public static function candleMorningStar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmorningstar($open, $high, $low, $close, $penetration);
+        return static::cdlmorningstar($open, $high, $low, $close, $penetration);
     }
 
     /**
@@ -971,7 +1025,7 @@ class Trader
      */
     public static function candleOnNeck(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlonneck($open, $high, $low, $close);
+        return static::cdlonneck($open, $high, $low, $close);
     }
 
     /**
@@ -986,7 +1040,7 @@ class Trader
      */
     public static function candlePiercing(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlpiercing($open, $high, $low, $close);
+        return static::cdlpiercing($open, $high, $low, $close);
     }
 
     /**
@@ -1001,7 +1055,7 @@ class Trader
      */
     public static function candleRickshawMan(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlrickshawman($open, $high, $low, $close);
+        return static::cdlrickshawman($open, $high, $low, $close);
     }
 
     /**
@@ -1016,7 +1070,7 @@ class Trader
      */
     public static function candleRisingFallingThreeMethods(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlrisefall3methods($open, $high, $low, $close);
+        return static::cdlrisefall3methods($open, $high, $low, $close);
     }
 
     /**
@@ -1031,7 +1085,7 @@ class Trader
      */
     public static function candleSeparatingLines(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlseparatinglines($open, $high, $low, $close);
+        return static::cdlseparatinglines($open, $high, $low, $close);
     }
 
     /**
@@ -1046,7 +1100,7 @@ class Trader
      */
     public static function candleShootingStar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlshootingstar($open, $high, $low, $close);
+        return static::cdlshootingstar($open, $high, $low, $close);
     }
 
     /**
@@ -1061,7 +1115,7 @@ class Trader
      */
     public static function candleShortLine(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlshortline($open, $high, $low, $close);
+        return static::cdlshortline($open, $high, $low, $close);
     }
 
     /**
@@ -1076,7 +1130,7 @@ class Trader
      */
     public static function candleSpinningTop(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlspinningtop($open, $high, $low, $close);
+        return static::cdlspinningtop($open, $high, $low, $close);
     }
 
     /**
@@ -1091,7 +1145,7 @@ class Trader
      */
     public static function candleStalled(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlstalledpattern($open, $high, $low, $close);
+        return static::cdlstalledpattern($open, $high, $low, $close);
     }
 
     /**
@@ -1106,7 +1160,7 @@ class Trader
      */
     public static function candleStickSandwich(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlsticksandwich($open, $high, $low, $close);
+        return static::cdlsticksandwich($open, $high, $low, $close);
     }
 
     /**
@@ -1121,7 +1175,7 @@ class Trader
      */
     public static function candleTakuri(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltakuri($open, $high, $low, $close);
+        return static::cdltakuri($open, $high, $low, $close);
     }
 
     /**
@@ -1136,7 +1190,7 @@ class Trader
      */
     public static function candleTasukiGap(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltasukigap($open, $high, $low, $close);
+        return static::cdltasukigap($open, $high, $low, $close);
     }
 
     /**
@@ -1151,7 +1205,7 @@ class Trader
      */
     public static function candleThrusting(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlthrusting($open, $high, $low, $close);
+        return static::cdlthrusting($open, $high, $low, $close);
     }
 
     /**
@@ -1166,7 +1220,7 @@ class Trader
      */
     public static function candleTristar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltristar($open, $high, $low, $close);
+        return static::cdltristar($open, $high, $low, $close);
     }
 
     /**
@@ -1181,7 +1235,7 @@ class Trader
      */
     public static function candleUniqueThreeRiver(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlunique3river($open, $high, $low, $close);
+        return static::cdlunique3river($open, $high, $low, $close);
     }
 
     /**
@@ -1196,7 +1250,7 @@ class Trader
      */
     public static function candleUpsideGapTwoCrows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlupsidegap2crows($open, $high, $low, $close);
+        return static::cdlupsidegap2crows($open, $high, $low, $close);
     }
 
     /**
@@ -1211,11 +1265,12 @@ class Trader
      */
     public static function candleUpsideDownsideGapThreeMethods(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlxsidegap3methods($open, $high, $low, $close);
+        return static::cdlxsidegap3methods($open, $high, $low, $close);
     }
 
     /**
      * Vector Ceil
+     *
      * Calculates the next highest integer for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1224,11 +1279,15 @@ class Trader
      */
     public static function mathCeiling(array $real): array
     {
-        return trader_ceil($real);
+        return static::ceil($real);
     }
 
     /**
      * Chande Momentum Oscillator
+     *
+     * A technical momentum indicator invented by the technical analyst Tushar Chande.
+     * It is created by calculating the difference between the sum of all recent gains and the sum of all recent losses and then dividing the result by the sum of all price movement over the period.
+     * This oscillator is similar to other momentum indicators such as the Relative Strength Index and the Stochastic Oscillator because it is range bounded (+100 and -100).
      *
      * @param array $real       Array of real values.
      * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
@@ -1237,11 +1296,13 @@ class Trader
      */
     public static function chandeMomentumOscillator(array $real, integer $timePeriod): array
     {
-        return trader_cmo($real, $timePeriod);
+        return static::cmo($real, $timePeriod);
     }
 
     /**
      * Pearson's Correlation Coefficient (r)
+     *
+     * A type of correlation coefficient that represents the relationship between two variables that are measured on the same interval or ratio scale.
      *
      * @param array    $real0      Array of real values.
      * @param array    $real1      Array of real values.
@@ -1251,11 +1312,12 @@ class Trader
      */
     public static function pearsonCorrelationCoefficient(array $real0, array $real1, integer $timePeriod = null): array
     {
-        return trader_correl($real0, $real1, $timePeriod);
+        return static::correl($real0, $real1, $timePeriod);
     }
 
     /**
      * Vector Trigonometric Cos
+     *
      * Calculates the cosine for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1264,11 +1326,12 @@ class Trader
      */
     public static function mathCosine(array $real): array
     {
-        return trader_cos($real);
+        return static::cos($real);
     }
 
     /**
      * Vector Trigonometric Cosh
+     *
      * Calculates the hyperbolic cosine for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1277,11 +1340,14 @@ class Trader
      */
     public static function mathHyperbolicCosine(array $real): array
     {
-        return trader_cosh($real);
+        return static::cosh($real);
     }
 
     /**
      * Double Exponential Moving Average
+     *
+     * A technical indicator developed by Patrick Mulloy that first appeared in the February, 1994 Technical Analysis of Stocks & Commodities.
+     * The DEMA is a calculation based on both a single exponential moving average (EMA) and a double EMA.
      *
      * @param array $real       Array of real values.
      * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
@@ -1290,11 +1356,12 @@ class Trader
      */
     public static function doubleExponentialMovingAverage(array $real, integer $timePeriod): array
     {
-        return trader_dema($real, $timePeriod);
+        return static::dema($real, $timePeriod);
     }
 
     /**
      * Vector Arithmetic Div
+     *
      * Divides each value from real0 by the corresponding value from real1 and returns the resulting array.
      *
      * @param array $real0 Array of real values.
@@ -1304,11 +1371,14 @@ class Trader
      */
     public static function mathDivision(array $real0, array $real1): array
     {
-        return trader_div($real0, $real1);
+        return static::div($real0, $real1);
     }
 
     /**
      * Directional Movement Index
+     *
+     * The directional movement index (DMI) is an indicator developed by J. Welles Wilder for identifying when a definable trend is present in an instrument.
+     * That is, the DMI tells whether an instrument is trending or not.
      *
      * @param array    $high       High price, array of real values.
      * @param array    $low        Low price, array of real values.
@@ -1319,11 +1389,15 @@ class Trader
      */
     public static function directionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_dx($high, $low, $close, $timePeriod);
+        return static::dx($high, $low, $close, $timePeriod);
     }
 
     /**
      * Exponential Moving Average
+     *
+     * An exponential moving average (EMA) is a type of moving average that is similar to a simple moving average, except that more weight is given to the latest data.
+     * It's also known as the exponentially weighted moving average.
+     * This type of moving average reacts faster to recent price changes than a simple moving average.
      *
      * @param array $real       Array of real values.
      * @param int   $timePeriod Number of period. Valid range from 2 to 100000.
@@ -1332,22 +1406,24 @@ class Trader
      */
     public static function exponentialMovingAverage(array $real, integer $timePeriod): array
     {
-        return trader_ema($real, $timePeriod);
+        return static::ema($real, $timePeriod);
     }
 
     /**
      * Get error code
+     *
      * Get error code of the last operation.
      *
      * @return int Returns the error code identified by one of the TRADER_ERR_* constants.
      */
     public static function errorNumber(): integer
     {
-        return trader_errno();
+        return static::errno();
     }
 
     /**
      * Vector Arithmetic Exp
+     *
      * Calculates e raised to the power of each value in real. Returns an array with the calculated data.
      *
      * @param array $real Array of real values.
@@ -1356,11 +1432,12 @@ class Trader
      */
     public static function mathExponent(array $real): array
     {
-        return trader_exp($real);
+        return static::exp($real);
     }
 
     /**
      * Vector Floor
+     *
      * Calculates the next lowest integer for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1369,22 +1446,24 @@ class Trader
      */
     public static function mathFloor(array $real): array
     {
-        return trader_floor($real);
+        return static::floor($real);
     }
 
     /**
      * Get compatibility mode
+     *
      * Get compatibility mode which affects the way calculations are done by all the extension functions.
      *
      * @return int Returns the compatibility mode id which can be identified by TRADER_COMPATIBILITY_* series of constants.
      */
     public static function getCompatibilityMode(): integer
     {
-        return trader_get_compat();
+        return static::get_compat();
     }
 
     /**
      * Get unstable period
+     *
      * Get unstable period factor for a particular function.
      *
      * @param int $functionId Function ID the factor to be read for. TRADER_FUNC_UNST_* series of constants should be used.
@@ -1393,7 +1472,7 @@ class Trader
      */
     public static function getUnstablePeriod(integer $functionId): integer
     {
-        return trader_get_unstable_period($functionId);
+        return static::get_unstable_period($functionId);
     }
 
     /**
@@ -1405,7 +1484,7 @@ class Trader
      */
     public static function hilbertTransformDominantCyclePeriod(array $real): array
     {
-        return trader_ht_dcperiod($real);
+        return static::ht_dcperiod($real);
     }
 
     /**
@@ -1417,7 +1496,7 @@ class Trader
      */
     public static function hilbertTransformDominantCyclePhase(array $real): array
     {
-        return trader_ht_dcphase($real);
+        return static::ht_dcphase($real);
     }
 
     /**
@@ -1429,7 +1508,7 @@ class Trader
      */
     public static function hilbertTransformPhasorComponents(array $real): array
     {
-        return trader_ht_phasor($real);
+        return static::ht_phasor($real);
     }
 
     /**
@@ -1441,7 +1520,7 @@ class Trader
      */
     public static function hilbertTransformSineWave(array $real): array
     {
-        return trader_ht_sine($real);
+        return static::ht_sine($real);
     }
 
     /**
@@ -1453,7 +1532,7 @@ class Trader
      */
     public static function hilbertTransformInstantaneousTrendLine(array $real): array
     {
-        return trader_ht_trendline($real);
+        return static::ht_trendline($real);
     }
 
     /**
@@ -1465,11 +1544,16 @@ class Trader
      */
     public static function hilbertTransformTrendVsCycleMode(array $real): array
     {
-        return trader_ht_trendmode($real);
+        return static::ht_trendmode($real);
     }
 
     /**
      * Kaufman Adaptive Moving Average
+     *
+     * Developed by Perry Kaufman, Kaufman's Adaptive Moving Average (KAMA) is a moving average designed to account for market noise or volatility.
+     * KAMA will closely follow prices when the price swings are relatively small and the noise is low.
+     * KAMA will adjust when the price swings widen and follow prices from a greater distance.
+     * This trend-following indicator can be used to identify the overall trend, time turning points and filter price movements.
      *
      * @param array    $real       Array of real values.
      * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
@@ -1478,7 +1562,7 @@ class Trader
      */
     public static function kaufmanAdaptiveMovingAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_kama($real, $timePeriod);
+        return static::kama($real, $timePeriod);
     }
 
     /**
@@ -1489,13 +1573,13 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearRegressionAnlge(array $real, integer $timePeriod = null): array
+    public static function linearRegressionAngle(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_angle($real, $timePeriod);
+        return static::linearreg_angle($real, $timePeriod);
     }
 
     /**
-     * Linear Regression Angle
+     * Linear Regression Intercept
      *
      * @param array    $real       Array of real values.
      * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
@@ -1504,7 +1588,7 @@ class Trader
      */
     public static function linearRegressionIntercept(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_intercept($real, $timePeriod);
+        return static::linearreg_intercept($real, $timePeriod);
     }
 
     /**
@@ -1517,7 +1601,7 @@ class Trader
      */
     public static function linearRegressionSlope(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_slope($real, $timePeriod);
+        return static::linearreg_slope($real, $timePeriod);
     }
 
     /**
@@ -1530,11 +1614,12 @@ class Trader
      */
     public static function linearRegression(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg($real, $timePeriod);
+        return static::linearreg($real, $timePeriod);
     }
 
     /**
      * Vector Log Natural
+     *
      * Calculates the natural logarithm for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1543,11 +1628,12 @@ class Trader
      */
     public static function mathLogarithmNatural(array $real): array
     {
-        return trader_ln($real);
+        return static::ln($real);
     }
 
     /**
      * Vector Log10
+     *
      * Calculates the base-10 logarithm for each value in real and returns the resulting array.
      *
      * @param array $real Array of real values.
@@ -1556,7 +1642,7 @@ class Trader
      */
     public static function mathLogarithmBase10(array $real): array
     {
-        return trader_log10($real);
+        return static::log10($real);
     }
 
     /**
@@ -1570,7 +1656,7 @@ class Trader
      */
     public static function movingAverage(array $real, integer $timePeriod = null, integer $mAType = null): array
     {
-        return trader_ma($real, $timePeriod, $mAType);
+        return static::ma($real, $timePeriod, $mAType);
     }
 
     /**
@@ -1585,7 +1671,7 @@ class Trader
      */
     public static function movingAverageConvergenceDivergence(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
     {
-        return trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
+        return static::macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
     }
 
     /**
@@ -1602,7 +1688,7 @@ class Trader
      */
     public static function movingAverageConvergenceDivergenceExtended(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
     {
-        return trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
+        return static::macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
     }
 
     /**
@@ -1615,7 +1701,7 @@ class Trader
      */
     public static function movingAverageConvergenceDivergenceFixed(array $real, integer $signalPeriod = null): array
     {
-        return trader_macd($real, $signalPeriod);
+        return static::macd($real, $signalPeriod);
     }
 
     /**
@@ -1629,7 +1715,7 @@ class Trader
      */
     public static function mesaAdaptiveMovingAverage(array $real, float $fastLimit = null, float $slowLimit = null): array
     {
-        return trader_mama($real, $fastLimit, $slowLimit);
+        return static::mama($real, $fastLimit, $slowLimit);
     }
 
     /**
@@ -1645,7 +1731,7 @@ class Trader
      */
     public static function movingAverageVariablePeriod(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
     {
-        return trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
+        return static::mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
     }
 
     /**
@@ -1658,7 +1744,7 @@ class Trader
      */
     public static function mathMax(array $real, integer $timePeriod = null): array
     {
-        return trader_max($real, $timePeriod);
+        return static::max($real, $timePeriod);
     }
 
     /**
@@ -1671,7 +1757,7 @@ class Trader
      */
     public static function mathMaxIndex(array $real, integer $timePeriod = null): array
     {
-        return trader_maxindex($real, $timePeriod);
+        return static::maxindex($real, $timePeriod);
     }
 
     /**
@@ -1684,7 +1770,7 @@ class Trader
      */
     public static function mathMedianPrice(array $high, array $low): array
     {
-        return trader_medprice($high, $low);
+        return static::medprice($high, $low);
     }
 
     /**
@@ -1700,7 +1786,7 @@ class Trader
      */
     public static function moneyFlowIndex(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
     {
-        return trader_mfi($high, $low, $close, $volume, $timePeriod);
+        return static::mfi($high, $low, $close, $volume, $timePeriod);
     }
 
     /**
@@ -1713,7 +1799,7 @@ class Trader
      */
     public static function midpoint(array $real, integer $timePeriod = null): array
     {
-        return trader_midpoint($real, $timePeriod);
+        return static::midpoint($real, $timePeriod);
     }
 
     /**
@@ -1727,7 +1813,7 @@ class Trader
      */
     public static function midpointPrice(array $high, array $low, integer $timePeriod = null)
     {
-        return trader_midprice($high, $low, $timePeriod);
+        return static::midprice($high, $low, $timePeriod);
     }
 
     /**
@@ -1740,7 +1826,7 @@ class Trader
      */
     public static function mathMin(array $real, integer $timePeriod = null): array
     {
-        return trader_min($real, $timePeriod);
+        return static::min($real, $timePeriod);
     }
 
     /**
@@ -1753,7 +1839,7 @@ class Trader
      */
     public static function mathMinIndex(array $real, integer $timePeriod = null): array
     {
-        return trader_minindex($real, $timePeriod);
+        return static::minindex($real, $timePeriod);
     }
 
     /**
@@ -1766,7 +1852,7 @@ class Trader
      */
     public static function mathMinMax(array $real, integer $timePeriod = null): array
     {
-        return trader_minmax($real, $timePeriod);
+        return static::minmax($real, $timePeriod);
     }
 
     /**
@@ -1779,7 +1865,7 @@ class Trader
      */
     public static function mathMinMaxIndex(array $real, integer $timePeriod = null): array
     {
-        return trader_minmaxindex($real, $timePeriod);
+        return static::minmaxindex($real, $timePeriod);
     }
 
     /**
@@ -1794,7 +1880,7 @@ class Trader
      */
     public static function minusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_minus_di($high, $low, $close, $timePeriod);
+        return static::minus_di($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -1808,7 +1894,7 @@ class Trader
      */
     public static function minusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_minus_dm($high, $low, $timePeriod);
+        return static::minus_dm($high, $low, $timePeriod);
     }
 
     /**
@@ -1821,7 +1907,7 @@ class Trader
      */
     public static function momentum(array $real, integer $timePeriod = null): array
     {
-        return trader_mom($real, $timePeriod);
+        return static::mom($real, $timePeriod);
     }
 
     /**
@@ -1835,7 +1921,7 @@ class Trader
      */
     public static function mathMultiply(array $real0, array $real1): array
     {
-        return trader_mult($real0, $real1);
+        return static::mult($real0, $real1);
     }
 
     /**
@@ -1850,7 +1936,7 @@ class Trader
      */
     public static function normalizedAverageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_natr($high, $low, $close, $timePeriod);
+        return static::natr($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -1863,7 +1949,7 @@ class Trader
      */
     public static function onBalanceVolume(array $real, array $volume): array
     {
-        return trader_obv($real, $volume);
+        return static::obv($real, $volume);
     }
 
     /**
@@ -1878,7 +1964,7 @@ class Trader
      */
     public static function plusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_plus_di($high, $low, $close, $timePeriod);
+        return static::plus_di($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -1892,7 +1978,7 @@ class Trader
      */
     public static function plusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_plus_dm($high, $low, $timePeriod);
+        return static::plus_dm($high, $low, $timePeriod);
     }
 
     /**
@@ -1907,7 +1993,7 @@ class Trader
      */
     public static function percentagePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
-        return trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
+        return static::ppo($real, $fastPeriod, $slowPeriod, $mAType);
     }
 
     /**
@@ -1920,7 +2006,7 @@ class Trader
      */
     public static function rateOfChange(array $real, integer $timePeriod = null): array
     {
-        return trader_roc($real, $timePeriod);
+        return static::roc($real, $timePeriod);
     }
 
     /**
@@ -1933,7 +2019,7 @@ class Trader
      */
     public static function rateOfChangePercentage(array $real, integer $timePeriod = null): array
     {
-        return trader_rocp($real, $timePeriod);
+        return static::rocp($real, $timePeriod);
     }
 
     /**
@@ -1946,7 +2032,7 @@ class Trader
      */
     public static function rateOfChangeRatio100(array $real, integer $timePeriod = null): array
     {
-        return trader_rocr100($real, $timePeriod);
+        return static::rocr100($real, $timePeriod);
     }
 
     /**
@@ -1959,7 +2045,7 @@ class Trader
      */
     public static function rateOfChangeRatio(array $real, integer $timePeriod = null): array
     {
-        return trader_rocr($real, $timePeriod);
+        return static::rocr($real, $timePeriod);
     }
 
     /**
@@ -1972,7 +2058,7 @@ class Trader
      */
     public static function relativeStrengthIndex(array $real, integer $timePeriod = null): array
     {
-        return trader_rsi($real, $timePeriod);
+        return static::rsi($real, $timePeriod);
     }
 
     /**
@@ -1987,7 +2073,7 @@ class Trader
      */
     public static function parabolicSAR(array $high, array $low, float $acceleration = null, float $maximum = null): array
     {
-        return trader_sar($high, $low, $acceleration, $maximum);
+        return static::sar($high, $low, $acceleration, $maximum);
     }
 
     /**
@@ -2008,7 +2094,7 @@ class Trader
      */
     public static function parabolicSARExtended(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
     {
-        return trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
+        return static::sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
     }
 
     /**
@@ -2019,7 +2105,7 @@ class Trader
      */
     public static function setCompatibilityMode(integer $compatId)
     {
-        return trader_set_compat($compatId);
+        return static::set_compat($compatId);
     }
 
     /**
@@ -2031,7 +2117,7 @@ class Trader
      */
     public static function setUnstablePeriod(integer $functionId, integer $timePeriod)
     {
-        return trader_set_unstable_period($functionId, $timePeriod);
+        return static::set_unstable_period($functionId, $timePeriod);
     }
 
     /**
@@ -2044,7 +2130,7 @@ class Trader
      */
     public static function mathSine(array $real): array
     {
-        return trader_sin($real);
+        return static::sin($real);
     }
 
     /**
@@ -2057,7 +2143,7 @@ class Trader
      */
     public static function mathHyperbolicSine(array $real): array
     {
-        return trader_sinh($real);
+        return static::sinh($real);
     }
 
     /**
@@ -2070,7 +2156,7 @@ class Trader
      */
     public static function simpleMovingAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_sma($real, $timePeriod);
+        return static::sma($real, $timePeriod);
     }
 
     /**
@@ -2083,7 +2169,7 @@ class Trader
      */
     public static function mathSquareRoot(array $real): array
     {
-        return trader_sqrt($real);
+        return static::sqrt($real);
     }
 
     /**
@@ -2097,7 +2183,7 @@ class Trader
      */
     public static function standardDeviation(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
-        return trader_stddev($real, $timePeriod, $nbDev);
+        return static::stddev($real, $timePeriod, $nbDev);
     }
 
     /**
@@ -2116,7 +2202,7 @@ class Trader
      */
     public static function stochastic(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
     {
-        return trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
+        return static::stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
     }
 
     /**
@@ -2133,7 +2219,7 @@ class Trader
      */
     public static function stochasticFast(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
-        return trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
+        return static::stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
 
     /**
@@ -2149,7 +2235,7 @@ class Trader
      */
     public static function stochasticRelativeStrengthIndex(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
-        return trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
+        return static::stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
 
     /**
@@ -2163,7 +2249,7 @@ class Trader
      */
     public static function mathSubtraction(array $real0, array $real1): array
     {
-        return trader_sub($real0, $real1);
+        return static::sub($real0, $real1);
     }
 
     /**
@@ -2176,7 +2262,7 @@ class Trader
      */
     public static function mathSummation(array $real, integer $timePeriod = null): array
     {
-        return trader_sum($real, $timePeriod);
+        return static::sum($real, $timePeriod);
     }
 
     /**
@@ -2190,7 +2276,7 @@ class Trader
      */
     public static function tripleExponentialMovingAverageT3(array $real, integer $timePeriod = null, float $vFactor = null): array
     {
-        return trader_t3($real, $timePeriod, $vFactor);
+        return static::t3($real, $timePeriod, $vFactor);
     }
 
     /**
@@ -2203,7 +2289,7 @@ class Trader
      */
     public static function mathTangent(array $real): array
     {
-        return trader_tan($real);
+        return static::tan($real);
     }
 
     /**
@@ -2216,7 +2302,7 @@ class Trader
      */
     public static function mathHyperbolicTangent(array $real): array
     {
-        return trader_tanh($real);
+        return static::tanh($real);
     }
 
     /**
@@ -2229,7 +2315,7 @@ class Trader
      */
     public static function tripleExponentialMovingAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_tema($real, $timePeriod);
+        return static::tema($real, $timePeriod);
     }
 
     /**
@@ -2243,7 +2329,7 @@ class Trader
      */
     public static function trueRange(array $high, array $low, array $close): array
     {
-        return trader_trange($high, $low, $close);
+        return static::trange($high, $low, $close);
     }
 
     /**
@@ -2256,7 +2342,7 @@ class Trader
      */
     public static function triangularMovingAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_trima($real, $timePeriod);
+        return static::trima($real, $timePeriod);
     }
 
     /**
@@ -2269,7 +2355,7 @@ class Trader
      */
     public static function tripleExponentialAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_trix($real, $timePeriod);
+        return static::trix($real, $timePeriod);
     }
 
     /**
@@ -2282,7 +2368,7 @@ class Trader
      */
     public static function timeSeriesForecast(array $real, integer $timePeriod = null): array
     {
-        return trader_tsf($real, $timePeriod);
+        return static::tsf($real, $timePeriod);
     }
 
     /**
@@ -2296,7 +2382,7 @@ class Trader
      */
     public static function typicalPrice(array $high, array $low, array $close): array
     {
-        return trader_typprice($high, $low, $close);
+        return static::typprice($high, $low, $close);
     }
 
     /**
@@ -2313,7 +2399,7 @@ class Trader
      */
     public static function ultimateOscillator(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
     {
-        return trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
+        return static::ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
     }
 
     /**
@@ -2327,7 +2413,7 @@ class Trader
      */
     public static function variance(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
-        return trader_var($real, $timePeriod, $nbDev);
+        return static::var($real, $timePeriod, $nbDev);
     }
 
     /**
@@ -2341,7 +2427,7 @@ class Trader
      */
     public static function weightedClosePrice(array $high, array $low, array $close): array
     {
-        return trader_wclprice($high, $low, $close);
+        return static::wclprice($high, $low, $close);
     }
 
     /**
@@ -2356,7 +2442,7 @@ class Trader
      */
     public static function williamsR(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_willr($high, $low, $close, $timePeriod);
+        return static::willr($high, $low, $close, $timePeriod);
     }
 
     /**
@@ -2369,7 +2455,7 @@ class Trader
      */
     public static function weightedMovingAverage(array $real, integer $timePeriod = null): array
     {
-        return trader_wma($real, $timePeriod);
+        return static::wma($real, $timePeriod);
     }
 
 
