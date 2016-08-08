@@ -184,24 +184,18 @@ trait TraderTrait
     /**
      * Chaikin A/D Oscillator
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param array    $volume     Volume traded, array of real values.
-     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param array $volume     Volume traded, array of real values.
+     * @param int   $fastPeriod [OPTIONAL] [DEFAULT 3] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int   $slowPeriod [OPTIONAL] [DEFAULT 10] Number of period for the slow MA. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adosc(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
+    public static function adosc(array $high, array $low, array $close, array $volume, integer $fastPeriod = 3, integer $slowPeriod = 10): array
     {
-        if (is_null($fastPeriod)) {
-            $return = trader_adosc($high, $low, $close, $volume);
-        } elseif (is_null($slowPeriod)) {
-            $return = trader_adosc($high, $low, $close, $volume, $fastPeriod);
-        } else {
-            $return = trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
-        }
+        $return = trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
         static::checkForError();
 
         return $return;
@@ -210,20 +204,16 @@ trait TraderTrait
     /**
      * Average Directional Movement Index
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adx(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function adx(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_adx($high, $low, $close);
-        } else {
-            $return = trader_adx($high, $low, $close, $timePeriod);
-        }
+        $return = trader_adx($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -232,20 +222,16 @@ trait TraderTrait
     /**
      * Average Directional Movement Index Rating
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function adxr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function adxr(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_adxr($high, $low, $close);
-        } else {
-            $return = trader_adxr($high, $low, $close, $timePeriod);
-        }
+        $return = trader_adxr($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -254,24 +240,16 @@ trait TraderTrait
     /**
      * Absolute Price Oscillator
      *
-     * @param array    $real       Array of real values.
-     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real       Array of real values.
+     * @param int   $fastPeriod [OPTIONAL] [DEFAULT 12] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int   $slowPeriod [OPTIONAL] [DEFAULT 26] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function apo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function apo(array $real, integer $fastPeriod = 12, integer $slowPeriod = 26, integer $mAType = 0): array
     {
-        if (is_null($fastPeriod)) {
-            $return = trader_apo($real);
-        } elseif (is_null($slowPeriod)) {
-            $return = trader_apo($real, $fastPeriod);
-        } elseif (is_null($mAType)) {
-            $return = trader_apo($real, $fastPeriod, $slowPeriod);
-        } else {
-            $return = trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
-        }
+        $return = trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
         static::checkForError();
 
         return $return;
@@ -280,19 +258,15 @@ trait TraderTrait
     /**
      * Aroon
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function aroon(array $high, array $low, integer $timePeriod = null): array
+    public static function aroon(array $high, array $low, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_aroon($high, $low);
-        } else {
-            $return = trader_aroon($high, $low, $timePeriod);
-        }
+        $return = trader_aroon($high, $low, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -301,19 +275,15 @@ trait TraderTrait
     /**
      * Aroon Oscillator
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function arronosc(array $high, array $low, integer $timePeriod = null): array
+    public static function arronosc(array $high, array $low, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_aroonosc($high, $low);
-        } else {
-            $return = trader_aroonosc($high, $low, $timePeriod);
-        }
+        $return = trader_aroonosc($high, $low, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -354,20 +324,16 @@ trait TraderTrait
     /**
      * Average True Range
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function atr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function atr(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_atr($high, $low, $close);
-        } else {
-            $return = trader_atr($high, $low, $close, $timePeriod);
-        }
+        $return = trader_atr($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -394,27 +360,17 @@ trait TraderTrait
     /**
      * Bollinger Bands
      *
-     * @param array      $real       Array of real values.
-     * @param int|null   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param float|null $nbDevUp    [OPTIONAL] Deviation multiplier for upper band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param float|null $nbDevDn    [OPTIONAL] Deviation multiplier for lower band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param int|null   $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
+     * @param float $nbDevUp    [OPTIONAL] [DEFAULT 2.0] Deviation multiplier for upper band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param float $nbDevDn    [OPTIONAL] [DEFAULT 2.0] Deviation multiplier for lower band. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function bbands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
+    public static function bbands(array $real, integer $timePeriod = 5, float $nbDevUp = 2.0, float $nbDevDn = 2.0, integer $mAType = 0): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_bbands($real);
-        } elseif (is_null($nbDevUp)) {
-            $return = trader_bbands($real, $timePeriod);
-        } elseif (is_null($nbDevDn)) {
-            $return = trader_bbands($real, $timePeriod, $nbDevUp);
-        } elseif (is_null($mAType)) {
-            $return = trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn);
-        } else {
-            $return = trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
-        }
+        $return = trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
         static::checkForError();
 
         return $return;
@@ -423,19 +379,15 @@ trait TraderTrait
     /**
      * Beta
      *
-     * @param array    $real0      Array of real values.
-     * @param array    $real1      Array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real0      Array of real values.
+     * @param array $real1      Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function beta(array $real0, array $real1, integer $timePeriod = null): array
+    public static function beta(array $real0, array $real1, integer $timePeriod = 5): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_beta($real0, $real1);
-        } else {
-            $return = trader_beta($real0, $real1, $timePeriod);
-        }
+        $return = trader_beta($real0, $real1, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -462,20 +414,16 @@ trait TraderTrait
     /**
      * Commodity Channel Index
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cci(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function cci(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_cci($high, $low, $close);
-        } else {
-            $return = trader_cci($high, $low, $close, $timePeriod);
-        }
+        $return = trader_cci($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -614,17 +562,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = 0.3): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdlabandonedbaby($open, $high, $low, $close);
-        } else {
-            $return = trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -745,17 +689,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.5] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = 0.5): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdldarkcloudcover($open, $high, $low, $close);
-        } else {
-            $return = trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -840,17 +780,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = 0.3): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdleveningdojistar($open, $high, $low, $close);
-        } else {
-            $return = trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -863,17 +799,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = 0.3): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdleveningstar($open, $high, $low, $close);
-        } else {
-            $return = trader_cdleveningstar($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdleveningstar($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -1246,17 +1178,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.5] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = 0.5): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdlmathold($open, $high, $low, $close);
-        } else {
-            $return = trader_cdlmathold($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdlmathold($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -1269,17 +1197,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = 0.3): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdlmorningdojistar($open, $high, $low, $close);
-        } else {
-            $return = trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -1292,17 +1216,13 @@ trait TraderTrait
      * @param array $high        High price, array of real values.
      * @param array $low         Low price, array of real values.
      * @param array $close       Closing price, array of real values.
-     * @param float $penetration [OPTIONAL] Percentage of penetration of a candle within another candle.
+     * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
+    public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = 0.3): array
     {
-        if (is_null($penetration)) {
-            $return = trader_cdlmorningstar($open, $high, $low, $close);
-        } else {
-            $return = trader_cdlmorningstar($open, $high, $low, $close, $penetration);
-        }
+        $return = trader_cdlmorningstar($open, $high, $low, $close, $penetration);
         static::checkForError();
 
         return $return;
@@ -1633,18 +1553,14 @@ trait TraderTrait
     /**
      * Chande Momentum Oscillator
      *
-     * @param array    $real       Array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function cmo(array $real, integer $timePeriod = null): array
+    public static function cmo(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_cmo($real);
-        } else {
-            $return = trader_cmo($real, $timePeriod);
-        }
+        $return = trader_cmo($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1653,19 +1569,15 @@ trait TraderTrait
     /**
      * Pearson's Correlation Coefficient (r)
      *
-     * @param array    $real0      Array of real values.
-     * @param array    $real1      Array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real0      Array of real values.
+     * @param array $real1      Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function correl(array $real0, array $real1, integer $timePeriod = null): array
+    public static function correl(array $real0, array $real1, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_correl($real0, $real1);
-        } else {
-            $return = trader_correl($real0, $real1, $timePeriod);
-        }
+        $return = trader_correl($real0, $real1, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1707,17 +1619,13 @@ trait TraderTrait
      * Double Exponential Moving Average
      *
      * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 3.] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function dema(array $real, integer $timePeriod): array
+    public static function dema(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_dema($real);
-        } else {
-            $return = trader_dema($real, $timePeriod);
-        }
+        $return = trader_dema($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1743,20 +1651,16 @@ trait TraderTrait
     /**
      * Directional Movement Index
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array  Returns an array with calculated data or false on failure.
      */
-    public static function dx(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function dx(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_dx($high, $low, $close);
-        } else {
-            $return = trader_dx($high, $low, $close, $timePeriod);
-        }
+        $return = trader_dx($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1765,18 +1669,14 @@ trait TraderTrait
     /**
      * Exponential Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param int|null $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ema(array $real, integer $timePeriod = null): array
+    public static function ema(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_ema($real);
-        } else {
-            $return = trader_ema($real, $timePeriod);
-        }
+        $return = trader_ema($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1951,18 +1851,14 @@ trait TraderTrait
     /**
      * Kaufman Adaptive Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function kama(array $real, integer $timePeriod = null): array
+    public static function kama(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_kama($real);
-        } else {
-            $return = trader_kama($real, $timePeriod);
-        }
+        $return = trader_kama($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1971,18 +1867,14 @@ trait TraderTrait
     /**
      * Linear Regression Angle
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_angle(array $real, integer $timePeriod = null): array
+    public static function linearreg_angle(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_linearreg_angle($real);
-        } else {
-            $return = trader_linearreg_angle($real, $timePeriod);
-        }
+        $return = trader_linearreg_angle($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -1991,18 +1883,14 @@ trait TraderTrait
     /**
      * Linear Regression Angle
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_intercept(array $real, integer $timePeriod = null): array
+    public static function linearreg_intercept(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_linearreg_intercept($real);
-        } else {
-            $return = trader_linearreg_intercept($real, $timePeriod);
-        }
+        $return = trader_linearreg_intercept($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2011,18 +1899,14 @@ trait TraderTrait
     /**
      * Linear Regression Slope
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg_slope(array $real, integer $timePeriod = null): array
+    public static function linearreg_slope(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_linearreg_slope($real);
-        } else {
-            $return = trader_linearreg_slope($real, $timePeriod);
-        }
+        $return = trader_linearreg_slope($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2031,18 +1915,14 @@ trait TraderTrait
     /**
      * Linear Regression
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearreg(array $real, integer $timePeriod = null): array
+    public static function linearreg(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_linearreg($real);
-        } else {
-            $return = trader_linearreg($real, $timePeriod);
-        }
+        $return = trader_linearreg($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2083,21 +1963,15 @@ trait TraderTrait
     /**
      * Moving average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param int      $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
+     * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ma(array $real, integer $timePeriod = null, integer $mAType = null): array
+    public static function ma(array $real, integer $timePeriod = 30, integer $mAType = 0): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_ma($real);
-        } elseif (is_null($mAType)) {
-            $return = trader_ma($real, $timePeriod);
-        } else {
-            $return = trader_ma($real, $timePeriod, $mAType);
-        }
+        $return = trader_ma($real, $timePeriod, $mAType);
         static::checkForError();
 
         return $return;
@@ -2106,24 +1980,16 @@ trait TraderTrait
     /**
      * Moving Average Convergence/Divergence
      *
-     * @param array    $real         Array of real values.
-     * @param int|null $fastPeriod   [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod   [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param array $real         Array of real values.
+     * @param int   $fastPeriod   [OPTIONAL] [DEFAULT 12] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int   $slowPeriod   [OPTIONAL] [DEFAULT 26] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macd(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
+    public static function macd(array $real, integer $fastPeriod = 12, integer $slowPeriod = 26, integer $signalPeriod = 9): array
     {
-        if (is_null($fastPeriod)) {
-            $return = trader_macd($real);
-        } elseif (is_null($slowPeriod)) {
-            $return = trader_macd($real, $fastPeriod);
-        } elseif (is_null($signalPeriod)) {
-            $return = trader_macd($real, $fastPeriod, $slowPeriod);
-        } else {
-            $return = trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
-        }
+        $return = trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
         static::checkForError();
 
         return $return;
@@ -2132,30 +1998,18 @@ trait TraderTrait
     /**
      * Moving Average Convergence/Divergence with controllable Moving Average type
      *
-     * @param array    $real         Array of real values.
-     * @param int|null $fastPeriod   [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $fastMAType   [OPTIONAL] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $slowPeriod   [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $slowMAType   [OPTIONAL] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param array $real         Array of real values.
+     * @param int   $fastPeriod   [OPTIONAL] [DEFAULT 12] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int   $fastMAType   [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int   $slowPeriod   [OPTIONAL] [DEFAULT 26] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int   $slowMAType   [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for fast MA. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macdext(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
+    public static function macdext(array $real, integer $fastPeriod = 12, integer $fastMAType = 0, integer $slowPeriod = 26, integer $slowMAType = 0, integer $signalPeriod = 9): array
     {
-        if (is_null($fastPeriod)) {
-            $return = trader_macdext($real);
-        } elseif (is_null($fastMAType)) {
-            $return = trader_macdext($real, $fastPeriod);
-        } elseif (is_null($slowPeriod)) {
-            $return = trader_macdext($real, $fastPeriod, $fastMAType);
-        } elseif (is_null($slowMAType)) {
-            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod);
-        } elseif (is_null($signalPeriod)) {
-            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType);
-        } else {
-            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
-        }
+        $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
         static::checkForError();
 
         return $return;
@@ -2164,18 +2018,14 @@ trait TraderTrait
     /**
      * Moving Average Convergence/Divergence Fix 12/26
      *
-     * @param array    $real         Array of real values.
-     * @param int|null $signalPeriod [OPTIONAL] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
+     * @param array $real         Array of real values.
+     * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macdfix(array $real, integer $signalPeriod = null): array
+    public static function macdfix(array $real, integer $signalPeriod = 9): array
     {
-        if (is_null($signalPeriod)) {
-            $return = trader_macd($real);
-        } else {
-            $return = trader_macd($real, $signalPeriod);
-        }
+        $return = trader_macd($real, $signalPeriod);
         static::checkForError();
 
         return $return;
@@ -2184,21 +2034,15 @@ trait TraderTrait
     /**
      * MESA Adaptive Moving Average
      *
-     * @param array      $real      Array of real values.
-     * @param float|null $fastLimit [OPTIONAL] Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
-     * @param float|null $slowLimit [OPTIONAL] Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+     * @param array $real      Array of real values.
+     * @param float $fastLimit [OPTIONAL] [DEFAULT 0.5] Upper limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
+     * @param float $slowLimit [OPTIONAL] [DEFAULT 0.05] Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mama(array $real, float $fastLimit = null, float $slowLimit = null): array
+    public static function mama(array $real, float $fastLimit = 0.5, float $slowLimit = 0.05): array
     {
-        if (is_null($fastLimit)) {
-            $return = trader_mama($real);
-        } elseif (is_null($slowLimit)) {
-            $return = trader_mama($real, $fastLimit);
-        } else {
-            $return = trader_mama($real, $fastLimit, $slowLimit);
-        }
+        $return = trader_mama($real, $fastLimit, $slowLimit);
         static::checkForError();
 
         return $return;
@@ -2207,25 +2051,17 @@ trait TraderTrait
     /**
      * Moving average with variable period
      *
-     * @param array    $real      Array of real values.
-     * @param array    $periods   Array of real values.
-     * @param int|null $minPeriod [OPTIONAL] Value less than minimum will be changed to Minimum period. Valid range from 2 to 100000
-     * @param int|null $maxPeriod [OPTIONAL] Value higher than maximum will be changed to Maximum period. Valid range from 2 to 100000
-     * @param int|null $mAType    [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real      Array of real values.
+     * @param array $periods   Array of real values.
+     * @param int   $minPeriod [OPTIONAL] [DEFAULT 2] Value less than minimum will be changed to Minimum period. Valid range from 2 to 100000
+     * @param int   $maxPeriod [OPTIONAL] [DEFAULT 30] Value higher than maximum will be changed to Maximum period. Valid range from 2 to 100000
+     * @param int   $mAType    [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mavp(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
+    public static function mavp(array $real, array $periods, integer $minPeriod = 2, integer $maxPeriod = 30, integer $mAType = 0): array
     {
-        if (is_null($minPeriod)) {
-            $return = trader_mavp($real, $periods);
-        } elseif (is_null($maxPeriod)) {
-            $return = trader_mavp($real, $periods, $minPeriod);
-        } elseif (is_null($mAType)) {
-            $return = trader_mavp($real, $periods, $minPeriod, $maxPeriod);
-        } else {
-            $return = trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
-        }
+        $return = trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
         static::checkForError();
 
         return $return;
@@ -2234,18 +2070,14 @@ trait TraderTrait
     /**
      * Highest value over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function max(array $real, integer $timePeriod = null): array
+    public static function max(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_max($real);
-        } else {
-            $return = trader_max($real, $timePeriod);
-        }
+        $return = trader_max($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2254,18 +2086,14 @@ trait TraderTrait
     /**
      * Index of highest value over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function maxindex(array $real, integer $timePeriod = null): array
+    public static function maxindex(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_maxindex($real);
-        } else {
-            $return = trader_maxindex($real, $timePeriod);
-        }
+        $return = trader_maxindex($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2294,17 +2122,13 @@ trait TraderTrait
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
      * @param array $volume     Volume traded, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mfi(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
+    public static function mfi(array $high, array $low, array $close, array $volume, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_mfi($high, $low, $close, $volume);
-        } else {
-            $return = trader_mfi($high, $low, $close, $volume, $timePeriod);
-        }
+        $return = trader_mfi($high, $low, $close, $volume, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2313,18 +2137,14 @@ trait TraderTrait
     /**
      * MidPoint over period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function midpoint(array $real, integer $timePeriod = null): array
+    public static function midpoint(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_midpoint($real);
-        } else {
-            $return = trader_midpoint($real, $timePeriod);
-        }
+        $return = trader_midpoint($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2333,19 +2153,15 @@ trait TraderTrait
     /**
      * Midpoint Price over period
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function midprice(array $high, array $low, integer $timePeriod = null)
+    public static function midprice(array $high, array $low, integer $timePeriod = 14)
     {
-        if (is_null($timePeriod)) {
-            $return = trader_midprice($high, $low);
-        } else {
-            $return = trader_midprice($high, $low, $timePeriod);
-        }
+        $return = trader_midprice($high, $low, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2354,18 +2170,14 @@ trait TraderTrait
     /**
      * Lowest value over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function min(array $real, integer $timePeriod = null): array
+    public static function min(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_min($real);
-        } else {
-            $return = trader_min($real, $timePeriod);
-        }
+        $return = trader_min($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2374,18 +2186,14 @@ trait TraderTrait
     /**
      * Index of lowest value over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minindex(array $real, integer $timePeriod = null): array
+    public static function minindex(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_minindex($real);
-        } else {
-            $return = trader_minindex($real, $timePeriod);
-        }
+        $return = trader_minindex($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2394,18 +2202,14 @@ trait TraderTrait
     /**
      * Lowest and highest values over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minmax(array $real, integer $timePeriod = null): array
+    public static function minmax(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_minmax($real);
-        } else {
-            $return = trader_minmax($real, $timePeriod);
-        }
+        $return = trader_minmax($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2414,18 +2218,14 @@ trait TraderTrait
     /**
      * Indexes of lowest and highest values over a specified period
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minmaxindex(array $real, integer $timePeriod = null): array
+    public static function minmaxindex(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_minmaxindex($real);
-        } else {
-            $return = trader_minmaxindex($real, $timePeriod);
-        }
+        $return = trader_minmaxindex($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2437,17 +2237,13 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minus_di(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function minus_di(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_minus_di($high, $low, $close);
-        } else {
-            $return = trader_minus_di($high, $low, $close, $timePeriod);
-        }
+        $return = trader_minus_di($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2458,17 +2254,13 @@ trait TraderTrait
      *
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minus_dm(array $high, array $low, integer $timePeriod = null): array
+    public static function minus_dm(array $high, array $low, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_minus_dm($high, $low);
-        } else {
-            $return = trader_minus_dm($high, $low, $timePeriod);
-        }
+        $return = trader_minus_dm($high, $low, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2477,18 +2269,14 @@ trait TraderTrait
     /**
      * Momentum
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mom(array $real, integer $timePeriod = null): array
+    public static function mom(array $real, integer $timePeriod = 10): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_mom($real);
-        } else {
-            $return = trader_mom($real, $timePeriod);
-        }
+        $return = trader_mom($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2517,17 +2305,13 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function natr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function natr(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_natr($high, $low, $close);
-        } else {
-            $return = trader_natr($high, $low, $close, $timePeriod);
-        }
+        $return = trader_natr($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2555,17 +2339,13 @@ trait TraderTrait
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
      * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plus_di(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function plus_di(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_plus_di($high, $low, $close);
-        } else {
-            $return = trader_plus_di($high, $low, $close, $timePeriod);
-        }
+        $return = trader_plus_di($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2576,17 +2356,13 @@ trait TraderTrait
      *
      * @param array $high       High price, array of real values.
      * @param array $low        Low price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plus_dm(array $high, array $low, integer $timePeriod = null): array
+    public static function plus_dm(array $high, array $low, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_plus_dm($high, $low);
-        } else {
-            $return = trader_plus_dm($high, $low, $timePeriod);
-        }
+        $return = trader_plus_dm($high, $low, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2595,24 +2371,16 @@ trait TraderTrait
     /**
      * Percentage Price Oscillator
      *
-     * @param array    $real       Array of real values.
-     * @param int|null $fastPeriod [OPTIONAL] Number of period for the fast MA. Valid range from 2 to 100000.
-     * @param int|null $slowPeriod [OPTIONAL] Number of period for the slow MA. Valid range from 2 to 100000.
-     * @param int|null $mAType     [OPTIONAL] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real       Array of real values.
+     * @param int   $fastPeriod [OPTIONAL] [DEFAULT 12] Number of period for the fast MA. Valid range from 2 to 100000.
+     * @param int   $slowPeriod [OPTIONAL] [DEFAULT 26] Number of period for the slow MA. Valid range from 2 to 100000.
+     * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ppo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function ppo(array $real, integer $fastPeriod = 12, integer $slowPeriod = 26, integer $mAType = 0): array
     {
-        if (is_null($fastPeriod)) {
-            $return = trader_ppo($real);
-        } elseif (is_null($slowPeriod)) {
-            $return = trader_ppo($real, $fastPeriod);
-        } elseif (is_null($mAType)) {
-            $return = trader_ppo($real, $fastPeriod, $slowPeriod);
-        } else {
-            $return = trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
-        }
+        $return = trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
         static::checkForError();
 
         return $return;
@@ -2621,18 +2389,14 @@ trait TraderTrait
     /**
      * Rate of change : ((price/prevPrice)-1)*100
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function roc(array $real, integer $timePeriod = null): array
+    public static function roc(array $real, integer $timePeriod = 10): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_roc($real);
-        } else {
-            $return = trader_roc($real, $timePeriod);
-        }
+        $return = trader_roc($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2641,18 +2405,14 @@ trait TraderTrait
     /**
      * Rate of change Percentage: (price-prevPrice)/prevPrice
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocp(array $real, integer $timePeriod = null): array
+    public static function rocp(array $real, integer $timePeriod = 10): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_rocp($real);
-        } else {
-            $return = trader_rocp($real, $timePeriod);
-        }
+        $return = trader_rocp($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2661,18 +2421,14 @@ trait TraderTrait
     /**
      * Rate of change ratio 100 scale: (price/prevPrice)*100
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocr100(array $real, integer $timePeriod = null): array
+    public static function rocr100(array $real, integer $timePeriod = 10): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_rocr100($real);
-        } else {
-            $return = trader_rocr100($real, $timePeriod);
-        }
+        $return = trader_rocr100($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2681,18 +2437,14 @@ trait TraderTrait
     /**
      * Rate of change ratio: (price/prevPrice)
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rocr(array $real, integer $timePeriod = null): array
+    public static function rocr(array $real, integer $timePeriod = 10): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_rocr($real);
-        } else {
-            $return = trader_rocr($real, $timePeriod);
-        }
+        $return = trader_rocr($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2701,18 +2453,14 @@ trait TraderTrait
     /**
      * Relative Strength Index
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rsi(array $real, integer $timePeriod = null): array
+    public static function rsi(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_rsi($real);
-        } else {
-            $return = trader_rsi($real, $timePeriod);
-        }
+        $return = trader_rsi($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2721,22 +2469,16 @@ trait TraderTrait
     /**
      * Parabolic SAR
      *
-     * @param array      $high         High price, array of real values.
-     * @param array      $low          Low price, array of real values.
-     * @param float|null $acceleration [OPTIONAL] Acceleration Factor used up to the Maximum value. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $maximum      [OPTIONAL] Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
+     * @param array $high         High price, array of real values.
+     * @param array $low          Low price, array of real values.
+     * @param float $acceleration [OPTIONAL] [DEFAULT 0.02] Acceleration Factor used up to the Maximum value. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $maximum      [OPTIONAL] [DEFAULT 0.2] Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sar(array $high, array $low, float $acceleration = null, float $maximum = null): array
+    public static function sar(array $high, array $low, float $acceleration = 0.02, float $maximum = 0.2): array
     {
-        if (is_null($acceleration)) {
-            $return = trader_sar($high, $low);
-        } elseif (is_null($maximum)) {
-            $return = trader_sar($high, $low, $acceleration);
-        } else {
-            $return = trader_sar($high, $low, $acceleration, $maximum);
-        }
+        $return = trader_sar($high, $low, $acceleration, $maximum);
         static::checkForError();
 
         return $return;
@@ -2745,40 +2487,22 @@ trait TraderTrait
     /**
      * Parabolic SAR - Extended
      *
-     * @param array      $high                  High price, array of real values.
-     * @param array      $low                   Low price, array of real values.
-     * @param float|null $startValue            [OPTIONAL] Start value and direction. 0 for Auto, >0 for Long, <0 for Short. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
-     * @param float|null $offsetOnReverse       [OPTIONAL] Percent offset added/removed to initial stop on short/long reversal. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationInitLong  [OPTIONAL] Acceleration Factor initial value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationLong      [OPTIONAL] Acceleration Factor for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationMaxLong   [OPTIONAL] Acceleration Factor maximum value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationInitShort [OPTIONAL] Acceleration Factor initial value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationShort     [OPTIONAL] Acceleration Factor for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
-     * @param float|null $accelerationMaxShort  [OPTIONAL] Acceleration Factor maximum value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param array $high                  High price, array of real values.
+     * @param array $low                   Low price, array of real values.
+     * @param float $startValue            [OPTIONAL] [DEFAULT 0.0] Start value and direction. 0 for Auto, >0 for Long, <0 for Short. Valid range from TRADER_REAL_MIN to TRADER_REAL_MAX.
+     * @param float $offsetOnReverse       [OPTIONAL] [DEFAULT 0.0] Percent offset added/removed to initial stop on short/long reversal. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationInitLong  [OPTIONAL] [DEFAULT 0.02] Acceleration Factor initial value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationLong      [OPTIONAL] [DEFAULT 0.02] Acceleration Factor for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationMaxLong   [OPTIONAL] [DEFAULT 0.2] Acceleration Factor maximum value for the Long direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationInitShort [OPTIONAL] [DEFAULT 0.02] Acceleration Factor initial value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationShort     [OPTIONAL] [DEFAULT 0.02] Acceleration Factor for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
+     * @param float $accelerationMaxShort  [OPTIONAL] [DEFAULT 0.2] Acceleration Factor maximum value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sarext(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
+    public static function sarext(array $high, array $low, float $startValue = 0.0, float $offsetOnReverse = 0.0, float $accelerationInitLong = 0.02, float $accelerationLong = 0.02, float $accelerationMaxLong = 0.2, float $accelerationInitShort = 0.02, float $accelerationShort = 0.02, float $accelerationMaxShort = 0.2): array
     {
-        if (is_null($startValue)) {
-            $return = trader_sarext($high, $low);
-        } elseif (is_null($offsetOnReverse)) {
-            $return = trader_sarext($high, $low, $startValue);
-        } elseif (is_null($accelerationInitLong)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse);
-        } elseif (is_null($accelerationLong)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong);
-        } elseif (is_null($accelerationMaxLong)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong);
-        } elseif (is_null($accelerationInitShort)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong);
-        } elseif (is_null($accelerationShort)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort);
-        } elseif (is_null($accelerationMaxShort)) {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort);
-        } else {
-            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
-        }
+        $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
         static::checkForError();
 
         return $return;
@@ -2848,18 +2572,14 @@ trait TraderTrait
     /**
      * Simple Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sma(array $real, integer $timePeriod = null): array
+    public static function sma(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_sma($real);
-        } else {
-            $return = trader_sma($real, $timePeriod);
-        }
+        $return = trader_sma($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -2884,21 +2604,15 @@ trait TraderTrait
     /**
      * Standard Deviation
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param float    $nbDev      [OPTIONAL]
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
+     * @param float $nbDev      [OPTIONAL] [DEFAULT 1.0] Number of deviations
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stddev(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function stddev(array $real, integer $timePeriod = 5, float $nbDev = 1.0): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_stddev($real);
-        } elseif (is_null($nbDev)) {
-            $return = trader_stddev($real, $timePeriod);
-        } else {
-            $return = trader_stddev($real, $timePeriod, $nbDev);
-        }
+        $return = trader_stddev($real, $timePeriod, $nbDev);
         static::checkForError();
 
         return $return;
@@ -2907,32 +2621,20 @@ trait TraderTrait
     /**
      * Stochastic
      *
-     * @param array    $high         High price, array of real values.
-     * @param array    $low          Low price, array of real values.
-     * @param array    $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $slowK_Period [OPTIONAL] Smoothing for making the Slow-K line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $slowK_MAType [OPTIONAL] Type of Moving Average for Slow-K. TRADER_MA_TYPE_* series of constants should be used.
-     * @param int|null $slowD_Period [OPTIONAL] Smoothing for making the Slow-D line. Valid range from 1 to 100000.
-     * @param int|null $slowD_MAType [OPTIONAL] Type of Moving Average for Slow-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $high         High price, array of real values.
+     * @param array $low          Low price, array of real values.
+     * @param array $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int   $fastK_Period [OPTIONAL] [DEFAULT 5] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int   $slowK_Period [OPTIONAL] [DEFAULT 3] Smoothing for making the Slow-K line. Valid range from 1 to 100000, usually set to 3.
+     * @param int   $slowK_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Slow-K. TRADER_MA_TYPE_* series of constants should be used.
+     * @param int   $slowD_Period [OPTIONAL] [DEFAULT 3] Smoothing for making the Slow-D line. Valid range from 1 to 100000.
+     * @param int   $slowD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Slow-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stoch(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
+    public static function stoch(array $high, array $low, array $close, integer $fastK_Period = 5, integer $slowK_Period = 3, integer $slowK_MAType = 0, integer $slowD_Period = 3, integer $slowD_MAType = 0): array
     {
-        if (is_null($fastK_Period)) {
-            $return = trader_stoch($high, $low, $close);
-        } elseif (is_null($slowK_Period)) {
-            $return = trader_stoch($high, $low, $close, $fastK_Period);
-        } elseif (is_null($slowK_MAType)) {
-            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period);
-        } elseif (is_null($slowD_Period)) {
-            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType);
-        } elseif (is_null($slowD_MAType)) {
-            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period);
-        } else {
-            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
-        }
+        $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
         static::checkForError();
 
         return $return;
@@ -2941,26 +2643,18 @@ trait TraderTrait
     /**
      * Stochastic Fast
      *
-     * @param array    $high         High price, array of real values.
-     * @param array    $low          Low price, array of real values.
-     * @param array    $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastD_Period [OPTIONAL] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $fastD_MAType [OPTIONAL] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $high         High price, array of real values.
+     * @param array $low          Low price, array of real values.
+     * @param array $close        Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int   $fastK_Period [OPTIONAL] [DEFAULT 5] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int   $fastD_Period [OPTIONAL] [DEFAULT 3] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
+     * @param int   $fastD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochf(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochf(array $high, array $low, array $close, integer $fastK_Period = 5, integer $fastD_Period = 3, integer $fastD_MAType = 0): array
     {
-        if (is_null($fastK_Period)) {
-            $return = trader_stochf($high, $low, $close);
-        } elseif (is_null($fastD_Period)) {
-            $return = trader_stochf($high, $low, $close, $fastK_Period);
-        } elseif (is_null($fastD_MAType)) {
-            $return = trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period);
-        } else {
-            $return = trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
-        }
+        $return = trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
         static::checkForError();
 
         return $return;
@@ -2969,27 +2663,17 @@ trait TraderTrait
     /**
      * Stochastic Relative Strength Index
      *
-     * @param array    $real         Array of real values.
-     * @param int|null $timePeriod   [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param int|null $fastK_Period [OPTIONAL] Time period for building the Fast-K line. Valid range from 1 to 100000.
-     * @param int|null $fastD_Period [OPTIONAL] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
-     * @param int|null $fastD_MAType [OPTIONAL] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
+     * @param array $real         Array of real values.
+     * @param int   $timePeriod   [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
+     * @param int   $fastK_Period [OPTIONAL] [DEFAULT 5] Time period for building the Fast-K line. Valid range from 1 to 100000.
+     * @param int   $fastD_Period [OPTIONAL] [DEFAULT 3] Smoothing for making the Fast-D line. Valid range from 1 to 100000, usually set to 3.
+     * @param int   $fastD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochrsi(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochrsi(array $real, integer $timePeriod = 14, integer $fastK_Period = 5, integer $fastD_Period = 3, integer $fastD_MAType = 0): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_stochrsi($real);
-        } elseif (is_null($fastK_Period)) {
-            $return = trader_stochrsi($real, $timePeriod);
-        } elseif (is_null($fastD_Period)) {
-            $return = trader_stochrsi($real, $timePeriod, $fastK_Period);
-        } elseif (is_null($fastD_MAType)) {
-            $return = trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period);
-        } else {
-            $return = trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
-        }
+        $return = trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
         static::checkForError();
 
         return $return;
@@ -3015,18 +2699,14 @@ trait TraderTrait
     /**
      * Summation
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function sum(array $real, integer $timePeriod = null): array
+    public static function sum(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_sum($real);
-        } else {
-            $return = trader_sum($real, $timePeriod);
-        }
+        $return = trader_sum($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3035,21 +2715,15 @@ trait TraderTrait
     /**
      * Triple Exponential Moving Average (T3)
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param float    $vFactor    [OPTIONAL] Volume Factor. Valid range from 1 to 0.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
+     * @param float $vFactor    [OPTIONAL] [DEFAULT 0.7] Volume Factor. Valid range from 1 to 0.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function t3(array $real, integer $timePeriod = null, float $vFactor = null): array
+    public static function t3(array $real, integer $timePeriod = 5, float $vFactor = 0.7): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_t3($real);
-        } elseif (is_null($vFactor)) {
-            $return = trader_t3($real, $timePeriod);
-        } else {
-            $return = trader_t3($real, $timePeriod, $vFactor);
-        }
+        $return = trader_t3($real, $timePeriod, $vFactor);
         static::checkForError();
 
         return $return;
@@ -3090,18 +2764,14 @@ trait TraderTrait
     /**
      * Triple Exponential Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tema(array $real, integer $timePeriod = null): array
+    public static function tema(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_tema($real);
-        } else {
-            $return = trader_tema($real, $timePeriod);
-        }
+        $return = trader_tema($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3127,18 +2797,14 @@ trait TraderTrait
     /**
      * Triangular Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function trima(array $real, integer $timePeriod = null): array
+    public static function trima(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_trima($real);
-        } else {
-            $return = trader_trima($real, $timePeriod);
-        }
+        $return = trader_trima($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3147,18 +2813,14 @@ trait TraderTrait
     /**
      * 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function trix(array $real, integer $timePeriod = null): array
+    public static function trix(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_trix($real);
-        } else {
-            $return = trader_trix($real, $timePeriod);
-        }
+        $return = trader_trix($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3167,18 +2829,14 @@ trait TraderTrait
     /**
      * Time Series Forecast
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tsf(array $real, integer $timePeriod = null): array
+    public static function tsf(array $real, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_tsf($real);
-        } else {
-            $return = trader_tsf($real, $timePeriod);
-        }
+        $return = trader_tsf($real, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3204,26 +2862,18 @@ trait TraderTrait
     /**
      * Ultimate Oscillator
      *
-     * @param array    $high        High price, array of real values.
-     * @param array    $low         Low price, array of real values.
-     * @param array    $close       Closing price, array of real values.
-     * @param int|null $timePeriod1 [OPTIONAL] Number of bars for 1st period. Valid range from 1 to 100000.
-     * @param int|null $timePeriod2 [OPTIONAL] Number of bars for 2nd period. Valid range from 1 to 100000.
-     * @param int|null $timePeriod3 [OPTIONAL] Number of bars for 3rd period. Valid range from 1 to 100000.
+     * @param array $high        High price, array of real values.
+     * @param array $low         Low price, array of real values.
+     * @param array $close       Closing price, array of real values.
+     * @param int   $timePeriod1 [OPTIONAL] [DEFAULT 7] Number of bars for 1st period. Valid range from 1 to 100000.
+     * @param int   $timePeriod2 [OPTIONAL] [DEFAULT 14] Number of bars for 2nd period. Valid range from 1 to 100000.
+     * @param int   $timePeriod3 [OPTIONAL] [DEFAULT 28] Number of bars for 3rd period. Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ultosc(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
+    public static function ultosc(array $high, array $low, array $close, integer $timePeriod1 = 7, integer $timePeriod2 = 14, integer $timePeriod3 = 28): array
     {
-        if (is_null($timePeriod1)) {
-            $return = trader_ultosc($high, $low, $close);
-        } elseif (is_null($timePeriod2)) {
-            $return = trader_ultosc($high, $low, $close, $timePeriod1);
-        } elseif (is_null($timePeriod3)) {
-            $return = trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2);
-        } else {
-            $return = trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
-        }
+        $return = trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
         static::checkForError();
 
         return $return;
@@ -3232,21 +2882,15 @@ trait TraderTrait
     /**
      * Variance
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
-     * @param float    $nbDev      [OPTIONAL]
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
+     * @param float $nbDev      [OPTIONAL] [DEFAULT 1.0] Number of deviations
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function var(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function var(array $real, integer $timePeriod = 5, float $nbDev = 1.0): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_var($real);
-        } elseif (is_null($nbDev)) {
-            $return = trader_var($real, $timePeriod);
-        } else {
-            $return = trader_var($real, $timePeriod, $nbDev);
-        }
+        $return = trader_var($real, $timePeriod, $nbDev);
         static::checkForError();
 
         return $return;
@@ -3272,20 +2916,16 @@ trait TraderTrait
     /**
      * Williams' %R
      *
-     * @param array    $high       High price, array of real values.
-     * @param array    $low        Low price, array of real values.
-     * @param array    $close      Closing price, array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $high       High price, array of real values.
+     * @param array $low        Low price, array of real values.
+     * @param array $close      Closing price, array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function willr(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function willr(array $high, array $low, array $close, integer $timePeriod = 14): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_willr($high, $low, $close);
-        } else {
-            $return = trader_willr($high, $low, $close, $timePeriod);
-        }
+        $return = trader_willr($high, $low, $close, $timePeriod);
         static::checkForError();
 
         return $return;
@@ -3294,18 +2934,14 @@ trait TraderTrait
     /**
      * Weighted Moving Average
      *
-     * @param array    $real       Array of real values.
-     * @param null|int $timePeriod [OPTIONAL] Number of period. Valid range from 2 to 100000.
+     * @param array $real       Array of real values.
+     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function wma(array $real, integer $timePeriod = null): array
+    public static function wma(array $real, integer $timePeriod = 30): array
     {
-        if (is_null($timePeriod)) {
-            $return = trader_wma($real);
-        } else {
-            $return = trader_wma($real, $timePeriod);
-        }
+        $return = trader_wma($real, $timePeriod);
         static::checkForError();
 
         return $return;
