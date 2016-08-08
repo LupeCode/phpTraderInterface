@@ -180,14 +180,6 @@ class TraderTest extends PHPUnit_Framework_TestCase
                 ],
         ];
 
-    /**
-     * This test proves that two NaNs do not equal.
-     * Some of the tests below may fail if they return NaN.
-     */
-    public function testPHPUnitAssertEqualsNaN(){
-        $this->assertEquals(NAN, NAN);
-    }
-
 //<editor-fold defaultstate="collapsed" desc="Constant Member Tests">
     public function testConstants_TRADER_MA_TYPE_SMA()
     {
@@ -473,18 +465,14 @@ class TraderTest extends PHPUnit_Framework_TestCase
 //<editor-fold defaultstate="collapsed" desc="Interface Function Tests">
     public function testInterfaceFunctions_acos()
     {
-        $Open   = $this->History['Open'];
-        $High   = $this->History['High'];
-        $Low    = $this->History['Low'];
-        $Close  = $this->History['Close'];
-        $Volume = $this->History['Volume'];
+        $Close = $this->History['Close'];
+        $Close = array_map('cos', $Close);
 
-        $this->assertEquals(trader_acos($Close), \LupeCode\phpTraderInterface\Trader::acos($Close)); //Only produces NaN, phpUnit calls this unequal
+        $this->assertEquals(trader_acos($Close), \LupeCode\phpTraderInterface\Trader::acos($Close));
     }
 
     public function testInterfaceFunctions_ad()
     {
-        $Open   = $this->History['Open'];
         $High   = $this->History['High'];
         $Low    = $this->History['Low'];
         $Close  = $this->History['Close'];
@@ -495,18 +483,14 @@ class TraderTest extends PHPUnit_Framework_TestCase
 
     public function testInterfaceFunctions_add()
     {
-        $Open   = $this->History['Open'];
         $High   = $this->History['High'];
         $Low    = $this->History['Low'];
-        $Close  = $this->History['Close'];
-        $Volume = $this->History['Volume'];
 
         $this->assertEquals(trader_add($High, $Low), \LupeCode\phpTraderInterface\Trader::add($High, $Low));
     }
 
     public function testInterfaceFunctions_adosc()
     {
-        $Open   = $this->History['Open'];
         $High   = $this->History['High'];
         $Low    = $this->History['Low'];
         $Close  = $this->History['Close'];
@@ -517,13 +501,22 @@ class TraderTest extends PHPUnit_Framework_TestCase
 
     public function testInterfaceFunctions_adx()
     {
+        $High   = $this->History['High'];
+        $Low    = $this->History['Low'];
+        $Close  = $this->History['Close'];
+
+        $this->assertEquals(trader_adx($High, $Low, $Close), \LupeCode\phpTraderInterface\Trader::adx($High, $Low, $Close));
+    }
+
+    public function testInterfaceFunctions_adxr()
+    {
         $Open   = $this->History['Open'];
         $High   = $this->History['High'];
         $Low    = $this->History['Low'];
         $Close  = $this->History['Close'];
         $Volume = $this->History['Volume'];
 
-        $this->assertEquals(trader_adx($High, $Low, $Close), \LupeCode\phpTraderInterface\Trader::adx($High, $Low, $Close));
+        $this->assertEquals(trader_adxr($High, $Low, $Close), \LupeCode\phpTraderInterface\Trader::adxr($High, $Low, $Close));
     }
 //</editor-fold>
 
