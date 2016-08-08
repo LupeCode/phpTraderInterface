@@ -159,7 +159,10 @@ trait TraderTrait
      */
     public static function ad(array $high, array $low, array $close, array $volume): array
     {
-        return trader_ad($high, $low, $close, $volume);
+        $return = trader_ad($high, $low, $close, $volume);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -172,7 +175,10 @@ trait TraderTrait
      */
     public static function add(array $real0, array $real1): array
     {
-        return trader_add($real0, $real1);
+        $return = trader_add($real0, $real1);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -189,14 +195,17 @@ trait TraderTrait
      */
     public static function adosc(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
     {
+        //TODO: Reverse
         if (!is_null($slowPeriod)) {
-            return trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
+            $return = trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
+        } elseif (!is_null($fastPeriod)) {
+            $return = trader_adosc($high, $low, $close, $volume, $fastPeriod);
+        } else {
+            $return = trader_adosc($high, $low, $close, $volume);
         }
-        if (!is_null($fastPeriod)) {
-            return trader_adosc($high, $low, $close, $volume, $fastPeriod);
-        }
+        static::checkForError();
 
-        return trader_adosc($high, $low, $close, $volume);
+        return $return;
     }
 
     /**
@@ -211,11 +220,15 @@ trait TraderTrait
      */
     public static function adx(array $high, array $low, array $close, integer $timePeriod = null): array
     {
+        //TODO: Reverse
         if (!is_null($timePeriod)) {
-            return trader_adx($high, $low, $close, $timePeriod);
+            $return = trader_adx($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_adx($high, $low, $close);
         }
+        static::checkForError();
 
-        return trader_adx($high, $low, $close);
+        return $return;
     }
 
     /**
@@ -230,11 +243,15 @@ trait TraderTrait
      */
     public static function adxr(array $high, array $low, array $close, integer $timePeriod = null): array
     {
+        //TODO: Reverse
         if (!is_null($timePeriod)) {
-            return trader_adxr($high, $low, $close, $timePeriod);
+            $return = trader_adxr($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_adxr($high, $low, $close);
         }
+        static::checkForError();
 
-        return trader_adxr($high, $low, $close);
+        return $return;
     }
 
     /**
@@ -249,17 +266,19 @@ trait TraderTrait
      */
     public static function apo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
+        //TODO: Reverse
         if (!is_null($mAType)) {
-            return trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
+            $return = trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
+        } elseif (!is_null($slowPeriod)) {
+            $return = trader_apo($real, $fastPeriod, $slowPeriod);
+        } elseif (!is_null($fastPeriod)) {
+            $return = trader_apo($real, $fastPeriod);
+        } else {
+            $return = trader_apo($real);
         }
-        if (!is_null($slowPeriod)) {
-            return trader_apo($real, $fastPeriod, $slowPeriod);
-        }
-        if (!is_null($fastPeriod)) {
-            return trader_apo($real, $fastPeriod);
-        }
+        static::checkForError();
 
-        return trader_apo($real);
+        return $return;
     }
 
     /**
@@ -273,11 +292,15 @@ trait TraderTrait
      */
     public static function aroon(array $high, array $low, integer $timePeriod = null): array
     {
+        //TODO: Reverse
         if (!is_null($timePeriod)) {
-            return trader_aroon($high, $low, $timePeriod);
+            $return = trader_aroon($high, $low, $timePeriod);
+        } else {
+            $return = trader_aroon($high, $low);
         }
+        static::checkForError();
 
-        return trader_aroon($high, $low);
+        return $return;
     }
 
     /**
@@ -291,11 +314,15 @@ trait TraderTrait
      */
     public static function arronosc(array $high, array $low, integer $timePeriod = null): array
     {
+        //TODO: Reverse
         if (!is_null($timePeriod)) {
-            return trader_aroonosc($high, $low, $timePeriod);
+            $return = trader_aroonosc($high, $low, $timePeriod);
+        } else {
+            $return = trader_aroonosc($high, $low);
         }
+        static::checkForError();
 
-        return trader_aroonosc($high, $low);
+        return $return;
     }
 
     /**
@@ -308,7 +335,10 @@ trait TraderTrait
      */
     public static function asin(array $real): array
     {
-        return trader_asin($real);
+        $return = trader_asin($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -321,7 +351,10 @@ trait TraderTrait
      */
     public static function atan(array $real): array
     {
-        return trader_atan($real);
+        $return = trader_atan($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -336,7 +369,15 @@ trait TraderTrait
      */
     public static function atr(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_atr($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_atr($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_atr($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -351,7 +392,10 @@ trait TraderTrait
      */
     public static function avgprice(array $open, array $high, array $low, array $close): array
     {
-        return trader_avgprice($open, $high, $low, $close);
+        $return = trader_avgprice($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -367,7 +411,21 @@ trait TraderTrait
      */
     public static function bbands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
     {
-        return trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
+        //TODO: Reverse
+        if (!is_null($mAType)) {
+            $return = trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
+        } elseif (!is_null($nbDevDn)) {
+            $return = trader_bbands($real, $timePeriod, $nbDevUp, $nbDevDn);
+        } elseif (!is_null($nbDevUp)) {
+            $return = trader_bbands($real, $timePeriod, $nbDevUp);
+        } elseif (!is_null($timePeriod)) {
+            $return = trader_bbands($real, $timePeriod);
+        } else {
+            $return = trader_bbands($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -381,7 +439,15 @@ trait TraderTrait
      */
     public static function beta(array $real0, array $real1, integer $timePeriod = null): array
     {
-        return trader_beta($real0, $real1, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_beta($real0, $real1, $timePeriod);
+        } else {
+            $return = trader_beta($real0, $real1);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -396,7 +462,10 @@ trait TraderTrait
      */
     public static function bop(array $open, array $high, array $low, array $close): array
     {
-        return trader_bop($open, $high, $low, $close);
+        $return = trader_bop($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -411,7 +480,15 @@ trait TraderTrait
      */
     public static function cci(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_cci($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_cci($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_cci($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -426,7 +503,10 @@ trait TraderTrait
      */
     public static function cdl2crows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl2crows($open, $high, $low, $close);
+        $return = trader_cdl2crows($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -441,7 +521,10 @@ trait TraderTrait
      */
     public static function cdl3blackcrows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3blackcrows($open, $high, $low, $close);
+        $return = trader_cdl3blackcrows($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -456,7 +539,10 @@ trait TraderTrait
      */
     public static function cdl3inside(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3inside($open, $high, $low, $close);
+        $return = trader_cdl3inside($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -471,7 +557,10 @@ trait TraderTrait
      */
     public static function cdl3linestrike(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3linestrike($open, $high, $low, $close);
+        $return = trader_cdl3linestrike($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -486,7 +575,10 @@ trait TraderTrait
      */
     public static function cdl3outside(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3outside($open, $high, $low, $close);
+        $return = trader_cdl3outside($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -501,7 +593,10 @@ trait TraderTrait
      */
     public static function cdl3starsinsouth(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3starsinsouth($open, $high, $low, $close);
+        $return = trader_cdl3starsinsouth($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -516,7 +611,10 @@ trait TraderTrait
      */
     public static function cdl3whitesoldiers(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdl3whitesoldiers($open, $high, $low, $close);
+        $return = trader_cdl3whitesoldiers($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -532,7 +630,15 @@ trait TraderTrait
      */
     public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdlabandonedbaby($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdlabandonedbaby($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -547,7 +653,10 @@ trait TraderTrait
      */
     public static function cdladvanceblock(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdladvanceblock($open, $high, $low, $close);
+        $return = trader_cdladvanceblock($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -562,7 +671,10 @@ trait TraderTrait
      */
     public static function cdlbelthold(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlbelthold($open, $high, $low, $close);
+        $return = trader_cdlbelthold($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -577,7 +689,10 @@ trait TraderTrait
      */
     public static function cdlbreakaway(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlbreakaway($open, $high, $low, $close);
+        $return = trader_cdlbreakaway($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -592,7 +707,10 @@ trait TraderTrait
      */
     public static function cdlclosingmarubozu(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlclosingmarubozu($open, $high, $low, $close);
+        $return = trader_cdlclosingmarubozu($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -607,7 +725,10 @@ trait TraderTrait
      */
     public static function cdlconcealbabyswall(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlconcealbabyswall($open, $high, $low, $close);
+        $return = trader_cdlconcealbabyswall($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -622,7 +743,10 @@ trait TraderTrait
      */
     public static function cdlcounterattack(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlcounterattack($open, $high, $low, $close);
+        $return = trader_cdlcounterattack($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -638,7 +762,15 @@ trait TraderTrait
      */
     public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdldarkcloudcover($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdldarkcloudcover($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -653,7 +785,10 @@ trait TraderTrait
      */
     public static function cdldoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldoji($open, $high, $low, $close);
+        $return = trader_cdldoji($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -668,7 +803,10 @@ trait TraderTrait
      */
     public static function cdldojistar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldojistar($open, $high, $low, $close);
+        $return = trader_cdldojistar($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -683,7 +821,10 @@ trait TraderTrait
      */
     public static function cdldragonflydoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdldragonflydoji($open, $high, $low, $close);
+        $return = trader_cdldragonflydoji($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -698,7 +839,10 @@ trait TraderTrait
      */
     public static function cdlengulfing(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlengulfing($open, $high, $low, $close);
+        $return = trader_cdlengulfing($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -714,7 +858,15 @@ trait TraderTrait
      */
     public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdleveningdojistar($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdleveningdojistar($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -730,7 +882,15 @@ trait TraderTrait
      */
     public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdleveningstar($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdleveningstar($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdleveningstar($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -745,7 +905,10 @@ trait TraderTrait
      */
     public static function cdlgapsidesidewhite(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlgapsidesidewhite($open, $high, $low, $close);
+        $return = trader_cdlgapsidesidewhite($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -760,7 +923,10 @@ trait TraderTrait
      */
     public static function cdlgravestonedoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlgravestonedoji($open, $high, $low, $close);
+        $return = trader_cdlgravestonedoji($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -775,7 +941,10 @@ trait TraderTrait
      */
     public static function cdlhammer(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhammer($open, $high, $low, $close);
+        $return = trader_cdlhammer($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -790,7 +959,10 @@ trait TraderTrait
      */
     public static function cdlhangingman(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhangingman($open, $high, $low, $close);
+        $return = trader_cdlhangingman($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -805,7 +977,10 @@ trait TraderTrait
      */
     public static function cdlharami(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlharami($open, $high, $low, $close);
+        $return = trader_cdlharami($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -820,7 +995,10 @@ trait TraderTrait
      */
     public static function cdlharamicross(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlharamicross($open, $high, $low, $close);
+        $return = trader_cdlharamicross($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -835,7 +1013,10 @@ trait TraderTrait
      */
     public static function cdlhighwave(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhighwave($open, $high, $low, $close);
+        $return = trader_cdlhighwave($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -850,7 +1031,10 @@ trait TraderTrait
      */
     public static function cdlhikkake(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhikkake($open, $high, $low, $close);
+        $return = trader_cdlhikkake($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -865,7 +1049,10 @@ trait TraderTrait
      */
     public static function cdlhikkakemod(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhikkakemod($open, $high, $low, $close);
+        $return = trader_cdlhikkakemod($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -880,7 +1067,10 @@ trait TraderTrait
      */
     public static function cdlhomingpigeon(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlhomingpigeon($open, $high, $low, $close);
+        $return = trader_cdlhomingpigeon($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -895,7 +1085,10 @@ trait TraderTrait
      */
     public static function cdlidentical3crows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlidentical3crows($open, $high, $low, $close);
+        $return = trader_cdlidentical3crows($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -910,7 +1103,10 @@ trait TraderTrait
      */
     public static function cdlinneck(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlinneck($open, $high, $low, $close);
+        $return = trader_cdlinneck($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -925,7 +1121,10 @@ trait TraderTrait
      */
     public static function cdlinvertedhammer(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlinvertedhammer($open, $high, $low, $close);
+        $return = trader_cdlinvertedhammer($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -940,7 +1139,10 @@ trait TraderTrait
      */
     public static function cdlkicking(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlkicking($open, $high, $low, $close);
+        $return = trader_cdlkicking($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -955,7 +1157,10 @@ trait TraderTrait
      */
     public static function cdlkickingbylength(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlkickingbylength($open, $high, $low, $close);
+        $return = trader_cdlkickingbylength($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -970,7 +1175,10 @@ trait TraderTrait
      */
     public static function cdlladderbottom(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlladderbottom($open, $high, $low, $close);
+        $return = trader_cdlladderbottom($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -985,7 +1193,10 @@ trait TraderTrait
      */
     public static function cdllongleggeddoji(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdllongleggeddoji($open, $high, $low, $close);
+        $return = trader_cdllongleggeddoji($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1000,7 +1211,10 @@ trait TraderTrait
      */
     public static function cdllongline(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdllongline($open, $high, $low, $close);
+        $return = trader_cdllongline($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1015,7 +1229,10 @@ trait TraderTrait
      */
     public static function cdlmarubozu(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlmarubozu($open, $high, $low, $close);
+        $return = trader_cdlmarubozu($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1030,7 +1247,10 @@ trait TraderTrait
      */
     public static function cdlmatchinglow(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlmatchinglow($open, $high, $low, $close);
+        $return = trader_cdlmatchinglow($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1046,7 +1266,15 @@ trait TraderTrait
      */
     public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmathold($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdlmathold($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdlmathold($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1062,7 +1290,15 @@ trait TraderTrait
      */
     public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdlmorningdojistar($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdlmorningdojistar($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1078,7 +1314,15 @@ trait TraderTrait
      */
     public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
-        return trader_cdlmorningstar($open, $high, $low, $close, $penetration);
+        //TODO: Reverse
+        if (!is_null($penetration)) {
+            $return = trader_cdlmorningstar($open, $high, $low, $close, $penetration);
+        } else {
+            $return = trader_cdlmorningstar($open, $high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1093,7 +1337,10 @@ trait TraderTrait
      */
     public static function cdlonneck(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlonneck($open, $high, $low, $close);
+        $return = trader_cdlonneck($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1108,7 +1355,10 @@ trait TraderTrait
      */
     public static function cdlpiercing(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlpiercing($open, $high, $low, $close);
+        $return = trader_cdlpiercing($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1123,7 +1373,10 @@ trait TraderTrait
      */
     public static function cdlrickshawman(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlrickshawman($open, $high, $low, $close);
+        $return = trader_cdlrickshawman($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1138,7 +1391,10 @@ trait TraderTrait
      */
     public static function cdlrisefall3methods(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlrisefall3methods($open, $high, $low, $close);
+        $return = trader_cdlrisefall3methods($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1153,7 +1409,10 @@ trait TraderTrait
      */
     public static function cdlseparatinglines(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlseparatinglines($open, $high, $low, $close);
+        $return = trader_cdlseparatinglines($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1168,7 +1427,10 @@ trait TraderTrait
      */
     public static function cdlshootingstar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlshootingstar($open, $high, $low, $close);
+        $return = trader_cdlshootingstar($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1183,7 +1445,10 @@ trait TraderTrait
      */
     public static function cdlshortline(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlshortline($open, $high, $low, $close);
+        $return = trader_cdlshortline($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1198,7 +1463,10 @@ trait TraderTrait
      */
     public static function cdlspinningtop(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlspinningtop($open, $high, $low, $close);
+        $return = trader_cdlspinningtop($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1213,7 +1481,10 @@ trait TraderTrait
      */
     public static function cdlstalledpattern(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlstalledpattern($open, $high, $low, $close);
+        $return = trader_cdlstalledpattern($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1228,7 +1499,10 @@ trait TraderTrait
      */
     public static function cdlsticksandwich(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlsticksandwich($open, $high, $low, $close);
+        $return = trader_cdlsticksandwich($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1243,7 +1517,10 @@ trait TraderTrait
      */
     public static function cdltakuri(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltakuri($open, $high, $low, $close);
+        $return = trader_cdltakuri($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1258,7 +1535,10 @@ trait TraderTrait
      */
     public static function cdltasukigap(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltasukigap($open, $high, $low, $close);
+        $return = trader_cdltasukigap($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1273,7 +1553,10 @@ trait TraderTrait
      */
     public static function cdlthrusting(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlthrusting($open, $high, $low, $close);
+        $return = trader_cdlthrusting($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1288,7 +1571,10 @@ trait TraderTrait
      */
     public static function cdltristar(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdltristar($open, $high, $low, $close);
+        $return = trader_cdltristar($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1303,7 +1589,10 @@ trait TraderTrait
      */
     public static function cdlunique3river(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlunique3river($open, $high, $low, $close);
+        $return = trader_cdlunique3river($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1318,7 +1607,10 @@ trait TraderTrait
      */
     public static function cdlupsidegap2crows(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlupsidegap2crows($open, $high, $low, $close);
+        $return = trader_cdlupsidegap2crows($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1333,7 +1625,10 @@ trait TraderTrait
      */
     public static function cdlxsidegap3methods(array $open, array $high, array $low, array $close): array
     {
-        return trader_cdlxsidegap3methods($open, $high, $low, $close);
+        $return = trader_cdlxsidegap3methods($open, $high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1346,7 +1641,10 @@ trait TraderTrait
      */
     public static function ceil(array $real): array
     {
-        return trader_ceil($real);
+        $return = trader_ceil($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1359,7 +1657,15 @@ trait TraderTrait
      */
     public static function cmo(array $real, integer $timePeriod = null): array
     {
-        return trader_cmo($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_cmo($real, $timePeriod);
+        } else {
+            $return = trader_cmo($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1373,7 +1679,15 @@ trait TraderTrait
      */
     public static function correl(array $real0, array $real1, integer $timePeriod = null): array
     {
-        return trader_correl($real0, $real1, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_correl($real0, $real1, $timePeriod);
+        } else {
+            $return = trader_correl($real0, $real1);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1386,7 +1700,10 @@ trait TraderTrait
      */
     public static function cos(array $real): array
     {
-        return trader_cos($real);
+        $return = trader_cos($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1399,7 +1716,10 @@ trait TraderTrait
      */
     public static function cosh(array $real): array
     {
-        return trader_cosh($real);
+        $return = trader_cosh($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1412,7 +1732,15 @@ trait TraderTrait
      */
     public static function dema(array $real, integer $timePeriod): array
     {
-        return trader_dema($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_dema($real, $timePeriod);
+        } else {
+            $return = trader_dema($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1426,7 +1754,10 @@ trait TraderTrait
      */
     public static function div(array $real0, array $real1): array
     {
-        return trader_div($real0, $real1);
+        $return = trader_div($real0, $real1);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1441,7 +1772,15 @@ trait TraderTrait
      */
     public static function dx(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_dx($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_dx($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_dx($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1454,7 +1793,15 @@ trait TraderTrait
      */
     public static function ema(array $real, integer $timePeriod = null): array
     {
-        return trader_ema($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_ema($real, $timePeriod);
+        } else {
+            $return = trader_ema($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1465,7 +1812,10 @@ trait TraderTrait
      */
     public static function errno(): integer
     {
-        return trader_errno();
+        $return = trader_errno();
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1478,7 +1828,10 @@ trait TraderTrait
      */
     public static function exp(array $real): array
     {
-        return trader_exp($real);
+        $return = trader_exp($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1491,7 +1844,10 @@ trait TraderTrait
      */
     public static function floor(array $real): array
     {
-        return trader_floor($real);
+        $return = trader_floor($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1502,7 +1858,10 @@ trait TraderTrait
      */
     public static function get_compat(): integer
     {
-        return trader_get_compat();
+        $return = trader_get_compat();
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1515,7 +1874,10 @@ trait TraderTrait
      */
     public static function get_unstable_period(integer $functionId): integer
     {
-        return trader_get_unstable_period($functionId);
+        $return = trader_get_unstable_period($functionId);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1527,7 +1889,10 @@ trait TraderTrait
      */
     public static function ht_dcperiod(array $real): array
     {
-        return trader_ht_dcperiod($real);
+        $return = trader_ht_dcperiod($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1539,7 +1904,10 @@ trait TraderTrait
      */
     public static function ht_dcphase(array $real): array
     {
-        return trader_ht_dcphase($real);
+        $return = trader_ht_dcphase($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1551,7 +1919,10 @@ trait TraderTrait
      */
     public static function ht_phasor(array $real): array
     {
-        return trader_ht_phasor($real);
+        $return = trader_ht_phasor($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1563,7 +1934,10 @@ trait TraderTrait
      */
     public static function ht_sine(array $real): array
     {
-        return trader_ht_sine($real);
+        $return = trader_ht_sine($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1575,7 +1949,10 @@ trait TraderTrait
      */
     public static function ht_trendline(array $real): array
     {
-        return trader_ht_trendline($real);
+        $return = trader_ht_trendline($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1587,7 +1964,10 @@ trait TraderTrait
      */
     public static function ht_trendmode(array $real): array
     {
-        return trader_ht_trendmode($real);
+        $return = trader_ht_trendmode($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1600,7 +1980,15 @@ trait TraderTrait
      */
     public static function kama(array $real, integer $timePeriod = null): array
     {
-        return trader_kama($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_kama($real, $timePeriod);
+        } else {
+            $return = trader_kama($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1613,7 +2001,15 @@ trait TraderTrait
      */
     public static function linearreg_angle(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_angle($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_linearreg_angle($real, $timePeriod);
+        } else {
+            $return = trader_linearreg_angle($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1626,7 +2022,15 @@ trait TraderTrait
      */
     public static function linearreg_intercept(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_intercept($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_linearreg_intercept($real, $timePeriod);
+        } else {
+            $return = trader_linearreg_intercept($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1639,7 +2043,15 @@ trait TraderTrait
      */
     public static function linearreg_slope(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg_slope($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_linearreg_slope($real, $timePeriod);
+        } else {
+            $return = trader_linearreg_slope($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1652,7 +2064,15 @@ trait TraderTrait
      */
     public static function linearreg(array $real, integer $timePeriod = null): array
     {
-        return trader_linearreg($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_linearreg($real, $timePeriod);
+        } else {
+            $return = trader_linearreg($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1665,7 +2085,10 @@ trait TraderTrait
      */
     public static function ln(array $real): array
     {
-        return trader_ln($real);
+        $return = trader_ln($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1678,7 +2101,10 @@ trait TraderTrait
      */
     public static function log10(array $real): array
     {
-        return trader_log10($real);
+        $return = trader_log10($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1692,7 +2118,17 @@ trait TraderTrait
      */
     public static function ma(array $real, integer $timePeriod = null, integer $mAType = null): array
     {
-        return trader_ma($real, $timePeriod, $mAType);
+        //TODO: Reverse
+        if (!is_null($mAType)) {
+            $return = trader_ma($real, $timePeriod, $mAType);
+        } elseif (!is_null($timePeriod)) {
+            $return = trader_ma($real, $timePeriod);
+        } else {
+            $return = trader_ma($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1707,7 +2143,19 @@ trait TraderTrait
      */
     public static function macd(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
     {
-        return trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
+        //TODO: Reverse
+        if (!is_null($signalPeriod)) {
+            $return = trader_macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
+        } elseif (!is_null($slowPeriod)) {
+            $return = trader_macd($real, $fastPeriod, $slowPeriod);
+        } elseif (!is_null($fastPeriod)) {
+            $return = trader_macd($real, $fastPeriod);
+        } else {
+            $return = trader_macd($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1724,7 +2172,23 @@ trait TraderTrait
      */
     public static function macdext(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
     {
-        return trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
+        //TODO: Reverse
+        if (!is_null($signalPeriod)) {
+            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
+        } elseif (!is_null($slowMAType)) {
+            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType);
+        } elseif (!is_null($slowPeriod)) {
+            $return = trader_macdext($real, $fastPeriod, $fastMAType, $slowPeriod);
+        } elseif (!is_null($fastMAType)) {
+            $return = trader_macdext($real, $fastPeriod, $fastMAType);
+        } elseif (!is_null($fastPeriod)) {
+            $return = trader_macdext($real, $fastPeriod);
+        } else {
+            $return = trader_macdext($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1737,7 +2201,15 @@ trait TraderTrait
      */
     public static function macdfix(array $real, integer $signalPeriod = null): array
     {
-        return trader_macd($real, $signalPeriod);
+        //TODO: Reverse
+        if (!is_null($signalPeriod)) {
+            $return = trader_macd($real, $signalPeriod);
+        } else {
+            $return = trader_macd($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1751,7 +2223,17 @@ trait TraderTrait
      */
     public static function mama(array $real, float $fastLimit = null, float $slowLimit = null): array
     {
-        return trader_mama($real, $fastLimit, $slowLimit);
+        //TODO: Reverse
+        if (!is_null($slowLimit)) {
+            $return = trader_mama($real, $fastLimit, $slowLimit);
+        } elseif (!is_null($fastLimit)) {
+            $return = trader_mama($real, $fastLimit);
+        } else {
+            $return = trader_mama($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1767,7 +2249,19 @@ trait TraderTrait
      */
     public static function mavp(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
     {
-        return trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
+        //TODO: Reverse
+        if (!is_null($mAType)) {
+            $return = trader_mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
+        } elseif (!is_null($maxPeriod)) {
+            $return = trader_mavp($real, $periods, $minPeriod, $maxPeriod);
+        } elseif (!is_null($minPeriod)) {
+            $return = trader_mavp($real, $periods, $minPeriod);
+        } else {
+            $return = trader_mavp($real, $periods);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1780,7 +2274,15 @@ trait TraderTrait
      */
     public static function max(array $real, integer $timePeriod = null): array
     {
-        return trader_max($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_max($real, $timePeriod);
+        } else {
+            $return = trader_max($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1793,7 +2295,15 @@ trait TraderTrait
      */
     public static function maxindex(array $real, integer $timePeriod = null): array
     {
-        return trader_maxindex($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_maxindex($real, $timePeriod);
+        } else {
+            $return = trader_maxindex($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1806,7 +2316,10 @@ trait TraderTrait
      */
     public static function medprice(array $high, array $low): array
     {
-        return trader_medprice($high, $low);
+        $return = trader_medprice($high, $low);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1822,7 +2335,15 @@ trait TraderTrait
      */
     public static function mfi(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
     {
-        return trader_mfi($high, $low, $close, $volume, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_mfi($high, $low, $close, $volume, $timePeriod);
+        } else {
+            $return = trader_mfi($high, $low, $close, $volume);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1835,7 +2356,15 @@ trait TraderTrait
      */
     public static function midpoint(array $real, integer $timePeriod = null): array
     {
-        return trader_midpoint($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_midpoint($real, $timePeriod);
+        } else {
+            $return = trader_midpoint($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1849,7 +2378,15 @@ trait TraderTrait
      */
     public static function midprice(array $high, array $low, integer $timePeriod = null)
     {
-        return trader_midprice($high, $low, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_midprice($high, $low, $timePeriod);
+        } else {
+            $return = trader_midprice($high, $low);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1862,7 +2399,15 @@ trait TraderTrait
      */
     public static function min(array $real, integer $timePeriod = null): array
     {
-        return trader_min($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_min($real, $timePeriod);
+        } else {
+            $return = trader_min($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1875,7 +2420,15 @@ trait TraderTrait
      */
     public static function minindex(array $real, integer $timePeriod = null): array
     {
-        return trader_minindex($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_minindex($real, $timePeriod);
+        } else {
+            $return = trader_minindex($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1888,7 +2441,15 @@ trait TraderTrait
      */
     public static function minmax(array $real, integer $timePeriod = null): array
     {
-        return trader_minmax($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_minmax($real, $timePeriod);
+        } else {
+            $return = trader_minmax($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1901,7 +2462,15 @@ trait TraderTrait
      */
     public static function minmaxindex(array $real, integer $timePeriod = null): array
     {
-        return trader_minmaxindex($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_minmaxindex($real, $timePeriod);
+        } else {
+            $return = trader_minmaxindex($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1916,7 +2485,15 @@ trait TraderTrait
      */
     public static function minus_di(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_minus_di($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_minus_di($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_minus_di($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1930,7 +2507,15 @@ trait TraderTrait
      */
     public static function minus_dm(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_minus_dm($high, $low, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_minus_dm($high, $low, $timePeriod);
+        } else {
+            $return = trader_minus_dm($high, $low);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1943,7 +2528,15 @@ trait TraderTrait
      */
     public static function mom(array $real, integer $timePeriod = null): array
     {
-        return trader_mom($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_mom($real, $timePeriod);
+        } else {
+            $return = trader_mom($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1957,7 +2550,10 @@ trait TraderTrait
      */
     public static function mult(array $real0, array $real1): array
     {
-        return trader_mult($real0, $real1);
+        $return = trader_mult($real0, $real1);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1972,7 +2568,15 @@ trait TraderTrait
      */
     public static function natr(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_natr($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_natr($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_natr($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -1985,7 +2589,10 @@ trait TraderTrait
      */
     public static function obv(array $real, array $volume): array
     {
-        return trader_obv($real, $volume);
+        $return = trader_obv($real, $volume);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2000,7 +2607,15 @@ trait TraderTrait
      */
     public static function plus_di(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_plus_di($high, $low, $close, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_plus_di($high, $low, $close, $timePeriod);
+        } else {
+            $return = trader_plus_di($high, $low, $close);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2014,7 +2629,15 @@ trait TraderTrait
      */
     public static function plus_dm(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_plus_dm($high, $low, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_plus_dm($high, $low, $timePeriod);
+        } else {
+            $return = trader_plus_dm($high, $low);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2029,7 +2652,19 @@ trait TraderTrait
      */
     public static function ppo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
-        return trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
+        //TODO: Reverse
+        if (!is_null($mAType)) {
+            $return = trader_ppo($real, $fastPeriod, $slowPeriod, $mAType);
+        } elseif (!is_null($slowPeriod)) {
+            $return = trader_ppo($real, $fastPeriod, $slowPeriod);
+        } elseif (!is_null($fastPeriod)) {
+            $return = trader_ppo($real, $fastPeriod);
+        } else {
+            $return = trader_ppo($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2042,7 +2677,15 @@ trait TraderTrait
      */
     public static function roc(array $real, integer $timePeriod = null): array
     {
-        return trader_roc($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_roc($real, $timePeriod);
+        } else {
+            $return = trader_roc($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2055,7 +2698,15 @@ trait TraderTrait
      */
     public static function rocp(array $real, integer $timePeriod = null): array
     {
-        return trader_rocp($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_rocp($real, $timePeriod);
+        } else {
+            $return = trader_rocp($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2068,7 +2719,15 @@ trait TraderTrait
      */
     public static function rocr100(array $real, integer $timePeriod = null): array
     {
-        return trader_rocr100($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_rocr100($real, $timePeriod);
+        } else {
+            $return = trader_rocr100($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2081,7 +2740,15 @@ trait TraderTrait
      */
     public static function rocr(array $real, integer $timePeriod = null): array
     {
-        return trader_rocr($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_rocr($real, $timePeriod);
+        } else {
+            $return = trader_rocr($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2094,7 +2761,15 @@ trait TraderTrait
      */
     public static function rsi(array $real, integer $timePeriod = null): array
     {
-        return trader_rsi($real, $timePeriod);
+        //TODO: Reverse
+        if (!is_null($timePeriod)) {
+            $return = trader_rsi($real, $timePeriod);
+        } else {
+            $return = trader_rsi($real);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2109,7 +2784,16 @@ trait TraderTrait
      */
     public static function sar(array $high, array $low, float $acceleration = null, float $maximum = null): array
     {
-        return trader_sar($high, $low, $acceleration, $maximum);
+        if (is_null($acceleration)) {
+            $return = trader_sar($high, $low);
+        } elseif (is_null($maximum)) {
+            $return = trader_sar($high, $low, $acceleration);
+        } else {
+            $return = trader_sar($high, $low, $acceleration, $maximum);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2130,7 +2814,28 @@ trait TraderTrait
      */
     public static function sarext(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
     {
-        return trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
+        if (is_null($startValue)) {
+            $return = trader_sarext($high, $low);
+        } elseif (is_null($offsetOnReverse)) {
+            $return = trader_sarext($high, $low, $startValue);
+        } elseif (is_null($accelerationInitLong)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse);
+        } elseif (is_null($accelerationLong)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong);
+        } elseif (is_null($accelerationMaxLong)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong);
+        } elseif (is_null($accelerationInitShort)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong);
+        } elseif (is_null($accelerationShort)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort);
+        } elseif (is_null($accelerationMaxShort)) {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort);
+        } else {
+            $return = trader_sarext($high, $low, $startValue, $offsetOnReverse, $accelerationInitLong, $accelerationLong, $accelerationMaxLong, $accelerationInitShort, $accelerationShort, $accelerationMaxShort);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2141,7 +2846,10 @@ trait TraderTrait
      */
     public static function set_compat(integer $compatId)
     {
-        return trader_set_compat($compatId);
+        $return = trader_set_compat($compatId);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2153,7 +2861,10 @@ trait TraderTrait
      */
     public static function set_unstable_period(integer $functionId, integer $timePeriod)
     {
-        return trader_set_unstable_period($functionId, $timePeriod);
+        $return = trader_set_unstable_period($functionId, $timePeriod);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2166,7 +2877,10 @@ trait TraderTrait
      */
     public static function sin(array $real): array
     {
-        return trader_sin($real);
+        $return = trader_sin($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2179,7 +2893,10 @@ trait TraderTrait
      */
     public static function sinh(array $real): array
     {
-        return trader_sinh($real);
+        $return = trader_sinh($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2192,7 +2909,14 @@ trait TraderTrait
      */
     public static function sma(array $real, integer $timePeriod = null): array
     {
-        return trader_sma($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_sma($real);
+        } else {
+            $return = trader_sma($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2205,7 +2929,10 @@ trait TraderTrait
      */
     public static function sqrt(array $real): array
     {
-        return trader_sqrt($real);
+        $return = trader_sqrt($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2219,7 +2946,16 @@ trait TraderTrait
      */
     public static function stddev(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
-        return trader_stddev($real, $timePeriod, $nbDev);
+        if (is_null($timePeriod)) {
+            $return = trader_stddev($real);
+        } elseif (is_null($nbDev)) {
+            $return = trader_stddev($real, $timePeriod);
+        } else {
+            $return = trader_stddev($real, $timePeriod, $nbDev);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2238,7 +2974,22 @@ trait TraderTrait
      */
     public static function stoch(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
     {
-        return trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
+        if (is_null($fastK_Period)) {
+            $return = trader_stoch($high, $low, $close);
+        } elseif (is_null($slowK_Period)) {
+            $return = trader_stoch($high, $low, $close, $fastK_Period);
+        } elseif (is_null($slowK_MAType)) {
+            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period);
+        } elseif (is_null($slowD_Period)) {
+            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType);
+        } elseif (is_null($slowD_MAType)) {
+            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period);
+        } else {
+            $return = trader_stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2255,7 +3006,18 @@ trait TraderTrait
      */
     public static function stochf(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
-        return trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
+        if (is_null($fastK_Period)) {
+            $return = trader_stochf($high, $low, $close);
+        } elseif (is_null($fastD_Period)) {
+            $return = trader_stochf($high, $low, $close, $fastK_Period);
+        } elseif (is_null($fastD_MAType)) {
+            $return = trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period);
+        } else {
+            $return = trader_stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2271,7 +3033,20 @@ trait TraderTrait
      */
     public static function stochrsi(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
     {
-        return trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
+        if (is_null($timePeriod)) {
+            $return = trader_stochrsi($real);
+        } elseif (is_null($fastK_Period)) {
+            $return = trader_stochrsi($real, $timePeriod);
+        } elseif (is_null($fastD_Period)) {
+            $return = trader_stochrsi($real, $timePeriod, $fastK_Period);
+        } elseif (is_null($fastD_MAType)) {
+            $return = trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period);
+        } else {
+            $return = trader_stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2285,7 +3060,10 @@ trait TraderTrait
      */
     public static function sub(array $real0, array $real1): array
     {
-        return trader_sub($real0, $real1);
+        $return = trader_sub($real0, $real1);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2298,7 +3076,14 @@ trait TraderTrait
      */
     public static function sum(array $real, integer $timePeriod = null): array
     {
-        return trader_sum($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_sum($real);
+        } else {
+            $return = trader_sum($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2312,7 +3097,16 @@ trait TraderTrait
      */
     public static function t3(array $real, integer $timePeriod = null, float $vFactor = null): array
     {
-        return trader_t3($real, $timePeriod, $vFactor);
+        if (is_null($timePeriod)) {
+            $return = trader_t3($real);
+        } elseif (is_null($vFactor)) {
+            $return = trader_t3($real, $timePeriod);
+        } else {
+            $return = trader_t3($real, $timePeriod, $vFactor);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2325,7 +3119,10 @@ trait TraderTrait
      */
     public static function tan(array $real): array
     {
-        return trader_tan($real);
+        $return = trader_tan($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2338,7 +3135,10 @@ trait TraderTrait
      */
     public static function tanh(array $real): array
     {
-        return trader_tanh($real);
+        $return = trader_tanh($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2351,7 +3151,14 @@ trait TraderTrait
      */
     public static function tema(array $real, integer $timePeriod = null): array
     {
-        return trader_tema($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_tema($real);
+        } else {
+            $return = trader_tema($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2365,7 +3172,10 @@ trait TraderTrait
      */
     public static function trange(array $high, array $low, array $close): array
     {
-        return trader_trange($high, $low, $close);
+        $return = trader_trange($high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2378,7 +3188,14 @@ trait TraderTrait
      */
     public static function trima(array $real, integer $timePeriod = null): array
     {
-        return trader_trima($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_trima($real);
+        } else {
+            $return = trader_trima($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2391,7 +3208,14 @@ trait TraderTrait
      */
     public static function trix(array $real, integer $timePeriod = null): array
     {
-        return trader_trix($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_trix($real);
+        } else {
+            $return = trader_trix($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2404,7 +3228,14 @@ trait TraderTrait
      */
     public static function tsf(array $real, integer $timePeriod = null): array
     {
-        return trader_tsf($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_tsf($real);
+        } else {
+            $return = trader_tsf($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2418,7 +3249,10 @@ trait TraderTrait
      */
     public static function typprice(array $high, array $low, array $close): array
     {
-        return trader_typprice($high, $low, $close);
+        $return = trader_typprice($high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2435,7 +3269,18 @@ trait TraderTrait
      */
     public static function ultosc(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
     {
-        return trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
+        if (is_null($timePeriod1)) {
+            $return = trader_ultosc($high, $low, $close);
+        } elseif (is_null($timePeriod2)) {
+            $return = trader_ultosc($high, $low, $close, $timePeriod1);
+        } elseif (is_null($timePeriod3)) {
+            $return = trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2);
+        } else {
+            $return = trader_ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2449,7 +3294,16 @@ trait TraderTrait
      */
     public static function var(array $real, integer $timePeriod = null, float $nbDev = null): array
     {
-        return trader_var($real, $timePeriod, $nbDev);
+        if (is_null($timePeriod)) {
+            $return = trader_var($real);
+        } elseif (is_null($nbDev)) {
+            $return = trader_var($real, $timePeriod);
+        } else {
+            $return = trader_var($real, $timePeriod, $nbDev);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2463,7 +3317,10 @@ trait TraderTrait
      */
     public static function wclprice(array $high, array $low, array $close): array
     {
-        return trader_wclprice($high, $low, $close);
+        $return = trader_wclprice($high, $low, $close);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2478,7 +3335,14 @@ trait TraderTrait
      */
     public static function willr(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_willr($high, $low, $close, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_willr($high, $low, $close);
+        } else {
+            $return = trader_willr($high, $low, $close, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -2491,7 +3355,14 @@ trait TraderTrait
      */
     public static function wma(array $real, integer $timePeriod = null): array
     {
-        return trader_wma($real, $timePeriod);
+        if (is_null($timePeriod)) {
+            $return = trader_wma($real);
+        } else {
+            $return = trader_wma($real, $timePeriod);
+        }
+        static::checkForError();
+
+        return $return;
     }
 
 }
