@@ -141,7 +141,10 @@ trait TraderTrait
      */
     public static function acos(array $real): array
     {
-        return trader_acos($real);
+        $return = trader_acos($real);
+        static::checkForError();
+
+        return $return;
     }
 
     /**
@@ -186,7 +189,14 @@ trait TraderTrait
      */
     public static function adosc(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
     {
-        return trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
+        if (!is_null($slowPeriod)) {
+            return trader_adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
+        }
+        if (!is_null($fastPeriod)) {
+            return trader_adosc($high, $low, $close, $volume, $fastPeriod);
+        }
+
+        return trader_adosc($high, $low, $close, $volume);
     }
 
     /**
@@ -201,7 +211,11 @@ trait TraderTrait
      */
     public static function adx(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_adx($high, $low, $close, $timePeriod);
+        if (!is_null($timePeriod)) {
+            return trader_adx($high, $low, $close, $timePeriod);
+        }
+
+        return trader_adx($high, $low, $close);
     }
 
     /**
@@ -216,7 +230,11 @@ trait TraderTrait
      */
     public static function adxr(array $high, array $low, array $close, integer $timePeriod = null): array
     {
-        return trader_adxr($high, $low, $close, $timePeriod);
+        if (!is_null($timePeriod)) {
+            return trader_adxr($high, $low, $close, $timePeriod);
+        }
+
+        return trader_adxr($high, $low, $close);
     }
 
     /**
@@ -231,7 +249,17 @@ trait TraderTrait
      */
     public static function apo(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
     {
-        return trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
+        if (!is_null($mAType)) {
+            return trader_apo($real, $fastPeriod, $slowPeriod, $mAType);
+        }
+        if (!is_null($slowPeriod)) {
+            return trader_apo($real, $fastPeriod, $slowPeriod);
+        }
+        if (!is_null($fastPeriod)) {
+            return trader_apo($real, $fastPeriod);
+        }
+
+        return trader_apo($real);
     }
 
     /**
@@ -245,7 +273,11 @@ trait TraderTrait
      */
     public static function aroon(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_aroon($high, $low, $timePeriod);
+        if (!is_null($timePeriod)) {
+            return trader_aroon($high, $low, $timePeriod);
+        }
+
+        return trader_aroon($high, $low);
     }
 
     /**
@@ -259,7 +291,11 @@ trait TraderTrait
      */
     public static function arronosc(array $high, array $low, integer $timePeriod = null): array
     {
-        return trader_aroonosc($high, $low, $timePeriod);
+        if (!is_null($timePeriod)) {
+            return trader_aroonosc($high, $low, $timePeriod);
+        }
+
+        return trader_aroonosc($high, $low);
     }
 
     /**
