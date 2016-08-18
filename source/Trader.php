@@ -1503,24 +1503,26 @@ class Trader
      * Hilbert Transform - Phasor Components
      *
      * @param array $real Array of real values.
+     * @param array $inPhase Empty array, will be filled with in phase data.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function hilbertTransformPhasorComponents(array $real): array
+    public static function hilbertTransformPhasorComponents(array $real, array &$inPhase): array
     {
-        return static::ht_phasor($real);
+        return static::ht_phasor($real, $inPhase);
     }
 
     /**
      * Hilbert Transform - SineWave
      *
      * @param array $real Array of real values.
+     * @param array $sine Empty array, will be filled with sine data.
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function hilbertTransformSineWave(array $real): array
+    public static function hilbertTransformSineWave(array $real, array &$sine): array
     {
-        return static::ht_sine($real);
+        return static::ht_sine($real, $sine);
     }
 
     /**
