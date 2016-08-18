@@ -1699,9 +1699,9 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function movingAverageConvergenceDivergenceFixed(array $real, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergenceFixed(array $real, int $signalPeriod = null): array
     {
-        return static::macd($real, $signalPeriod);
+        return static::macdfix($real, $signalPeriod);
     }
 
     /**
