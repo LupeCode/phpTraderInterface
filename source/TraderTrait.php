@@ -2066,10 +2066,10 @@ trait TraderTrait
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function macdfix(array $real, integer $signalPeriod = null): array
+    public static function macdfix(array $real, int $signalPeriod = null): array
     {
         $signalPeriod = $signalPeriod ?? 9;
-        $return       = trader_macd($real, $signalPeriod);
+        $return       = trader_macdfix($real, $signalPeriod);
         static::checkForError();
 
         return $return;
