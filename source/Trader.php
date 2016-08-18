@@ -308,7 +308,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function beta(array $real0, array $real1, integer $timePeriod = null): array
+    public static function betaVolatility(array $real0, array $real1, int $timePeriod = null): array
     {
         return static::beta($real0, $real1, $timePeriod);
     }
