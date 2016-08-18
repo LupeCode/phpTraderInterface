@@ -179,7 +179,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function aroon(array $high, array $low, integer $timePeriod = null): array
+    public static function aroonIndicator(array $high, array $low, int $timePeriod = null): array
     {
         return static::aroon($high, $low, $timePeriod);
     }
