@@ -88,7 +88,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function chaikinAccumulationDistributionOscillator(array $high, array $low, array $close, array $volume, integer $fastPeriod = null, integer $slowPeriod = null): array
+    public static function chaikinAccumulationDistributionOscillator(array $high, array $low, array $close, array $volume, int $fastPeriod = null, int $slowPeriod = null): array
     {
         return static::adosc($high, $low, $close, $volume, $fastPeriod, $slowPeriod);
     }
@@ -114,7 +114,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function averageDirectionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageDirectionalMovementIndex(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::adx($high, $low, $close, $timePeriod);
     }
@@ -135,7 +135,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function averageDirectionalMovementIndexRating(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageDirectionalMovementIndexRating(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::adxr($high, $low, $close, $timePeriod);
     }
@@ -159,7 +159,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function absolutePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function absolutePriceOscillator(array $real, int $fastPeriod = null, int $slowPeriod = null, int $mAType = null): array
     {
         return static::apo($real, $fastPeriod, $slowPeriod, $mAType);
     }
@@ -196,7 +196,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function arronOscillator(array $high, array $low, integer $timePeriod = null): array
+    public static function arronOscillator(array $high, array $low, int $timePeriod = null): array
     {
         return static::aroonosc($high, $low, $timePeriod);
     }
@@ -246,7 +246,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function averageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function averageTrueRange(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::atr($high, $low, $close, $timePeriod);
     }
@@ -286,7 +286,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function bollingerBands(array $real, integer $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, integer $mAType = null): array
+    public static function bollingerBands(array $real, int $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, int $mAType = null): array
     {
         return static::bbands($real, $timePeriod, $nbDevUp, $nbDevDn, $mAType);
     }
@@ -341,7 +341,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function commodityChannelIndex(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function commodityChannelIndex(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::cci($high, $low, $close, $timePeriod);
     }
@@ -1294,7 +1294,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function chandeMomentumOscillator(array $real, integer $timePeriod): array
+    public static function chandeMomentumOscillator(array $real, int $timePeriod): array
     {
         return static::cmo($real, $timePeriod);
     }
@@ -1310,7 +1310,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function pearsonCorrelationCoefficient(array $real0, array $real1, integer $timePeriod = null): array
+    public static function pearsonCorrelationCoefficient(array $real0, array $real1, int $timePeriod = null): array
     {
         return static::correl($real0, $real1, $timePeriod);
     }
@@ -1354,7 +1354,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function doubleExponentialMovingAverage(array $real, integer $timePeriod): array
+    public static function doubleExponentialMovingAverage(array $real, int $timePeriod): array
     {
         return static::dema($real, $timePeriod);
     }
@@ -1387,7 +1387,7 @@ class Trader
      *
      * @return array  Returns an array with calculated data or false on failure.
      */
-    public static function directionalMovementIndex(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function directionalMovementIndex(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::dx($high, $low, $close, $timePeriod);
     }
@@ -1404,7 +1404,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function exponentialMovingAverage(array $real, integer $timePeriod): array
+    public static function exponentialMovingAverage(array $real, int $timePeriod): array
     {
         return static::ema($real, $timePeriod);
     }
@@ -1560,7 +1560,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function kaufmanAdaptiveMovingAverage(array $real, integer $timePeriod = null): array
+    public static function kaufmanAdaptiveMovingAverage(array $real, int $timePeriod = null): array
     {
         return static::kama($real, $timePeriod);
     }
@@ -1573,7 +1573,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearRegressionAngle(array $real, integer $timePeriod = null): array
+    public static function linearRegressionAngle(array $real, int $timePeriod = null): array
     {
         return static::linearreg_angle($real, $timePeriod);
     }
@@ -1586,7 +1586,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearRegressionIntercept(array $real, integer $timePeriod = null): array
+    public static function linearRegressionIntercept(array $real, int $timePeriod = null): array
     {
         return static::linearreg_intercept($real, $timePeriod);
     }
@@ -1599,7 +1599,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearRegressionSlope(array $real, integer $timePeriod = null): array
+    public static function linearRegressionSlope(array $real, int $timePeriod = null): array
     {
         return static::linearreg_slope($real, $timePeriod);
     }
@@ -1612,7 +1612,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function linearRegression(array $real, integer $timePeriod = null): array
+    public static function linearRegression(array $real, int $timePeriod = null): array
     {
         return static::linearreg($real, $timePeriod);
     }
@@ -1654,7 +1654,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function movingAverage(array $real, integer $timePeriod = null, integer $mAType = null): array
+    public static function movingAverage(array $real, int $timePeriod = null, int $mAType = null): array
     {
         return static::ma($real, $timePeriod, $mAType);
     }
@@ -1669,7 +1669,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function movingAverageConvergenceDivergence(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergence(array $real, int $fastPeriod = null, int $slowPeriod = null, int $signalPeriod = null): array
     {
         return static::macd($real, $fastPeriod, $slowPeriod, $signalPeriod);
     }
@@ -1686,7 +1686,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function movingAverageConvergenceDivergenceExtended(array $real, integer $fastPeriod = null, integer $fastMAType = null, integer $slowPeriod = null, integer $slowMAType = null, integer $signalPeriod = null): array
+    public static function movingAverageConvergenceDivergenceExtended(array $real, int $fastPeriod = null, int $fastMAType = null, int $slowPeriod = null, int $slowMAType = null, int $signalPeriod = null): array
     {
         return static::macdext($real, $fastPeriod, $fastMAType, $slowPeriod, $slowMAType, $signalPeriod);
     }
@@ -1729,7 +1729,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function movingAverageVariablePeriod(array $real, array $periods, integer $minPeriod = null, integer $maxPeriod = null, integer $mAType = null): array
+    public static function movingAverageVariablePeriod(array $real, array $periods, int $minPeriod = null, int $maxPeriod = null, int $mAType = null): array
     {
         return static::mavp($real, $periods, $minPeriod, $maxPeriod, $mAType);
     }
@@ -1742,7 +1742,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMax(array $real, integer $timePeriod = null): array
+    public static function mathMax(array $real, int $timePeriod = null): array
     {
         return static::max($real, $timePeriod);
     }
@@ -1755,7 +1755,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMaxIndex(array $real, integer $timePeriod = null): array
+    public static function mathMaxIndex(array $real, int $timePeriod = null): array
     {
         return static::maxindex($real, $timePeriod);
     }
@@ -1784,7 +1784,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function moneyFlowIndex(array $high, array $low, array $close, array $volume, integer $timePeriod = null): array
+    public static function moneyFlowIndex(array $high, array $low, array $close, array $volume, int $timePeriod = null): array
     {
         return static::mfi($high, $low, $close, $volume, $timePeriod);
     }
@@ -1797,7 +1797,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function midpoint(array $real, integer $timePeriod = null): array
+    public static function middlePoint(array $real, int $timePeriod = null): array
     {
         return static::midpoint($real, $timePeriod);
     }
@@ -1811,7 +1811,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function midpointPrice(array $high, array $low, integer $timePeriod = null)
+    public static function middlePointPrice(array $high, array $low, int $timePeriod = null)
     {
         return static::midprice($high, $low, $timePeriod);
     }
@@ -1824,7 +1824,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMin(array $real, integer $timePeriod = null): array
+    public static function mathMin(array $real, int $timePeriod = null): array
     {
         return static::min($real, $timePeriod);
     }
@@ -1837,7 +1837,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMinIndex(array $real, integer $timePeriod = null): array
+    public static function mathMinIndex(array $real, int $timePeriod = null): array
     {
         return static::minindex($real, $timePeriod);
     }
@@ -1850,7 +1850,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMinMax(array $real, integer $timePeriod = null): array
+    public static function mathMinMax(array $real, int $timePeriod = null): array
     {
         return static::minmax($real, $timePeriod);
     }
@@ -1863,7 +1863,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathMinMaxIndex(array $real, integer $timePeriod = null): array
+    public static function mathMinMaxIndex(array $real, int $timePeriod = null): array
     {
         return static::minmaxindex($real, $timePeriod);
     }
@@ -1878,7 +1878,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function minusDirectionalIndicator(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::minus_di($high, $low, $close, $timePeriod);
     }
@@ -1892,7 +1892,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function minusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
+    public static function minusDirectionalMovement(array $high, array $low, int $timePeriod = null): array
     {
         return static::minus_dm($high, $low, $timePeriod);
     }
@@ -1905,7 +1905,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function momentum(array $real, integer $timePeriod = null): array
+    public static function momentum(array $real, int $timePeriod = null): array
     {
         return static::mom($real, $timePeriod);
     }
@@ -1934,7 +1934,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function normalizedAverageTrueRange(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function normalizedAverageTrueRange(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::natr($high, $low, $close, $timePeriod);
     }
@@ -1962,7 +1962,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plusDirectionalIndicator(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function plusDirectionalIndicator(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::plus_di($high, $low, $close, $timePeriod);
     }
@@ -1976,7 +1976,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function plusDirectionalMovement(array $high, array $low, integer $timePeriod = null): array
+    public static function plusDirectionalMovement(array $high, array $low, int $timePeriod = null): array
     {
         return static::plus_dm($high, $low, $timePeriod);
     }
@@ -1991,7 +1991,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function percentagePriceOscillator(array $real, integer $fastPeriod = null, integer $slowPeriod = null, integer $mAType = null): array
+    public static function percentagePriceOscillator(array $real, int $fastPeriod = null, int $slowPeriod = null, int $mAType = null): array
     {
         return static::ppo($real, $fastPeriod, $slowPeriod, $mAType);
     }
@@ -2004,7 +2004,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rateOfChange(array $real, integer $timePeriod = null): array
+    public static function rateOfChange(array $real, int $timePeriod = null): array
     {
         return static::roc($real, $timePeriod);
     }
@@ -2017,7 +2017,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rateOfChangePercentage(array $real, integer $timePeriod = null): array
+    public static function rateOfChangePercentage(array $real, int $timePeriod = null): array
     {
         return static::rocp($real, $timePeriod);
     }
@@ -2030,7 +2030,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rateOfChangeRatio100(array $real, integer $timePeriod = null): array
+    public static function rateOfChangeRatio100(array $real, int $timePeriod = null): array
     {
         return static::rocr100($real, $timePeriod);
     }
@@ -2043,7 +2043,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function rateOfChangeRatio(array $real, integer $timePeriod = null): array
+    public static function rateOfChangeRatio(array $real, int $timePeriod = null): array
     {
         return static::rocr($real, $timePeriod);
     }
@@ -2056,7 +2056,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function relativeStrengthIndex(array $real, integer $timePeriod = null): array
+    public static function relativeStrengthIndex(array $real, int $timePeriod = null): array
     {
         return static::rsi($real, $timePeriod);
     }
@@ -2115,7 +2115,7 @@ class Trader
      * @param int $functionId Function ID the factor should be set for. TRADER_FUNC_UNST_* constant series can be used to affect the corresponding function.
      * @param int $timePeriod Unstable period value.
      */
-    public static function setUnstablePeriod(integer $functionId, integer $timePeriod)
+    public static function setUnstablePeriod(integer $functionId, int $timePeriod)
     {
         return static::set_unstable_period($functionId, $timePeriod);
     }
@@ -2154,7 +2154,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function simpleMovingAverage(array $real, integer $timePeriod = null): array
+    public static function simpleMovingAverage(array $real, int $timePeriod = null): array
     {
         return static::sma($real, $timePeriod);
     }
@@ -2181,7 +2181,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function standardDeviation(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function standardDeviation(array $real, int $timePeriod = null, float $nbDev = null): array
     {
         return static::stddev($real, $timePeriod, $nbDev);
     }
@@ -2200,7 +2200,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochastic(array $high, array $low, array $close, integer $fastK_Period = null, integer $slowK_Period = null, integer $slowK_MAType = null, integer $slowD_Period = null, integer $slowD_MAType = null): array
+    public static function stochastic(array $high, array $low, array $close, int $fastK_Period = null, int $slowK_Period = null, int $slowK_MAType = null, int $slowD_Period = null, int $slowD_MAType = null): array
     {
         return static::stoch($high, $low, $close, $fastK_Period, $slowK_Period, $slowK_MAType, $slowD_Period, $slowD_MAType);
     }
@@ -2217,7 +2217,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochasticFast(array $high, array $low, array $close, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochasticFast(array $high, array $low, array $close, int $fastK_Period = null, int $fastD_Period = null, int $fastD_MAType = null): array
     {
         return static::stochf($high, $low, $close, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
@@ -2233,7 +2233,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function stochasticRelativeStrengthIndex(array $real, integer $timePeriod = null, integer $fastK_Period = null, integer $fastD_Period = null, integer $fastD_MAType = null): array
+    public static function stochasticRelativeStrengthIndex(array $real, int $timePeriod = null, int $fastK_Period = null, int $fastD_Period = null, int $fastD_MAType = null): array
     {
         return static::stochrsi($real, $timePeriod, $fastK_Period, $fastD_Period, $fastD_MAType);
     }
@@ -2260,7 +2260,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function mathSummation(array $real, integer $timePeriod = null): array
+    public static function mathSummation(array $real, int $timePeriod = null): array
     {
         return static::sum($real, $timePeriod);
     }
@@ -2274,7 +2274,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tripleExponentialMovingAverageT3(array $real, integer $timePeriod = null, float $vFactor = null): array
+    public static function tripleExponentialMovingAverageT3(array $real, int $timePeriod = null, float $vFactor = null): array
     {
         return static::t3($real, $timePeriod, $vFactor);
     }
@@ -2313,7 +2313,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tripleExponentialMovingAverage(array $real, integer $timePeriod = null): array
+    public static function tripleExponentialMovingAverage(array $real, int $timePeriod = null): array
     {
         return static::tema($real, $timePeriod);
     }
@@ -2340,7 +2340,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function triangularMovingAverage(array $real, integer $timePeriod = null): array
+    public static function triangularMovingAverage(array $real, int $timePeriod = null): array
     {
         return static::trima($real, $timePeriod);
     }
@@ -2353,7 +2353,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function tripleExponentialAverage(array $real, integer $timePeriod = null): array
+    public static function tripleExponentialAverage(array $real, int $timePeriod = null): array
     {
         return static::trix($real, $timePeriod);
     }
@@ -2366,7 +2366,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function timeSeriesForecast(array $real, integer $timePeriod = null): array
+    public static function timeSeriesForecast(array $real, int $timePeriod = null): array
     {
         return static::tsf($real, $timePeriod);
     }
@@ -2397,7 +2397,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function ultimateOscillator(array $high, array $low, array $close, integer $timePeriod1 = null, integer $timePeriod2 = null, integer $timePeriod3 = null): array
+    public static function ultimateOscillator(array $high, array $low, array $close, int $timePeriod1 = null, int $timePeriod2 = null, int $timePeriod3 = null): array
     {
         return static::ultosc($high, $low, $close, $timePeriod1, $timePeriod2, $timePeriod3);
     }
@@ -2411,7 +2411,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function variance(array $real, integer $timePeriod = null, float $nbDev = null): array
+    public static function variance(array $real, int $timePeriod = null, float $nbDev = null): array
     {
         return static::var($real, $timePeriod, $nbDev);
     }
@@ -2440,7 +2440,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function williamsR(array $high, array $low, array $close, integer $timePeriod = null): array
+    public static function williamsR(array $high, array $low, array $close, int $timePeriod = null): array
     {
         return static::willr($high, $low, $close, $timePeriod);
     }
@@ -2453,7 +2453,7 @@ class Trader
      *
      * @return array Returns an array with calculated data or false on failure.
      */
-    public static function weightedMovingAverage(array $real, integer $timePeriod = null): array
+    public static function weightedMovingAverage(array $real, int $timePeriod = null): array
     {
         return static::wma($real, $timePeriod);
     }
