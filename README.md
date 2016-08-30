@@ -12,15 +12,19 @@ This project is just an interface to that extension, and does not work without i
 
 Variable types are set on all function parameters.
 
-## Note About Misdocumented Functions
+## Note About Mis-documented Functions
 
 The php.net documentation for trader_ht_phasor and trader_ht_sine are incorrect.  This was discovered through unit testing of this interface.  Both functions require a second parameter, a by reference array that extra data will be written into.
 
 This interface has the correct version of those functions.
 
+### Bug in Trader 0.4.0
+
+The PECL Trader package version 0.4.0 has a bug regarding the two functions above.  Though the output parameters are required for the function to execute, they are not used.  The returned array is a 2-Dimensional array with the return value and the output parameter combined. 
+
 ## How to use
 
-Lets assume that you want to generate an Aroon indicator.
+Lets assume that you want to generate a correlation indicator.
 Instead of using 
 `trader_correl($Open, $Close, 30)`
 You can now use the exact named
