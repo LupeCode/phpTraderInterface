@@ -1,7 +1,7 @@
 {
   "name": "lupecode/php-trader-interface",
   "description": "An interface to the PHP Trader extension.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "library",
   "license": "GNU GPLv3",
   "authors":[
@@ -17,7 +17,9 @@
     "ext-trader": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "~5.4"
+    "phpunit/phpunit": "~5.4",
+    "codeclimate/php-test-reporter": "~0.3",
+    "codacy/coverage": "~1.0"
   },
   "autoload": {
     "psr-4": {"LupeCode\\phpTraderInterface\\": "source/"}
