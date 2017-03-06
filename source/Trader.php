@@ -1502,7 +1502,7 @@ class Trader
     /**
      * Hilbert Transform - Phasor Components
      *
-     * @param array $real Array of real values.
+     * @param array $real    Array of real values.
      * @param array $inPhase Empty array, will be filled with in phase data.
      *
      * @return array Returns an array with calculated data or false on failure.
@@ -2435,9 +2435,9 @@ class Trader
     /**
      * Williams' %R
      *
-     * @param array $high  High price, array of real values.
-     * @param array $low   Low price, array of real values.
-     * @param array $close Closing price, array of real values.
+     * @param array    $high       High price, array of real values.
+     * @param array    $low        Low price, array of real values.
+     * @param array    $close      Closing price, array of real values.
      * @param null|int $timePeriod Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
@@ -2459,6 +2459,5 @@ class Trader
     {
         return static::wma($real, $timePeriod);
     }
-
 
 }
