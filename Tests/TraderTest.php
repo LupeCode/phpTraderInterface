@@ -2054,7 +2054,7 @@ class TraderTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(trader_wma($this->Close, 30), Trader::weightedMovingAverage($this->Close, 30));
     }
-    
+
 //</editor-fold>
 
 }
