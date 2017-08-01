@@ -179,7 +179,7 @@ class TraderTest extends PHPUnit_Framework_TestCase
             '16909400', '20529200', '19432500', '11803400', '7713000', '6398400',
         ];
 
-//<editor-fold defaultstate="collapsed" desc="Constant Member Tests">
+    //<editor-fold defaultstate="collapsed" desc="Constant Member Tests">
     public function testConstants_TRADER_MA_TYPE_SMA()
     {
         $this->assertEquals(TRADER_MA_TYPE_SMA, Trader::$TRADER_MA_TYPE_SMA);
@@ -459,9 +459,9 @@ class TraderTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(TRADER_ERR_UNKNOWN_ERROR, Trader::$TRADER_ERR_UNKNOWN_ERROR);
     }
-//</editor-fold>
+    //</editor-fold>
 
-//<editor-fold defaultstate="collapsed" desc="Interface Function Tests">
+    //<editor-fold defaultstate="collapsed" desc="Interface Function Tests">
 
     public function testInterfaceFunctions_acos()
     {
@@ -1257,9 +1257,9 @@ class TraderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(trader_wma($this->Close, 30), Trader::wma($this->Close, 30));
     }
 
-//</editor-fold>
+    //</editor-fold>
 
-//<editor-fold defaultstate="collapsed" desc="Friendly Function Tests">
+    //<editor-fold defaultstate="collapsed" desc="Friendly Function Tests">
 
     public function testFriendlyFunctions_acos()
     {
@@ -2055,6 +2055,6 @@ class TraderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(trader_wma($this->Close, 30), Trader::weightedMovingAverage($this->Close, 30));
     }
 
-//</editor-fold>
+    //</editor-fold>
 
 }

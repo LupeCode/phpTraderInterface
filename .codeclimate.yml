@@ -10,4 +10,6 @@ engines:
         enabled: false
       ExcessivePublicCount:
         enabled: false
+      Controversial/CamelCaseParameterName:
+        enabled: false
 # ... CONFIG CONTENT ...
