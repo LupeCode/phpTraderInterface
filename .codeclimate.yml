@@ -8,4 +8,6 @@ engines:
         enabled: false
       Naming/ShortMethodName:
         enabled: false
+      ExcessivePublicCount:
+        enabled: false
 # ... CONFIG CONTENT ...
