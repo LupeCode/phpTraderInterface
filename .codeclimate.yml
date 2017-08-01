@@ -6,4 +6,6 @@ engines:
     checks:
       Naming/LongVariable:
         enabled: false
+      Naming/ShortMethodName:
+        enabled: false
 # ... CONFIG CONTENT ...
