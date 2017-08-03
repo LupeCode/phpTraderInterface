@@ -1,11 +1,5 @@
 # PHP Trader Interface
 
-[![Code Climate](https://codeclimate.com/github/LupeCode/phpTraderInterface/badges/gpa.svg)](https://codeclimate.com/github/LupeCode/phpTraderInterface)
-
-[![Test Coverage](https://codeclimate.com/github/LupeCode/phpTraderInterface/badges/coverage.svg)](https://codeclimate.com/github/LupeCode/phpTraderInterface/coverage)
-
-[![Issue Count](https://codeclimate.com/github/LupeCode/phpTraderInterface/badges/issue_count.svg)](https://codeclimate.com/github/LupeCode/phpTraderInterface)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/221a58d6d99943688ff68ca1141a1c86)](https://www.codacy.com/app/jbspublic/phpTraderInterface?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LupeCode/phpTraderInterface&amp;utm_campaign=Badge_Grade)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/221a58d6d99943688ff68ca1141a1c86)](https://www.codacy.com/app/jbspublic/phpTraderInterface?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LupeCode/phpTraderInterface&amp;utm_campaign=Badge_Coverage)
