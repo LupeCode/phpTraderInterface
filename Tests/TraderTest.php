@@ -1,11 +1,12 @@
 <?php
 
 use LupeCode\phpTraderInterface\Trader;
+use PHPUnit\Framework\TestCase;
 
 require_once __DIR__ . '/../source/Trader.php';
 require_once __DIR__ . '/../source/TraderTrait.php';
 
-class TraderTest extends PHPUnit_Framework_TestCase
+class TraderTest extends TestCase
 {
 
     //<editor-fold defaultstate="collapsed" desc="Testing Data">

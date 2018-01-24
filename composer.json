@@ -4,10 +4,10 @@
   "version": "1.0.2",
   "type": "library",
   "license": "GNU GPLv3",
-  "authors":[
+  "authors": [
     {
-      "name": "Joshua Saige",
-      "email": "joshuasaige@lupecode.com",
+      "name": "Joshua Lopez",
+      "email": "lupecode@lupecode.com",
       "homepage": "http://github.com/jbsaige",
       "role": "Developer"
     }

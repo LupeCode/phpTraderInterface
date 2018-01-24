@@ -16,14 +16,14 @@
 >
 
     <testsuites>
-        <testsuite name="tests">
-            <directory>./tests</directory>
+        <testsuite name="all">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory suffix=".php">./source/</directory>
+            <directory suffix=".php">source</directory>
         </whitelist>
     </filter>
 
