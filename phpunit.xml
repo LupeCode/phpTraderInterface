@@ -17,7 +17,7 @@
 
     <testsuites>
         <testsuite name="base">
-            <file>./tests/*.php</file>
+            <file>./tests/TraderTest.php</file>
         </testsuite>
     </testsuites>
 
