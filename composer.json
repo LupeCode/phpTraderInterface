@@ -17,8 +17,8 @@
     "ext-trader": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "~5.4",
-    "codacy/coverage": "~1.0",
+    "phpunit/phpunit": "~6.3.0",
+    "codacy/coverage": "~1.4.0",
     "phpmetrics/phpmetrics": "~2.3.2"
   },
   "autoload": {
