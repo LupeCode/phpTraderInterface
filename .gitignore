@@ -1,3 +1,7 @@
 .*
 !/.gitignore
-vendor/
+!/.gitlab-ci.yml
+/vendor/
+/logs/
+/metrics/
+/update metrics.bat

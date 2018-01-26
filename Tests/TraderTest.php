@@ -8,6 +8,7 @@ require_once __DIR__ . '/../source/TraderTrait.php';
 class TraderTest extends PHPUnit_Framework_TestCase
 {
 
+    //<editor-fold defaultstate="collapsed" desc="Testing Data">
     protected $Open   =
         [
             '37.560001', '36.889999', '36.25', '35.580002', '35.869999', '36.400002', '37.639999', '37.369999',
@@ -178,6 +179,7 @@ class TraderTest extends PHPUnit_Framework_TestCase
             '14861600', '14752100', '14864300', '8462400', '9147300', '9506500', '8713200', '10057600',
             '16909400', '20529200', '19432500', '11803400', '7713000', '6398400',
         ];
+    //</editor-fold>
 
     //<editor-fold defaultstate="collapsed" desc="Constant Member Tests">
     public function testConstants_TRADER_MA_TYPE_SMA()
