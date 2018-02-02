@@ -2711,10 +2711,8 @@ trait TraderTrait
      */
     public static function set_compat(integer $compatId)
     {
-        $return = trader_set_compat($compatId);
+        trader_set_compat($compatId);
         static::checkForError();
-
-        return $return;
     }
 
     /**
@@ -2728,10 +2726,8 @@ trait TraderTrait
      */
     public static function set_unstable_period(integer $functionId, int $timePeriod)
     {
-        $return = trader_set_unstable_period($functionId, $timePeriod);
+        trader_set_unstable_period($functionId, $timePeriod);
         static::checkForError();
-
-        return $return;
     }
 
     /**
