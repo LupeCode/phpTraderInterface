@@ -90,6 +90,9 @@ trait TraderTrait
         65535 => "Unknown error",
     ];
 
+    /**
+     * @throws \Exception
+     */
     protected static function checkForError()
     {
         $errorNumber = trader_errno();
@@ -107,6 +110,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function acos(array $real): array
     {
@@ -125,6 +129,7 @@ trait TraderTrait
      * @param array $volume Volume traded, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ad(array $high, array $low, array $close, array $volume): array
     {
@@ -141,6 +146,7 @@ trait TraderTrait
      * @param array $real1 Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function add(array $real0, array $real1): array
     {
@@ -161,6 +167,7 @@ trait TraderTrait
      * @param int   $slowPeriod [OPTIONAL] [DEFAULT 10] Number of period for the slow MA. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function adosc(array $high, array $low, array $close, array $volume, int $fastPeriod = null, int $slowPeriod = null): array
     {
@@ -181,6 +188,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function adx(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -200,6 +208,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function adxr(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -219,6 +228,7 @@ trait TraderTrait
      * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function apo(array $real, int $fastPeriod = null, int $slowPeriod = null, int $mAType = null): array
     {
@@ -239,6 +249,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function aroon(array $high, array $low, int $timePeriod = null): array
     {
@@ -257,6 +268,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function aroonosc(array $high, array $low, int $timePeriod = null): array
     {
@@ -274,6 +286,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function asin(array $real): array
     {
@@ -290,6 +303,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function atan(array $real): array
     {
@@ -308,6 +322,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function atr(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -327,6 +342,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function avgprice(array $open, array $high, array $low, array $close): array
     {
@@ -346,6 +362,7 @@ trait TraderTrait
      * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function bbands(array $real, int $timePeriod = null, float $nbDevUp = null, float $nbDevDn = null, int $mAType = null): array
     {
@@ -367,6 +384,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function beta(array $real0, array $real1, int $timePeriod = null): array
     {
@@ -386,6 +404,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function bop(array $open, array $high, array $low, array $close): array
     {
@@ -404,6 +423,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cci(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -423,6 +443,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl2crows(array $open, array $high, array $low, array $close): array
     {
@@ -441,6 +462,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3blackcrows(array $open, array $high, array $low, array $close): array
     {
@@ -459,6 +481,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3inside(array $open, array $high, array $low, array $close): array
     {
@@ -477,6 +500,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3linestrike(array $open, array $high, array $low, array $close): array
     {
@@ -495,6 +519,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3outside(array $open, array $high, array $low, array $close): array
     {
@@ -513,6 +538,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3starsinsouth(array $open, array $high, array $low, array $close): array
     {
@@ -531,6 +557,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdl3whitesoldiers(array $open, array $high, array $low, array $close): array
     {
@@ -550,6 +577,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlabandonedbaby(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -569,6 +597,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdladvanceblock(array $open, array $high, array $low, array $close): array
     {
@@ -587,6 +616,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlbelthold(array $open, array $high, array $low, array $close): array
     {
@@ -605,6 +635,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlbreakaway(array $open, array $high, array $low, array $close): array
     {
@@ -623,6 +654,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlclosingmarubozu(array $open, array $high, array $low, array $close): array
     {
@@ -641,6 +673,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlconcealbabyswall(array $open, array $high, array $low, array $close): array
     {
@@ -659,6 +692,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlcounterattack(array $open, array $high, array $low, array $close): array
     {
@@ -678,6 +712,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.5] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdldarkcloudcover(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -697,6 +732,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdldoji(array $open, array $high, array $low, array $close): array
     {
@@ -715,6 +751,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdldojistar(array $open, array $high, array $low, array $close): array
     {
@@ -733,6 +770,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdldragonflydoji(array $open, array $high, array $low, array $close): array
     {
@@ -751,6 +789,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlengulfing(array $open, array $high, array $low, array $close): array
     {
@@ -770,6 +809,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdleveningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -790,6 +830,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdleveningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -809,6 +850,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlgapsidesidewhite(array $open, array $high, array $low, array $close): array
     {
@@ -827,6 +869,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlgravestonedoji(array $open, array $high, array $low, array $close): array
     {
@@ -845,6 +888,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhammer(array $open, array $high, array $low, array $close): array
     {
@@ -863,6 +907,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhangingman(array $open, array $high, array $low, array $close): array
     {
@@ -881,6 +926,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlharami(array $open, array $high, array $low, array $close): array
     {
@@ -899,6 +945,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlharamicross(array $open, array $high, array $low, array $close): array
     {
@@ -917,6 +964,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhighwave(array $open, array $high, array $low, array $close): array
     {
@@ -935,6 +983,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhikkake(array $open, array $high, array $low, array $close): array
     {
@@ -953,6 +1002,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhikkakemod(array $open, array $high, array $low, array $close): array
     {
@@ -971,6 +1021,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlhomingpigeon(array $open, array $high, array $low, array $close): array
     {
@@ -989,6 +1040,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlidentical3crows(array $open, array $high, array $low, array $close): array
     {
@@ -1007,6 +1059,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlinneck(array $open, array $high, array $low, array $close): array
     {
@@ -1025,6 +1078,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlinvertedhammer(array $open, array $high, array $low, array $close): array
     {
@@ -1043,6 +1097,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlkicking(array $open, array $high, array $low, array $close): array
     {
@@ -1061,6 +1116,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlkickingbylength(array $open, array $high, array $low, array $close): array
     {
@@ -1079,6 +1135,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlladderbottom(array $open, array $high, array $low, array $close): array
     {
@@ -1097,6 +1154,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdllongleggeddoji(array $open, array $high, array $low, array $close): array
     {
@@ -1115,6 +1173,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdllongline(array $open, array $high, array $low, array $close): array
     {
@@ -1133,6 +1192,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlmarubozu(array $open, array $high, array $low, array $close): array
     {
@@ -1151,6 +1211,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlmatchinglow(array $open, array $high, array $low, array $close): array
     {
@@ -1170,6 +1231,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.5] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlmathold(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -1190,6 +1252,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlmorningdojistar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -1210,6 +1273,7 @@ trait TraderTrait
      * @param float $penetration [OPTIONAL] [DEFAULT 0.3] Percentage of penetration of a candle within another candle.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlmorningstar(array $open, array $high, array $low, array $close, float $penetration = null): array
     {
@@ -1229,6 +1293,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlonneck(array $open, array $high, array $low, array $close): array
     {
@@ -1247,6 +1312,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlpiercing(array $open, array $high, array $low, array $close): array
     {
@@ -1265,6 +1331,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlrickshawman(array $open, array $high, array $low, array $close): array
     {
@@ -1283,6 +1350,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlrisefall3methods(array $open, array $high, array $low, array $close): array
     {
@@ -1301,6 +1369,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlseparatinglines(array $open, array $high, array $low, array $close): array
     {
@@ -1319,6 +1388,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlshootingstar(array $open, array $high, array $low, array $close): array
     {
@@ -1337,6 +1407,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlshortline(array $open, array $high, array $low, array $close): array
     {
@@ -1355,6 +1426,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlspinningtop(array $open, array $high, array $low, array $close): array
     {
@@ -1373,6 +1445,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlstalledpattern(array $open, array $high, array $low, array $close): array
     {
@@ -1391,6 +1464,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlsticksandwich(array $open, array $high, array $low, array $close): array
     {
@@ -1409,6 +1483,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdltakuri(array $open, array $high, array $low, array $close): array
     {
@@ -1427,6 +1502,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdltasukigap(array $open, array $high, array $low, array $close): array
     {
@@ -1445,6 +1521,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlthrusting(array $open, array $high, array $low, array $close): array
     {
@@ -1463,6 +1540,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdltristar(array $open, array $high, array $low, array $close): array
     {
@@ -1481,6 +1559,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlunique3river(array $open, array $high, array $low, array $close): array
     {
@@ -1499,6 +1578,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlupsidegap2crows(array $open, array $high, array $low, array $close): array
     {
@@ -1517,6 +1597,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cdlxsidegap3methods(array $open, array $high, array $low, array $close): array
     {
@@ -1533,6 +1614,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ceil(array $real): array
     {
@@ -1549,6 +1631,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cmo(array $real, int $timePeriod = null): array
     {
@@ -1567,6 +1650,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function correl(array $real0, array $real1, int $timePeriod = null): array
     {
@@ -1584,6 +1668,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cos(array $real): array
     {
@@ -1600,6 +1685,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function cosh(array $real): array
     {
@@ -1616,6 +1702,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 3.] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function dema(array $real, int $timePeriod = null): array
     {
@@ -1634,6 +1721,7 @@ trait TraderTrait
      * @param array $real1 Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function div(array $real0, array $real1): array
     {
@@ -1652,6 +1740,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array  Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function dx(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -1669,6 +1758,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ema(array $real, int $timePeriod = null): array
     {
@@ -1684,6 +1774,7 @@ trait TraderTrait
      * Get error code of the last operation.
      *
      * @return int Returns the error code identified by one of the TRADER_ERR_* constants.
+     * @throws \Exception
      */
     public static function errno(): integer
     {
@@ -1700,6 +1791,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function exp(array $real): array
     {
@@ -1716,6 +1808,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function floor(array $real): array
     {
@@ -1730,6 +1823,7 @@ trait TraderTrait
      * Get compatibility mode which affects the way calculations are done by all the extension functions.
      *
      * @return int Returns the compatibility mode id which can be identified by TRADER_COMPATIBILITY_* series of constants.
+     * @throws \Exception
      */
     public static function get_compat(): integer
     {
@@ -1746,6 +1840,7 @@ trait TraderTrait
      * @param int $functionId Function ID the factor to be read for. TRADER_FUNC_UNST_* series of constants should be used.
      *
      * @return int Returns the unstable period factor for the corresponding function.
+     * @throws \Exception
      */
     public static function get_unstable_period(integer $functionId): integer
     {
@@ -1761,6 +1856,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_dcperiod(array $real): array
     {
@@ -1776,6 +1872,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_dcphase(array $real): array
     {
@@ -1792,6 +1889,7 @@ trait TraderTrait
      * @param array $inPhase Empty array, will be filled with in phase data.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_phasor(array $real, array &$inPhase): array
     {
@@ -1808,6 +1906,7 @@ trait TraderTrait
      * @param array $sine Empty array, will be filled with sine data.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_sine(array $real, array &$sine): array
     {
@@ -1823,6 +1922,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_trendline(array $real): array
     {
@@ -1838,6 +1938,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ht_trendmode(array $real): array
     {
@@ -1854,6 +1955,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function kama(array $real, int $timePeriod = null): array
     {
@@ -1871,6 +1973,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function linearreg_angle(array $real, int $timePeriod = null): array
     {
@@ -1888,6 +1991,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function linearreg_intercept(array $real, int $timePeriod = null): array
     {
@@ -1905,6 +2009,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function linearreg_slope(array $real, int $timePeriod = null): array
     {
@@ -1922,6 +2027,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function linearreg(array $real, int $timePeriod = null): array
     {
@@ -1939,6 +2045,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ln(array $real): array
     {
@@ -1955,6 +2062,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function log10(array $real): array
     {
@@ -1972,6 +2080,7 @@ trait TraderTrait
      * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ma(array $real, int $timePeriod = null, int $mAType = null): array
     {
@@ -1992,6 +2101,7 @@ trait TraderTrait
      * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function macd(array $real, int $fastPeriod = null, int $slowPeriod = null, int $signalPeriod = null): array
     {
@@ -2015,6 +2125,7 @@ trait TraderTrait
      * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function macdext(array $real, int $fastPeriod = null, int $fastMAType = null, int $slowPeriod = null, int $slowMAType = null, int $signalPeriod = null): array
     {
@@ -2036,6 +2147,7 @@ trait TraderTrait
      * @param int   $signalPeriod [OPTIONAL] [DEFAULT 9] Smoothing for the signal line (nb of period). Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function macdfix(array $real, int $signalPeriod = null): array
     {
@@ -2054,6 +2166,7 @@ trait TraderTrait
      * @param float $slowLimit [OPTIONAL] [DEFAULT 0.05] Lower limit use in the adaptive algorithm. Valid range from 0.01 to 0.99.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function mama(array $real, float $fastLimit = null, float $slowLimit = null): array
     {
@@ -2075,6 +2188,7 @@ trait TraderTrait
      * @param int   $mAType    [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function mavp(array $real, array $periods, int $minPeriod = null, int $maxPeriod = null, int $mAType = null): array
     {
@@ -2094,6 +2208,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function max(array $real, int $timePeriod = null): array
     {
@@ -2111,6 +2226,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function maxindex(array $real, int $timePeriod = null): array
     {
@@ -2128,6 +2244,7 @@ trait TraderTrait
      * @param array $low  Low price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function medprice(array $high, array $low): array
     {
@@ -2147,6 +2264,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function mfi(array $high, array $low, array $close, array $volume, int $timePeriod = null): array
     {
@@ -2164,6 +2282,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function midpoint(array $real, int $timePeriod = null): array
     {
@@ -2182,8 +2301,9 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
-    public static function midprice(array $high, array $low, int $timePeriod = null)
+    public static function midprice(array $high, array $low, int $timePeriod = null): array
     {
         $timePeriod = $timePeriod ?? 14;
         $return     = trader_midprice($high, $low, $timePeriod);
@@ -2199,6 +2319,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function min(array $real, int $timePeriod = null): array
     {
@@ -2216,6 +2337,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function minindex(array $real, int $timePeriod = null): array
     {
@@ -2233,6 +2355,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function minmax(array $real, int $timePeriod = null): array
     {
@@ -2250,6 +2373,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function minmaxindex(array $real, int $timePeriod = null): array
     {
@@ -2269,6 +2393,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function minus_di(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -2287,6 +2412,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function minus_dm(array $high, array $low, int $timePeriod = null): array
     {
@@ -2304,6 +2430,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function mom(array $real, int $timePeriod = null): array
     {
@@ -2322,6 +2449,7 @@ trait TraderTrait
      * @param array $real1 Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function mult(array $real0, array $real1): array
     {
@@ -2340,6 +2468,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function natr(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -2357,6 +2486,7 @@ trait TraderTrait
      * @param array $volume Volume traded, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function obv(array $real, array $volume): array
     {
@@ -2375,6 +2505,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function plus_di(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -2393,6 +2524,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function plus_dm(array $high, array $low, int $timePeriod = null): array
     {
@@ -2412,6 +2544,7 @@ trait TraderTrait
      * @param int   $mAType     [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ppo(array $real, int $fastPeriod = null, int $slowPeriod = null, int $mAType = null): array
     {
@@ -2431,6 +2564,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function roc(array $real, int $timePeriod = null): array
     {
@@ -2448,6 +2582,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function rocp(array $real, int $timePeriod = null): array
     {
@@ -2465,6 +2600,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function rocr100(array $real, int $timePeriod = null): array
     {
@@ -2482,6 +2618,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 10] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function rocr(array $real, int $timePeriod = null): array
     {
@@ -2499,6 +2636,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function rsi(array $real, int $timePeriod = null): array
     {
@@ -2518,6 +2656,7 @@ trait TraderTrait
      * @param float $maximum      [OPTIONAL] [DEFAULT 0.2] Acceleration Factor Maximum value. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sar(array $high, array $low, float $acceleration = null, float $maximum = null): array
     {
@@ -2544,6 +2683,7 @@ trait TraderTrait
      * @param float $accelerationMaxShort  [OPTIONAL] [DEFAULT 0.2] Acceleration Factor maximum value for the Short direction. Valid range from 0 to TRADER_REAL_MAX.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sarext(array $high, array $low, float $startValue = null, float $offsetOnReverse = null, float $accelerationInitLong = null, float $accelerationLong = null, float $accelerationMaxLong = null, float $accelerationInitShort = null, float $accelerationShort = null, float $accelerationMaxShort = null): array
     {
@@ -2566,13 +2706,13 @@ trait TraderTrait
      * Set compatibility mode which will affect the way calculations are done by all the extension functions.
      *
      * @param int $compatId Compatibility Id. TRADER_COMPATIBILITY_* series of constants should be used.
+     *
+     * @throws \Exception
      */
     public static function set_compat(integer $compatId)
     {
-        $return = trader_set_compat($compatId);
+        trader_set_compat($compatId);
         static::checkForError();
-
-        return $return;
     }
 
     /**
@@ -2581,13 +2721,13 @@ trait TraderTrait
      *
      * @param int $functionId Function ID the factor should be set for. TRADER_FUNC_UNST_* constant series can be used to affect the corresponding function.
      * @param int $timePeriod Unstable period value.
+     *
+     * @throws \Exception
      */
     public static function set_unstable_period(integer $functionId, int $timePeriod)
     {
-        $return = trader_set_unstable_period($functionId, $timePeriod);
+        trader_set_unstable_period($functionId, $timePeriod);
         static::checkForError();
-
-        return $return;
     }
 
     /**
@@ -2597,6 +2737,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sin(array $real): array
     {
@@ -2613,6 +2754,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sinh(array $real): array
     {
@@ -2629,6 +2771,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sma(array $real, int $timePeriod = null): array
     {
@@ -2646,6 +2789,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sqrt(array $real): array
     {
@@ -2663,6 +2807,7 @@ trait TraderTrait
      * @param float $nbDev      [OPTIONAL] [DEFAULT 1.0] Number of deviations
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function stddev(array $real, int $timePeriod = null, float $nbDev = null): array
     {
@@ -2687,6 +2832,7 @@ trait TraderTrait
      * @param int   $slowD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Slow-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function stoch(array $high, array $low, array $close, int $fastK_Period = null, int $slowK_Period = null, int $slowK_MAType = null, int $slowD_Period = null, int $slowD_MAType = null): array
     {
@@ -2712,6 +2858,7 @@ trait TraderTrait
      * @param int   $fastD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function stochf(array $high, array $low, array $close, int $fastK_Period = null, int $fastD_Period = null, int $fastD_MAType = null): array
     {
@@ -2734,6 +2881,7 @@ trait TraderTrait
      * @param int   $fastD_MAType [OPTIONAL] [DEFAULT TRADER_MA_TYPE_SMA] Type of Moving Average for Fast-D. TRADER_MA_TYPE_* series of constants should be used.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function stochrsi(array $real, int $timePeriod = null, int $fastK_Period = null, int $fastD_Period = null, int $fastD_MAType = null): array
     {
@@ -2755,6 +2903,7 @@ trait TraderTrait
      * @param array $real1 Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sub(array $real0, array $real1): array
     {
@@ -2771,6 +2920,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function sum(array $real, int $timePeriod = null): array
     {
@@ -2789,6 +2939,7 @@ trait TraderTrait
      * @param float $vFactor    [OPTIONAL] [DEFAULT 0.7] Volume Factor. Valid range from 1 to 0.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function t3(array $real, int $timePeriod = null, float $vFactor = null): array
     {
@@ -2807,6 +2958,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function tan(array $real): array
     {
@@ -2823,6 +2975,7 @@ trait TraderTrait
      * @param array $real Array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function tanh(array $real): array
     {
@@ -2839,6 +2992,7 @@ trait TraderTrait
      * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function tema(array $real, int $timePeriod = null): array
     {
@@ -2857,6 +3011,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function trange(array $high, array $low, array $close): array
     {
@@ -2869,10 +3024,11 @@ trait TraderTrait
     /**
      * Triangular Moving Average
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
+     * @param array $real     Array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function trima(array $real, int $timePeriod = null): array
     {
@@ -2886,10 +3042,11 @@ trait TraderTrait
     /**
      * 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
+     * @param array $real     Array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function trix(array $real, int $timePeriod = null): array
     {
@@ -2903,10 +3060,11 @@ trait TraderTrait
     /**
      * Time Series Forecast
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
+     * @param array $real     Array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function tsf(array $real, int $timePeriod = null): array
     {
@@ -2925,6 +3083,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function typprice(array $high, array $low, array $close): array
     {
@@ -2937,14 +3096,15 @@ trait TraderTrait
     /**
      * Ultimate Oscillator
      *
-     * @param array $high        High price, array of real values.
-     * @param array $low         Low price, array of real values.
-     * @param array $close       Closing price, array of real values.
-     * @param int   $timePeriod1 [OPTIONAL] [DEFAULT 7] Number of bars for 1st period. Valid range from 1 to 100000.
-     * @param int   $timePeriod2 [OPTIONAL] [DEFAULT 14] Number of bars for 2nd period. Valid range from 1 to 100000.
-     * @param int   $timePeriod3 [OPTIONAL] [DEFAULT 28] Number of bars for 3rd period. Valid range from 1 to 100000.
+     * @param array $high      High price, array of real values.
+     * @param array $low       Low price, array of real values.
+     * @param array $close     Closing price, array of real values.
+     * @param int $timePeriod1 [OPTIONAL] [DEFAULT 7] Number of bars for 1st period. Valid range from 1 to 100000.
+     * @param int $timePeriod2 [OPTIONAL] [DEFAULT 14] Number of bars for 2nd period. Valid range from 1 to 100000.
+     * @param int $timePeriod3 [OPTIONAL] [DEFAULT 28] Number of bars for 3rd period. Valid range from 1 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function ultosc(array $high, array $low, array $close, int $timePeriod1 = null, int $timePeriod2 = null, int $timePeriod3 = null): array
     {
@@ -2960,11 +3120,12 @@ trait TraderTrait
     /**
      * Variance
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
-     * @param float $nbDev      [OPTIONAL] [DEFAULT 1.0] Number of deviations
+     * @param array $real     Array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 5] Number of period. Valid range from 2 to 100000.
+     * @param float $nbDev    [OPTIONAL] [DEFAULT 1.0] Number of deviations
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function var(array $real, int $timePeriod = null, float $nbDev = null): array
     {
@@ -2984,6 +3145,7 @@ trait TraderTrait
      * @param array $close Closing price, array of real values.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function wclprice(array $high, array $low, array $close): array
     {
@@ -2996,12 +3158,13 @@ trait TraderTrait
     /**
      * Williams' %R
      *
-     * @param array $high       High price, array of real values.
-     * @param array $low        Low price, array of real values.
-     * @param array $close      Closing price, array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
+     * @param array $high     High price, array of real values.
+     * @param array $low      Low price, array of real values.
+     * @param array $close    Closing price, array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 14] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function willr(array $high, array $low, array $close, int $timePeriod = null): array
     {
@@ -3015,10 +3178,11 @@ trait TraderTrait
     /**
      * Weighted Moving Average
      *
-     * @param array $real       Array of real values.
-     * @param int   $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
+     * @param array $real     Array of real values.
+     * @param int $timePeriod [OPTIONAL] [DEFAULT 30] Number of period. Valid range from 2 to 100000.
      *
      * @return array Returns an array with calculated data or false on failure.
+     * @throws \Exception
      */
     public static function wma(array $real, int $timePeriod = null): array
     {
