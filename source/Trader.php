@@ -2241,11 +2241,12 @@ class Trader
      * Set compatibility mode which will affect the way calculations are done by all the extension functions.
      *
      * @param int $compatId Compatibility Id. TRADER_COMPATIBILITY_* series of constants should be used.
+     *
      * @throws \Exception
      */
     public static function setCompatibilityMode(integer $compatId)
     {
-        return static::set_compat($compatId);
+        static::set_compat($compatId);
     }
 
     /**
@@ -2254,11 +2255,12 @@ class Trader
      *
      * @param int $functionId Function ID the factor should be set for. TRADER_FUNC_UNST_* constant series can be used to affect the corresponding function.
      * @param int $timePeriod Unstable period value.
+     *
      * @throws \Exception
      */
     public static function setUnstablePeriod(integer $functionId, int $timePeriod)
     {
-        return static::set_unstable_period($functionId, $timePeriod);
+        static::set_unstable_period($functionId, $timePeriod);
     }
 
     /**
