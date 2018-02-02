@@ -2,8 +2,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/221a58d6d99943688ff68ca1141a1c86)](https://www.codacy.com/app/jbspublic/phpTraderInterface?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LupeCode/phpTraderInterface&amp;utm_campaign=Badge_Grade)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/221a58d6d99943688ff68ca1141a1c86)](https://www.codacy.com/app/jbspublic/phpTraderInterface?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LupeCode/phpTraderInterface&amp;utm_campaign=Badge_Coverage)
-
 This is an interface to the PHP Trader Extension.
 The PHP Trader Extension is available from <http://pecl.php.net/package/trader>.
 The extension and the source for it can be downloaded there.
