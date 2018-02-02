@@ -1930,7 +1930,7 @@ class Trader
      * @return array Returns an array with calculated data or false on failure.
      * @throws \Exception
      */
-    public static function middlePointPrice(array $high, array $low, int $timePeriod = null)
+    public static function middlePointPrice(array $high, array $low, int $timePeriod = null): array
     {
         return static::midprice($high, $low, $timePeriod);
     }
