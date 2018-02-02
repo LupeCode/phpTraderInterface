@@ -2303,7 +2303,7 @@ trait TraderTrait
      * @return array Returns an array with calculated data or false on failure.
      * @throws \Exception
      */
-    public static function midprice(array $high, array $low, int $timePeriod = null)
+    public static function midprice(array $high, array $low, int $timePeriod = null): array
     {
         $timePeriod = $timePeriod ?? 14;
         $return     = trader_midprice($high, $low, $timePeriod);
