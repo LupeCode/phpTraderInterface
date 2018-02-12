@@ -4,4 +4,4 @@
 /vendor/
 /logs/
 /metrics/
-/update metrics.bat
+*.bat
