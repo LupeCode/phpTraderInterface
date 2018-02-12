@@ -1886,14 +1886,13 @@ trait TraderTrait
      * Hilbert Transform - Phasor Components
      *
      * @param array $real    Array of real values.
-     * @param array $inPhase Empty array, will be filled with in phase data.
      *
      * @return array Returns an array with calculated data or false on failure.
      * @throws \Exception
      */
-    public static function ht_phasor(array $real, array &$inPhase): array
+    public static function ht_phasor(array $real): array
     {
-        $return = trader_ht_phasor($real, $inPhase);
+        $return = trader_ht_phasor($real);
         static::checkForError();
 
         return $return;
@@ -1903,14 +1902,13 @@ trait TraderTrait
      * Hilbert Transform - SineWave
      *
      * @param array $real Array of real values.
-     * @param array $sine Empty array, will be filled with sine data.
      *
      * @return array Returns an array with calculated data or false on failure.
      * @throws \Exception
      */
-    public static function ht_sine(array $real, array &$sine): array
+    public static function ht_sine(array $real): array
     {
-        $return = trader_ht_sine($real, $sine);
+        $return = trader_ht_sine($real);
         static::checkForError();
 
         return $return;

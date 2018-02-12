@@ -923,16 +923,12 @@ class TraderTest extends TestCase
 
     public function testInterfaceFunctions_ht_phasor()
     {
-        $inPhase1 = [];
-        $inPhase2 = [];
-        $this->assertEquals(trader_ht_phasor($this->Close, $inPhase1), Trader::ht_phasor($this->Close, $inPhase2));
+        $this->assertEquals(trader_ht_phasor($this->Close), Trader::ht_phasor($this->Close));
     }
 
     public function testInterfaceFunctions_ht_sine()
     {
-        $sine1 = [];
-        $sine2 = [];
-        $this->assertEquals(trader_ht_sine($this->Close, $sine1), Trader::ht_sine($this->Close, $sine2));
+        $this->assertEquals(trader_ht_sine($this->Close), Trader::ht_sine($this->Close));
     }
 
     public function testInterfaceFunctions_ht_trendline()
@@ -1721,16 +1717,12 @@ class TraderTest extends TestCase
 
     public function testFriendlyFunctions_ht_phasor()
     {
-        $inPhase1 = [];
-        $inPhase2 = [];
-        $this->assertEquals(trader_ht_phasor($this->Close, $inPhase1), Trader::hilbertTransformPhasorComponents($this->Close, $inPhase2));
+        $this->assertEquals(trader_ht_phasor($this->Close), Trader::hilbertTransformPhasorComponents($this->Close));
     }
 
     public function testFriendlyFunctions_ht_sine()
     {
-        $sine1 = [];
-        $sine2 = [];
-        $this->assertEquals(trader_ht_sine($this->Close, $sine1), Trader::hilbertTransformSineWave($this->Close, $sine2));
+        $this->assertEquals(trader_ht_sine($this->Close), Trader::hilbertTransformSineWave($this->Close));
     }
 
     public function testFriendlyFunctions_ht_trendline()
