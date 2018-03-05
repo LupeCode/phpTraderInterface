@@ -18,6 +18,12 @@ Variable types are set on all function parameters.
 
 If you are using version 0.4.0, see the branch `trader-0.4.0` for that.
 
+## Purpose
+
+This package is meant to help when using the Trader PECL package.
+This is helpful if you do not have the code stub for the Trader Extension.
+Loading this interface will provide your IDE with the function information and auto completing.
+
 ## How to use
 
 Lets assume that you want to generate a correlation indicator.
@@ -27,8 +33,6 @@ You can now use the exact named
 `\LupeCode\phpTraderInterface\Trader::correl($Open, $Close, 30)`
 or the friendly named
 `\LupeCode\phpTraderInterface\Trader::pearsonCorrelationCoefficient($Open, $Close, 30)`
-
-This is helpful if you do not have the code stub for the Trader Extension.  Loading this interface will provide your IDE with the function information and auto completing.
 
 ## Metrics & Coverage
 ### PHP Metrics Report
@@ -44,7 +48,7 @@ To see the current report of coverage by PHP Unit, visit [Coverage](https://proj
  * PHP 7.2 TS [[XML]](https://projects.lupecode.com/phpTraderInterface/logs/logfile-7.2TS.xml) [[TXT]](https://projects.lupecode.com/phpTraderInterface/logs/testdox-7.2TS.txt) [[HTML]](https://projects.lupecode.com/phpTraderInterface/logs/testdox-7.2TS.html)
 
 ## License
-Copyright (C) Lupe Code, LLC.; Joshua Saige
+Copyright (C) Lupe Code, LLC.; Joshua Lopez
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
