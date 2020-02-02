@@ -14,7 +14,7 @@ If you cannot install the PECL extension, try the [PHP Trader Native](https://gi
 
 Variable types are set on all function parameters.
 
-### Requires PECL Trader 0.4.1.
+### Requires PECL Trader 0.4.1 or newer.
 
 If you are using version 0.4.0, see the branch `trader-0.4.0` for that.
 

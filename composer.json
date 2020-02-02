@@ -1,20 +1,20 @@
 {
   "name": "lupecode/php-trader-interface",
   "description": "An interface to the PHP Trader extension.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "library",
   "license": "GPL-3.0-or-later",
   "authors": [
     {
       "name": "Joshua Lopez",
       "email": "joshua@lupecode.com",
-      "homepage": "http://github.com/jbsaige",
+      "homepage": "http://github.com/LupeCode",
       "role": "Developer"
     }
   ],
   "require": {
     "php": ">=7.0.0",
-    "ext-trader": "0.4.1"
+    "ext-trader": ">=0.4.1"
   },
   "require-dev": {
     "phpunit/phpunit": "~6.3.0",
