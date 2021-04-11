@@ -1776,7 +1776,7 @@ trait TraderTrait
      * @return int Returns the error code identified by one of the TRADER_ERR_* constants.
      * @throws \Exception
      */
-    public static function errno(): integer
+    public static function errno(): int
     {
         $return = trader_errno();
         static::checkForError();
@@ -1825,7 +1825,7 @@ trait TraderTrait
      * @return int Returns the compatibility mode id which can be identified by TRADER_COMPATIBILITY_* series of constants.
      * @throws \Exception
      */
-    public static function get_compat(): integer
+    public static function get_compat(): int
     {
         $return = trader_get_compat();
         static::checkForError();
@@ -1842,7 +1842,7 @@ trait TraderTrait
      * @return int Returns the unstable period factor for the corresponding function.
      * @throws \Exception
      */
-    public static function get_unstable_period(integer $functionId): integer
+    public static function get_unstable_period(int $functionId): int
     {
         $return = trader_get_unstable_period($functionId);
         static::checkForError();
@@ -2707,7 +2707,7 @@ trait TraderTrait
      *
      * @throws \Exception
      */
-    public static function set_compat(integer $compatId)
+    public static function set_compat(int $compatId)
     {
         trader_set_compat($compatId);
         static::checkForError();
@@ -2722,7 +2722,7 @@ trait TraderTrait
      *
      * @throws \Exception
      */
-    public static function set_unstable_period(integer $functionId, int $timePeriod)
+    public static function set_unstable_period(int $functionId, int $timePeriod)
     {
         trader_set_unstable_period($functionId, $timePeriod);
         static::checkForError();

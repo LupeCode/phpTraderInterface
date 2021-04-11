@@ -1504,7 +1504,7 @@ class Trader
      * @return int Returns the error code identified by one of the TRADER_ERR_* constants.
      * @throws \Exception
      */
-    public static function errorNumber(): integer
+    public static function errorNumber(): int
     {
         return static::errno();
     }
@@ -1547,7 +1547,7 @@ class Trader
      * @return int Returns the compatibility mode id which can be identified by TRADER_COMPATIBILITY_* series of constants.
      * @throws \Exception
      */
-    public static function getCompatibilityMode(): integer
+    public static function getCompatibilityMode(): int
     {
         return static::get_compat();
     }
@@ -1562,7 +1562,7 @@ class Trader
      * @return int Returns the unstable period factor for the corresponding function.
      * @throws \Exception
      */
-    public static function getUnstablePeriod(integer $functionId): integer
+    public static function getUnstablePeriod(int $functionId): int
     {
         return static::get_unstable_period($functionId);
     }
@@ -2242,7 +2242,7 @@ class Trader
      *
      * @throws \Exception
      */
-    public static function setCompatibilityMode(integer $compatId)
+    public static function setCompatibilityMode(int $compatId)
     {
         static::set_compat($compatId);
     }
@@ -2256,7 +2256,7 @@ class Trader
      *
      * @throws \Exception
      */
-    public static function setUnstablePeriod(integer $functionId, int $timePeriod)
+    public static function setUnstablePeriod(int $functionId, int $timePeriod)
     {
         static::set_unstable_period($functionId, $timePeriod);
     }
