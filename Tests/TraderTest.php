@@ -185,282 +185,282 @@ class TraderTest extends TestCase
     //<editor-fold defaultstate="collapsed" desc="Constant Member Tests">
     public function testConstants_TRADER_MA_TYPE_SMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_SMA, Trader::$TRADER_MA_TYPE_SMA);
+        self::assertEquals(TRADER_MA_TYPE_SMA, Trader::$TRADER_MA_TYPE_SMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_EMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_EMA, Trader::$TRADER_MA_TYPE_EMA);
+        self::assertEquals(TRADER_MA_TYPE_EMA, Trader::$TRADER_MA_TYPE_EMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_WMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_WMA, Trader::$TRADER_MA_TYPE_WMA);
+        self::assertEquals(TRADER_MA_TYPE_WMA, Trader::$TRADER_MA_TYPE_WMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_DEMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_DEMA, Trader::$TRADER_MA_TYPE_DEMA);
+        self::assertEquals(TRADER_MA_TYPE_DEMA, Trader::$TRADER_MA_TYPE_DEMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_TEMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_TEMA, Trader::$TRADER_MA_TYPE_TEMA);
+        self::assertEquals(TRADER_MA_TYPE_TEMA, Trader::$TRADER_MA_TYPE_TEMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_TRIMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_TRIMA, Trader::$TRADER_MA_TYPE_TRIMA);
+        self::assertEquals(TRADER_MA_TYPE_TRIMA, Trader::$TRADER_MA_TYPE_TRIMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_KAMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_KAMA, Trader::$TRADER_MA_TYPE_KAMA);
+        self::assertEquals(TRADER_MA_TYPE_KAMA, Trader::$TRADER_MA_TYPE_KAMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_MAMA()
     {
-        $this->assertEquals(TRADER_MA_TYPE_MAMA, Trader::$TRADER_MA_TYPE_MAMA);
+        self::assertEquals(TRADER_MA_TYPE_MAMA, Trader::$TRADER_MA_TYPE_MAMA);
     }
 
     public function testConstants_TRADER_MA_TYPE_T3()
     {
-        $this->assertEquals(TRADER_MA_TYPE_T3, Trader::$TRADER_MA_TYPE_T3);
+        self::assertEquals(TRADER_MA_TYPE_T3, Trader::$TRADER_MA_TYPE_T3);
     }
 
     public function testConstants_TRADER_REAL_MIN()
     {
-        $this->assertEquals(TRADER_REAL_MIN, Trader::$TRADER_REAL_MIN);
+        self::assertEquals(TRADER_REAL_MIN, Trader::$TRADER_REAL_MIN);
     }
 
     public function testConstants_TRADER_REAL_MAX()
     {
-        $this->assertEquals(TRADER_REAL_MAX, Trader::$TRADER_REAL_MAX);
+        self::assertEquals(TRADER_REAL_MAX, Trader::$TRADER_REAL_MAX);
     }
 
     public function testConstants_TRADER_FUNC_UNST_ADX()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_ADX, Trader::$TRADER_FUNC_UNST_ADX);
+        self::assertEquals(TRADER_FUNC_UNST_ADX, Trader::$TRADER_FUNC_UNST_ADX);
     }
 
     public function testConstants_TRADER_FUNC_UNST_ADXR()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_ADXR, Trader::$TRADER_FUNC_UNST_ADXR);
+        self::assertEquals(TRADER_FUNC_UNST_ADXR, Trader::$TRADER_FUNC_UNST_ADXR);
     }
 
     public function testConstants_TRADER_FUNC_UNST_ATR()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_ATR, Trader::$TRADER_FUNC_UNST_ATR);
+        self::assertEquals(TRADER_FUNC_UNST_ATR, Trader::$TRADER_FUNC_UNST_ATR);
     }
 
     public function testConstants_TRADER_FUNC_UNST_CMO()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_CMO, Trader::$TRADER_FUNC_UNST_CMO);
+        self::assertEquals(TRADER_FUNC_UNST_CMO, Trader::$TRADER_FUNC_UNST_CMO);
     }
 
     public function testConstants_TRADER_FUNC_UNST_DX()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_DX, Trader::$TRADER_FUNC_UNST_DX);
+        self::assertEquals(TRADER_FUNC_UNST_DX, Trader::$TRADER_FUNC_UNST_DX);
     }
 
     public function testConstants_TRADER_FUNC_UNST_EMA()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_EMA, Trader::$TRADER_FUNC_UNST_EMA);
+        self::assertEquals(TRADER_FUNC_UNST_EMA, Trader::$TRADER_FUNC_UNST_EMA);
     }
 
     public function testConstants_TRADER_FUNC_UNST_HT_DCPERIOD()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_HT_DCPERIOD, Trader::$TRADER_FUNC_UNST_HT_DCPERIOD);
+        self::assertEquals(TRADER_FUNC_UNST_HT_DCPERIOD, Trader::$TRADER_FUNC_UNST_HT_DCPERIOD);
     }
 
     public function testConstants_TRADER_FUNC_UNST_HT_DCPHASE()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_HT_DCPHASE, Trader::$TRADER_FUNC_UNST_HT_DCPHASE);
+        self::assertEquals(TRADER_FUNC_UNST_HT_DCPHASE, Trader::$TRADER_FUNC_UNST_HT_DCPHASE);
     }
 
     public function testConstants_TRADER_FUNC_UNST_HT_PHASOR()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_HT_PHASOR, Trader::$TRADER_FUNC_UNST_HT_PHASOR);
+        self::assertEquals(TRADER_FUNC_UNST_HT_PHASOR, Trader::$TRADER_FUNC_UNST_HT_PHASOR);
     }
 
     public function testConstants_TRADER_FUNC_UNST_HT_TRENDLINE()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_HT_TRENDLINE, Trader::$TRADER_FUNC_UNST_HT_TRENDLINE);
+        self::assertEquals(TRADER_FUNC_UNST_HT_TRENDLINE, Trader::$TRADER_FUNC_UNST_HT_TRENDLINE);
     }
 
     public function testConstants_TRADER_FUNC_UNST_HT_TRENDMODE()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_HT_TRENDMODE, Trader::$TRADER_FUNC_UNST_HT_TRENDMODE);
+        self::assertEquals(TRADER_FUNC_UNST_HT_TRENDMODE, Trader::$TRADER_FUNC_UNST_HT_TRENDMODE);
     }
 
     public function testConstants_TRADER_FUNC_UNST_KAMA()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_KAMA, Trader::$TRADER_FUNC_UNST_KAMA);
+        self::assertEquals(TRADER_FUNC_UNST_KAMA, Trader::$TRADER_FUNC_UNST_KAMA);
     }
 
     public function testConstants_TRADER_FUNC_UNST_MAMA()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_MAMA, Trader::$TRADER_FUNC_UNST_MAMA);
+        self::assertEquals(TRADER_FUNC_UNST_MAMA, Trader::$TRADER_FUNC_UNST_MAMA);
     }
 
     public function testConstants_TRADER_FUNC_UNST_MFI()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_MFI, Trader::$TRADER_FUNC_UNST_MFI);
+        self::assertEquals(TRADER_FUNC_UNST_MFI, Trader::$TRADER_FUNC_UNST_MFI);
     }
 
     public function testConstants_TRADER_FUNC_UNST_MINUS_DI()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_MINUS_DI, Trader::$TRADER_FUNC_UNST_MINUS_DI);
+        self::assertEquals(TRADER_FUNC_UNST_MINUS_DI, Trader::$TRADER_FUNC_UNST_MINUS_DI);
     }
 
     public function testConstants_TRADER_FUNC_UNST_MINUS_DM()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_MINUS_DM, Trader::$TRADER_FUNC_UNST_MINUS_DM);
+        self::assertEquals(TRADER_FUNC_UNST_MINUS_DM, Trader::$TRADER_FUNC_UNST_MINUS_DM);
     }
 
     public function testConstants_TRADER_FUNC_UNST_NATR()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_NATR, Trader::$TRADER_FUNC_UNST_NATR);
+        self::assertEquals(TRADER_FUNC_UNST_NATR, Trader::$TRADER_FUNC_UNST_NATR);
     }
 
     public function testConstants_TRADER_FUNC_UNST_PLUS_DI()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_PLUS_DI, Trader::$TRADER_FUNC_UNST_PLUS_DI);
+        self::assertEquals(TRADER_FUNC_UNST_PLUS_DI, Trader::$TRADER_FUNC_UNST_PLUS_DI);
     }
 
     public function testConstants_TRADER_FUNC_UNST_PLUS_DM()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_PLUS_DM, Trader::$TRADER_FUNC_UNST_PLUS_DM);
+        self::assertEquals(TRADER_FUNC_UNST_PLUS_DM, Trader::$TRADER_FUNC_UNST_PLUS_DM);
     }
 
     public function testConstants_TRADER_FUNC_UNST_RSI()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_RSI, Trader::$TRADER_FUNC_UNST_RSI);
+        self::assertEquals(TRADER_FUNC_UNST_RSI, Trader::$TRADER_FUNC_UNST_RSI);
     }
 
     public function testConstants_TRADER_FUNC_UNST_STOCHRSI()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_STOCHRSI, Trader::$TRADER_FUNC_UNST_STOCHRSI);
+        self::assertEquals(TRADER_FUNC_UNST_STOCHRSI, Trader::$TRADER_FUNC_UNST_STOCHRSI);
     }
 
     public function testConstants_TRADER_FUNC_UNST_T3()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_T3, Trader::$TRADER_FUNC_UNST_T3);
+        self::assertEquals(TRADER_FUNC_UNST_T3, Trader::$TRADER_FUNC_UNST_T3);
     }
 
     public function testConstants_TRADER_FUNC_UNST_ALL()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_ALL, Trader::$TRADER_FUNC_UNST_ALL);
+        self::assertEquals(TRADER_FUNC_UNST_ALL, Trader::$TRADER_FUNC_UNST_ALL);
     }
 
     public function testConstants_TRADER_FUNC_UNST_NONE()
     {
-        $this->assertEquals(TRADER_FUNC_UNST_NONE, Trader::$TRADER_FUNC_UNST_NONE);
+        self::assertEquals(TRADER_FUNC_UNST_NONE, Trader::$TRADER_FUNC_UNST_NONE);
     }
 
     public function testConstants_TRADER_COMPATIBILITY_DEFAULT()
     {
-        $this->assertEquals(TRADER_COMPATIBILITY_DEFAULT, Trader::$TRADER_COMPATIBILITY_DEFAULT);
+        self::assertEquals(TRADER_COMPATIBILITY_DEFAULT, Trader::$TRADER_COMPATIBILITY_DEFAULT);
     }
 
     public function testConstants_TRADER_COMPATIBILITY_METASTOCK()
     {
-        $this->assertEquals(TRADER_COMPATIBILITY_METASTOCK, Trader::$TRADER_COMPATIBILITY_METASTOCK);
+        self::assertEquals(TRADER_COMPATIBILITY_METASTOCK, Trader::$TRADER_COMPATIBILITY_METASTOCK);
     }
 
     public function testConstants_TRADER_ERR_SUCCESS()
     {
-        $this->assertEquals(TRADER_ERR_SUCCESS, Trader::$TRADER_ERR_SUCCESS);
+        self::assertEquals(TRADER_ERR_SUCCESS, Trader::$TRADER_ERR_SUCCESS);
     }
 
     public function testConstants_TRADER_ERR_LIB_NOT_INITIALIZE()
     {
-        $this->assertEquals(TRADER_ERR_LIB_NOT_INITIALIZE, Trader::$TRADER_ERR_LIB_NOT_INITIALIZE);
+        self::assertEquals(TRADER_ERR_LIB_NOT_INITIALIZE, Trader::$TRADER_ERR_LIB_NOT_INITIALIZE);
     }
 
     public function testConstants_TRADER_ERR_BAD_PARAM()
     {
-        $this->assertEquals(TRADER_ERR_BAD_PARAM, Trader::$TRADER_ERR_BAD_PARAM);
+        self::assertEquals(TRADER_ERR_BAD_PARAM, Trader::$TRADER_ERR_BAD_PARAM);
     }
 
     public function testConstants_TRADER_ERR_ALLOC_ERR()
     {
-        $this->assertEquals(TRADER_ERR_ALLOC_ERR, Trader::$TRADER_ERR_ALLOC_ERR);
+        self::assertEquals(TRADER_ERR_ALLOC_ERR, Trader::$TRADER_ERR_ALLOC_ERR);
     }
 
     public function testConstants_TRADER_ERR_GROUP_NOT_FOUND()
     {
-        $this->assertEquals(TRADER_ERR_GROUP_NOT_FOUND, Trader::$TRADER_ERR_GROUP_NOT_FOUND);
+        self::assertEquals(TRADER_ERR_GROUP_NOT_FOUND, Trader::$TRADER_ERR_GROUP_NOT_FOUND);
     }
 
     public function testConstants_TRADER_ERR_FUNC_NOT_FOUND()
     {
-        $this->assertEquals(TRADER_ERR_FUNC_NOT_FOUND, Trader::$TRADER_ERR_FUNC_NOT_FOUND);
+        self::assertEquals(TRADER_ERR_FUNC_NOT_FOUND, Trader::$TRADER_ERR_FUNC_NOT_FOUND);
     }
 
     public function testConstants_TRADER_ERR_INVALID_HANDLE()
     {
-        $this->assertEquals(TRADER_ERR_INVALID_HANDLE, Trader::$TRADER_ERR_INVALID_HANDLE);
+        self::assertEquals(TRADER_ERR_INVALID_HANDLE, Trader::$TRADER_ERR_INVALID_HANDLE);
     }
 
     public function testConstants_TRADER_ERR_INVALID_PARAM_HOLDER()
     {
-        $this->assertEquals(TRADER_ERR_INVALID_PARAM_HOLDER, Trader::$TRADER_ERR_INVALID_PARAM_HOLDER);
+        self::assertEquals(TRADER_ERR_INVALID_PARAM_HOLDER, Trader::$TRADER_ERR_INVALID_PARAM_HOLDER);
     }
 
     public function testConstants_TRADER_ERR_INVALID_PARAM_HOLDER_TYPE()
     {
-        $this->assertEquals(TRADER_ERR_INVALID_PARAM_HOLDER_TYPE, Trader::$TRADER_ERR_INVALID_PARAM_HOLDER_TYPE);
+        self::assertEquals(TRADER_ERR_INVALID_PARAM_HOLDER_TYPE, Trader::$TRADER_ERR_INVALID_PARAM_HOLDER_TYPE);
     }
 
     public function testConstants_TRADER_ERR_INVALID_PARAM_FUNCTION()
     {
-        $this->assertEquals(TRADER_ERR_INVALID_PARAM_FUNCTION, Trader::$TRADER_ERR_INVALID_PARAM_FUNCTION);
+        self::assertEquals(TRADER_ERR_INVALID_PARAM_FUNCTION, Trader::$TRADER_ERR_INVALID_PARAM_FUNCTION);
     }
 
     public function testConstants_TRADER_ERR_INPUT_NOT_ALL_INITIALIZE()
     {
-        $this->assertEquals(TRADER_ERR_INPUT_NOT_ALL_INITIALIZE, Trader::$TRADER_ERR_INPUT_NOT_ALL_INITIALIZE);
+        self::assertEquals(TRADER_ERR_INPUT_NOT_ALL_INITIALIZE, Trader::$TRADER_ERR_INPUT_NOT_ALL_INITIALIZE);
     }
 
     public function testConstants_TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE()
     {
-        $this->assertEquals(TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE, Trader::$TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE);
+        self::assertEquals(TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE, Trader::$TRADER_ERR_OUTPUT_NOT_ALL_INITIALIZE);
     }
 
     public function testConstants_TRADER_ERR_OUT_OF_RANGE_START_INDEX()
     {
-        $this->assertEquals(TRADER_ERR_OUT_OF_RANGE_START_INDEX, Trader::$TRADER_ERR_OUT_OF_RANGE_START_INDEX);
+        self::assertEquals(TRADER_ERR_OUT_OF_RANGE_START_INDEX, Trader::$TRADER_ERR_OUT_OF_RANGE_START_INDEX);
     }
 
     public function testConstants_TRADER_ERR_OUT_OF_RANGE_END_INDEX()
     {
-        $this->assertEquals(TRADER_ERR_OUT_OF_RANGE_END_INDEX, Trader::$TRADER_ERR_OUT_OF_RANGE_END_INDEX);
+        self::assertEquals(TRADER_ERR_OUT_OF_RANGE_END_INDEX, Trader::$TRADER_ERR_OUT_OF_RANGE_END_INDEX);
     }
 
     public function testConstants_TRADER_ERR_INVALID_LIST_TYPE()
     {
-        $this->assertEquals(TRADER_ERR_INVALID_LIST_TYPE, Trader::$TRADER_ERR_INVALID_LIST_TYPE);
+        self::assertEquals(TRADER_ERR_INVALID_LIST_TYPE, Trader::$TRADER_ERR_INVALID_LIST_TYPE);
     }
 
     public function testConstants_TRADER_ERR_BAD_OBJECT()
     {
-        $this->assertEquals(TRADER_ERR_BAD_OBJECT, Trader::$TRADER_ERR_BAD_OBJECT);
+        self::assertEquals(TRADER_ERR_BAD_OBJECT, Trader::$TRADER_ERR_BAD_OBJECT);
     }
 
     public function testConstants_TRADER_ERR_NOT_SUPPORTED()
     {
-        $this->assertEquals(TRADER_ERR_NOT_SUPPORTED, Trader::$TRADER_ERR_NOT_SUPPORTED);
+        self::assertEquals(TRADER_ERR_NOT_SUPPORTED, Trader::$TRADER_ERR_NOT_SUPPORTED);
     }
 
     public function testConstants_TRADER_ERR_INTERNAL_ERROR()
     {
-        $this->assertEquals(TRADER_ERR_INTERNAL_ERROR, Trader::$TRADER_ERR_INTERNAL_ERROR);
+        self::assertEquals(TRADER_ERR_INTERNAL_ERROR, Trader::$TRADER_ERR_INTERNAL_ERROR);
     }
 
     public function testConstants_TRADER_ERR_UNKNOWN_ERROR()
     {
-        $this->assertEquals(TRADER_ERR_UNKNOWN_ERROR, Trader::$TRADER_ERR_UNKNOWN_ERROR);
+        self::assertEquals(TRADER_ERR_UNKNOWN_ERROR, Trader::$TRADER_ERR_UNKNOWN_ERROR);
     }
     //</editor-fold>
 
@@ -468,792 +468,792 @@ class TraderTest extends TestCase
 
     public function testInterfaceFunctions_acos()
     {
-        $this->assertEquals(trader_acos(array_map('cos', $this->Close)), Trader::acos(array_map('cos', $this->Close)));
+        self::assertEquals(trader_acos(array_map('cos', $this->Close)), Trader::acos(array_map('cos', $this->Close)));
     }
 
     public function testInterfaceFunctions_ad()
     {
-        $this->assertEquals(trader_ad($this->High, $this->Low, $this->Close, $this->Volume), Trader::ad($this->High, $this->Low, $this->Close, $this->Volume));
+        self::assertEquals(trader_ad($this->High, $this->Low, $this->Close, $this->Volume), Trader::ad($this->High, $this->Low, $this->Close, $this->Volume));
     }
 
     public function testInterfaceFunctions_add()
     {
-        $this->assertEquals(trader_add($this->High, $this->Low), Trader::add($this->High, $this->Low));
+        self::assertEquals(trader_add($this->High, $this->Low), Trader::add($this->High, $this->Low));
     }
 
     public function testInterfaceFunctions_adosc()
     {
-        $this->assertEquals(trader_adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10), Trader::adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10));
+        self::assertEquals(trader_adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10), Trader::adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10));
     }
 
     public function testInterfaceFunctions_adx()
     {
-        $this->assertEquals(trader_adx($this->High, $this->Low, $this->Close, 14), Trader::adx($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_adx($this->High, $this->Low, $this->Close, 14), Trader::adx($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_adxr()
     {
-        $this->assertEquals(trader_adxr($this->High, $this->Low, $this->Close, 14), Trader::adxr($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_adxr($this->High, $this->Low, $this->Close, 14), Trader::adxr($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_apo()
     {
-        $this->assertEquals(trader_apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_aroon()
     {
-        $this->assertEquals(trader_aroon($this->High, $this->Low, 14), Trader::aroon($this->High, $this->Low, 14));
+        self::assertEquals(trader_aroon($this->High, $this->Low, 14), Trader::aroon($this->High, $this->Low, 14));
     }
 
     public function testInterfaceFunctions_arronosc()
     {
-        $this->assertEquals(trader_aroonosc($this->High, $this->Low, 14), Trader::aroonosc($this->High, $this->Low, 14));
+        self::assertEquals(trader_aroonosc($this->High, $this->Low, 14), Trader::aroonosc($this->High, $this->Low, 14));
     }
 
     public function testInterfaceFunctions_asin()
     {
-        $this->assertEquals(trader_asin(array_map('sin', $this->Close)), Trader::asin(array_map('sin', $this->Close)));
+        self::assertEquals(trader_asin(array_map('sin', $this->Close)), Trader::asin(array_map('sin', $this->Close)));
     }
 
     public function testInterfaceFunctions_atan()
     {
-        $this->assertEquals(trader_atan(array_map('tan', $this->Close)), Trader::atan(array_map('tan', $this->Close)));
+        self::assertEquals(trader_atan(array_map('tan', $this->Close)), Trader::atan(array_map('tan', $this->Close)));
     }
 
     public function testInterfaceFunctions_atr()
     {
-        $this->assertEquals(trader_atr($this->High, $this->Low, $this->Close, 14), Trader::atr($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_atr($this->High, $this->Low, $this->Close, 14), Trader::atr($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_avgprice()
     {
-        $this->assertEquals(trader_avgprice($this->Open, $this->High, $this->Low, $this->Close), Trader::avgprice($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_avgprice($this->Open, $this->High, $this->Low, $this->Close), Trader::avgprice($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_bbands()
     {
-        $this->assertEquals(trader_bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA), Trader::bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA), Trader::bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_beta()
     {
-        $this->assertEquals(trader_beta($this->Open, $this->Close, 5), Trader::beta($this->Open, $this->Close, 5));
+        self::assertEquals(trader_beta($this->Open, $this->Close, 5), Trader::beta($this->Open, $this->Close, 5));
     }
 
     public function testInterfaceFunctions_bop()
     {
-        $this->assertEquals(trader_bop($this->Open, $this->High, $this->Low, $this->Close), Trader::bop($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_bop($this->Open, $this->High, $this->Low, $this->Close), Trader::bop($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cci()
     {
-        $this->assertEquals(trader_cci($this->High, $this->Low, $this->Close, 14), Trader::cci($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_cci($this->High, $this->Low, $this->Close, 14), Trader::cci($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_cdl2crows()
     {
-        $this->assertEquals(trader_cdl2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl2crows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl2crows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3blackcrows()
     {
-        $this->assertEquals(trader_cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3inside()
     {
-        $this->assertEquals(trader_cdl3inside($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3inside($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3inside($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3inside($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3linestrike()
     {
-        $this->assertEquals(trader_cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3outside()
     {
-        $this->assertEquals(trader_cdl3outside($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3outside($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3outside($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3outside($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3starsinsouth()
     {
-        $this->assertEquals(trader_cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdl3whitesoldiers()
     {
-        $this->assertEquals(trader_cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close), Trader::cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlabandonedbaby()
     {
-        $this->assertEquals(trader_cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdladvanceblock()
     {
-        $this->assertEquals(trader_cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close), Trader::cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close), Trader::cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlbelthold()
     {
-        $this->assertEquals(trader_cdlbelthold($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlbelthold($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlbelthold($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlbelthold($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlbreakaway()
     {
-        $this->assertEquals(trader_cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlclosingmarubozu()
     {
-        $this->assertEquals(trader_cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlconcealbabyswall()
     {
-        $this->assertEquals(trader_cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlcounterattack()
     {
-        $this->assertEquals(trader_cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdldarkcloudcover()
     {
-        $this->assertEquals(trader_cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5));
+        self::assertEquals(trader_cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5));
     }
 
     public function testInterfaceFunctions_cdldoji()
     {
-        $this->assertEquals(trader_cdldoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdldojistar()
     {
-        $this->assertEquals(trader_cdldojistar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldojistar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldojistar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldojistar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdldragonflydoji()
     {
-        $this->assertEquals(trader_cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlengulfing()
     {
-        $this->assertEquals(trader_cdlengulfing($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlengulfing($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlengulfing($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlengulfing($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdleveningdojistar()
     {
-        $this->assertEquals(trader_cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testInterfaceFunctions_cdleveningstar()
     {
-        $this->assertEquals(trader_cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testInterfaceFunctions_cdlgapsidesidewhite()
     {
-        $this->assertEquals(trader_cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlgravestonedoji()
     {
-        $this->assertEquals(trader_cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhammer()
     {
-        $this->assertEquals(trader_cdlhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhammer($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhammer($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhangingman()
     {
-        $this->assertEquals(trader_cdlhangingman($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhangingman($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhangingman($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhangingman($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlharami()
     {
-        $this->assertEquals(trader_cdlharami($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlharami($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlharami($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlharami($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlharamicross()
     {
-        $this->assertEquals(trader_cdlharamicross($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlharamicross($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlharamicross($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlharamicross($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhighwave()
     {
-        $this->assertEquals(trader_cdlhighwave($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhighwave($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhighwave($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhighwave($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhikkake()
     {
-        $this->assertEquals(trader_cdlhikkake($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhikkake($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhikkake($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhikkake($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhikkakemod()
     {
-        $this->assertEquals(trader_cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlhomingpigeon()
     {
-        $this->assertEquals(trader_cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlidentical3crows()
     {
-        $this->assertEquals(trader_cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlinneck()
     {
-        $this->assertEquals(trader_cdlinneck($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlinneck($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlinneck($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlinneck($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlinvertedhammer()
     {
-        $this->assertEquals(trader_cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlkicking()
     {
-        $this->assertEquals(trader_cdlkicking($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlkicking($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlkicking($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlkicking($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlkickingbylength()
     {
-        $this->assertEquals(trader_cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlladderbottom()
     {
-        $this->assertEquals(trader_cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdllongleggeddoji()
     {
-        $this->assertEquals(trader_cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close), Trader::cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdllongline()
     {
-        $this->assertEquals(trader_cdllongline($this->Open, $this->High, $this->Low, $this->Close), Trader::cdllongline($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdllongline($this->Open, $this->High, $this->Low, $this->Close), Trader::cdllongline($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlmarubozu()
     {
-        $this->assertEquals(trader_cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlmatchinglow()
     {
-        $this->assertEquals(trader_cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlmathold()
     {
-        $this->assertEquals(trader_cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5));
+        self::assertEquals(trader_cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5));
     }
 
     public function testInterfaceFunctions_cdlmorningdojistar()
     {
-        $this->assertEquals(trader_cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testInterfaceFunctions_cdlmorningstar()
     {
-        $this->assertEquals(trader_cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testInterfaceFunctions_cdlonneck()
     {
-        $this->assertEquals(trader_cdlonneck($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlonneck($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlonneck($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlonneck($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlpiercing()
     {
-        $this->assertEquals(trader_cdlpiercing($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlpiercing($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlpiercing($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlpiercing($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlrickshawman()
     {
-        $this->assertEquals(trader_cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlrisefall3methods()
     {
-        $this->assertEquals(trader_cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlseparatinglines()
     {
-        $this->assertEquals(trader_cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlshootingstar()
     {
-        $this->assertEquals(trader_cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlshortline()
     {
-        $this->assertEquals(trader_cdlshortline($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlshortline($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlshortline($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlshortline($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlspinningtop()
     {
-        $this->assertEquals(trader_cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlstalledpattern()
     {
-        $this->assertEquals(trader_cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlsticksandwich()
     {
-        $this->assertEquals(trader_cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdltakuri()
     {
-        $this->assertEquals(trader_cdltakuri($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltakuri($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltakuri($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltakuri($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdltasukigap()
     {
-        $this->assertEquals(trader_cdltasukigap($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltasukigap($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltasukigap($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltasukigap($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlthrusting()
     {
-        $this->assertEquals(trader_cdlthrusting($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlthrusting($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlthrusting($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlthrusting($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdltristar()
     {
-        $this->assertEquals(trader_cdltristar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltristar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltristar($this->Open, $this->High, $this->Low, $this->Close), Trader::cdltristar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlunique3river()
     {
-        $this->assertEquals(trader_cdlunique3river($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlunique3river($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlunique3river($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlunique3river($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlupsidegap2crows()
     {
-        $this->assertEquals(trader_cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_cdlxsidegap3methods()
     {
-        $this->assertEquals(trader_cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_ceil()
     {
-        $this->assertEquals(trader_ceil($this->Close), Trader::ceil($this->Close));
+        self::assertEquals(trader_ceil($this->Close), Trader::ceil($this->Close));
     }
 
     public function testInterfaceFunctions_cmo()
     {
-        $this->assertEquals(trader_cmo($this->Close, 14), Trader::cmo($this->Close, 14));
+        self::assertEquals(trader_cmo($this->Close, 14), Trader::cmo($this->Close, 14));
     }
 
     public function testInterfaceFunctions_correl()
     {
-        $this->assertEquals(trader_correl($this->Open, $this->Close, 30), Trader::correl($this->Open, $this->Close, 30));
+        self::assertEquals(trader_correl($this->Open, $this->Close, 30), Trader::correl($this->Open, $this->Close, 30));
     }
 
     public function testInterfaceFunctions_cos()
     {
-        $this->assertEquals(trader_cos($this->Close), Trader::cos($this->Close));
+        self::assertEquals(trader_cos($this->Close), Trader::cos($this->Close));
     }
 
     public function testInterfaceFunctions_cosh()
     {
-        $this->assertEquals(trader_cosh($this->Close), Trader::cosh($this->Close));
+        self::assertEquals(trader_cosh($this->Close), Trader::cosh($this->Close));
     }
 
     public function testInterfaceFunctions_dema()
     {
-        $this->assertEquals(trader_dema($this->Close, 30), Trader::dema($this->Close, 30));
+        self::assertEquals(trader_dema($this->Close, 30), Trader::dema($this->Close, 30));
     }
 
     public function testInterfaceFunctions_div()
     {
-        $this->assertEquals(trader_div($this->Open, $this->Close), Trader::div($this->Open, $this->Close));
+        self::assertEquals(trader_div($this->Open, $this->Close), Trader::div($this->Open, $this->Close));
     }
 
     public function testInterfaceFunctions_dx()
     {
-        $this->assertEquals(trader_dx($this->High, $this->Low, $this->Close, 14), Trader::dx($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_dx($this->High, $this->Low, $this->Close, 14), Trader::dx($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_ema()
     {
-        $this->assertEquals(trader_ema($this->Close, 30), Trader::ema($this->Close, 30));
+        self::assertEquals(trader_ema($this->Close, 30), Trader::ema($this->Close, 30));
     }
 
     public function testInterfaceFunctions_exp()
     {
-        $this->assertEquals(trader_exp($this->Close), Trader::exp($this->Close));
+        self::assertEquals(trader_exp($this->Close), Trader::exp($this->Close));
     }
 
     public function testInterfaceFunctions_floor()
     {
-        $this->assertEquals(trader_floor($this->Close), Trader::floor($this->Close));
+        self::assertEquals(trader_floor($this->Close), Trader::floor($this->Close));
     }
 
     public function testInterfaceFunctions_ht_dcperiod()
     {
-        $this->assertEquals(trader_ht_dcperiod($this->Close), Trader::ht_dcperiod($this->Close));
+        self::assertEquals(trader_ht_dcperiod($this->Close), Trader::ht_dcperiod($this->Close));
     }
 
     public function testInterfaceFunctions_ht_dcphase()
     {
-        $this->assertEquals(trader_ht_dcphase($this->Close), Trader::ht_dcphase($this->Close));
+        self::assertEquals(trader_ht_dcphase($this->Close), Trader::ht_dcphase($this->Close));
     }
 
     public function testInterfaceFunctions_ht_phasor()
     {
-        $this->assertEquals(trader_ht_phasor($this->Close), Trader::ht_phasor($this->Close));
+        self::assertEquals(trader_ht_phasor($this->Close), Trader::ht_phasor($this->Close));
     }
 
     public function testInterfaceFunctions_ht_sine()
     {
-        $this->assertEquals(trader_ht_sine($this->Close), Trader::ht_sine($this->Close));
+        self::assertEquals(trader_ht_sine($this->Close), Trader::ht_sine($this->Close));
     }
 
     public function testInterfaceFunctions_ht_trendline()
     {
-        $this->assertEquals(trader_ht_trendline($this->Close), Trader::ht_trendline($this->Close));
+        self::assertEquals(trader_ht_trendline($this->Close), Trader::ht_trendline($this->Close));
     }
 
     public function testInterfaceFunctions_ht_trendmode()
     {
-        $this->assertEquals(trader_ht_trendmode($this->Close), Trader::ht_trendmode($this->Close));
+        self::assertEquals(trader_ht_trendmode($this->Close), Trader::ht_trendmode($this->Close));
     }
 
     public function testInterfaceFunctions_kama()
     {
-        $this->assertEquals(trader_kama($this->Close, 30), Trader::kama($this->Close, 30));
+        self::assertEquals(trader_kama($this->Close, 30), Trader::kama($this->Close, 30));
     }
 
     public function testInterfaceFunctions_linearreg_angle()
     {
-        $this->assertEquals(trader_linearreg_angle($this->Close, 14), Trader::linearreg_angle($this->Close, 14));
+        self::assertEquals(trader_linearreg_angle($this->Close, 14), Trader::linearreg_angle($this->Close, 14));
     }
 
     public function testInterfaceFunctions_linearreg_intercept()
     {
-        $this->assertEquals(trader_linearreg_intercept($this->Close, 14), Trader::linearreg_intercept($this->Close, 14));
+        self::assertEquals(trader_linearreg_intercept($this->Close, 14), Trader::linearreg_intercept($this->Close, 14));
     }
 
     public function testInterfaceFunctions_linearreg_slope()
     {
-        $this->assertEquals(trader_linearreg_slope($this->Close, 14), Trader::linearreg_slope($this->Close, 14));
+        self::assertEquals(trader_linearreg_slope($this->Close, 14), Trader::linearreg_slope($this->Close, 14));
     }
 
     public function testInterfaceFunctions_linearreg()
     {
-        $this->assertEquals(trader_linearreg($this->Close, 14), Trader::linearreg($this->Close, 14));
+        self::assertEquals(trader_linearreg($this->Close, 14), Trader::linearreg($this->Close, 14));
     }
 
     public function testInterfaceFunctions_ln()
     {
-        $this->assertEquals(trader_ln($this->Close), Trader::ln($this->Close));
+        self::assertEquals(trader_ln($this->Close), Trader::ln($this->Close));
     }
 
     public function testInterfaceFunctions_log10()
     {
-        $this->assertEquals(trader_log10($this->Close), Trader::log10($this->Close));
+        self::assertEquals(trader_log10($this->Close), Trader::log10($this->Close));
     }
 
     public function testInterfaceFunctions_ma()
     {
-        $this->assertEquals(trader_ma($this->Close, 30, TRADER_MA_TYPE_SMA), Trader::ma($this->Close, 30, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_ma($this->Close, 30, TRADER_MA_TYPE_SMA), Trader::ma($this->Close, 30, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_macd()
     {
-        $this->assertEquals(trader_macd($this->Close, 12, 26, 9), Trader::macd($this->Close, 12, 26, 9));
+        self::assertEquals(trader_macd($this->Close, 12, 26, 9), Trader::macd($this->Close, 12, 26, 9));
     }
 
     public function testInterfaceFunctions_macdext()
     {
-        $this->assertEquals(trader_macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9), Trader::macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9));
+        self::assertEquals(trader_macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9), Trader::macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9));
     }
 
     public function testInterfaceFunctions_macdfix()
     {
-        $this->assertEquals(trader_macdfix($this->Close, 9), Trader::macdfix($this->Close, 9));
+        self::assertEquals(trader_macdfix($this->Close, 9), Trader::macdfix($this->Close, 9));
     }
 
     public function testInterfaceFunctions_mama()
     {
-        $this->assertEquals(trader_mama($this->Close, 0.5, 0.05), Trader::mama($this->Close, 0.5, 0.05));
+        self::assertEquals(trader_mama($this->Close, 0.5, 0.05), Trader::mama($this->Close, 0.5, 0.05));
     }
 
     public function testInterfaceFunctions_mavp()
     {
-        $this->assertEquals(trader_mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA), Trader::mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA), Trader::mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_max()
     {
-        $this->assertEquals(trader_max($this->Close, 30), Trader::max($this->Close, 30));
+        self::assertEquals(trader_max($this->Close, 30), Trader::max($this->Close, 30));
     }
 
     public function testInterfaceFunctions_maxindex()
     {
-        $this->assertEquals(trader_maxindex($this->Close, 30), Trader::maxindex($this->Close, 30));
+        self::assertEquals(trader_maxindex($this->Close, 30), Trader::maxindex($this->Close, 30));
     }
 
     public function testInterfaceFunctions_medprice()
     {
-        $this->assertEquals(trader_medprice($this->High, $this->Low), Trader::medprice($this->High, $this->Low));
+        self::assertEquals(trader_medprice($this->High, $this->Low), Trader::medprice($this->High, $this->Low));
     }
 
     public function testInterfaceFunctions_mfi()
     {
-        $this->assertEquals(trader_mfi($this->High, $this->Low, $this->Close, $this->Volume, 14), Trader::mfi($this->High, $this->Low, $this->Close, $this->Volume, 14));
+        self::assertEquals(trader_mfi($this->High, $this->Low, $this->Close, $this->Volume, 14), Trader::mfi($this->High, $this->Low, $this->Close, $this->Volume, 14));
     }
 
     public function testInterfaceFunctions_midpoint()
     {
-        $this->assertEquals(trader_midpoint($this->Close, 14), Trader::midpoint($this->Close, 14));
+        self::assertEquals(trader_midpoint($this->Close, 14), Trader::midpoint($this->Close, 14));
     }
 
     public function testInterfaceFunctions_midprice()
     {
-        $this->assertEquals(trader_midprice($this->High, $this->Low, 14), Trader::midprice($this->High, $this->Low, 14));
+        self::assertEquals(trader_midprice($this->High, $this->Low, 14), Trader::midprice($this->High, $this->Low, 14));
     }
 
     public function testInterfaceFunctions_min()
     {
-        $this->assertEquals(trader_min($this->High, 30), Trader::min($this->High, 30));
+        self::assertEquals(trader_min($this->High, 30), Trader::min($this->High, 30));
     }
 
     public function testInterfaceFunctions_minindex()
     {
-        $this->assertEquals(trader_minindex($this->High, 30), Trader::minindex($this->High, 30));
+        self::assertEquals(trader_minindex($this->High, 30), Trader::minindex($this->High, 30));
     }
 
     public function testInterfaceFunctions_minmax()
     {
-        $this->assertEquals(trader_minmax($this->High, 30), Trader::minmax($this->High, 30));
+        self::assertEquals(trader_minmax($this->High, 30), Trader::minmax($this->High, 30));
     }
 
     public function testInterfaceFunctions_minmaxindex()
     {
-        $this->assertEquals(trader_minmaxindex($this->High, 30), Trader::minmaxindex($this->High, 30));
+        self::assertEquals(trader_minmaxindex($this->High, 30), Trader::minmaxindex($this->High, 30));
     }
 
     public function testInterfaceFunctions_minus_di()
     {
-        $this->assertEquals(trader_minus_di($this->High, $this->Low, $this->Close, 14), Trader::minus_di($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_minus_di($this->High, $this->Low, $this->Close, 14), Trader::minus_di($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_minus_dmi()
     {
-        $this->assertEquals(trader_minus_dm($this->High, $this->Low, 14), Trader::minus_dm($this->High, $this->Low, 14));
+        self::assertEquals(trader_minus_dm($this->High, $this->Low, 14), Trader::minus_dm($this->High, $this->Low, 14));
     }
 
     public function testInterfaceFunctions_mom()
     {
-        $this->assertEquals(trader_mom($this->High, 10), Trader::mom($this->High, 10));
+        self::assertEquals(trader_mom($this->High, 10), Trader::mom($this->High, 10));
     }
 
     public function testInterfaceFunctions_mult()
     {
-        $this->assertEquals(trader_mult($this->Open, $this->Close), Trader::mult($this->Open, $this->Close));
+        self::assertEquals(trader_mult($this->Open, $this->Close), Trader::mult($this->Open, $this->Close));
     }
 
     public function testInterfaceFunctions_natr()
     {
-        $this->assertEquals(trader_natr($this->High, $this->Low, $this->Close, 14), Trader::natr($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_natr($this->High, $this->Low, $this->Close, 14), Trader::natr($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_obv()
     {
-        $this->assertEquals(trader_obv($this->Close, $this->Volume), Trader::obv($this->Close, $this->Volume));
+        self::assertEquals(trader_obv($this->Close, $this->Volume), Trader::obv($this->Close, $this->Volume));
     }
 
     public function testInterfaceFunctions_plus_di()
     {
-        $this->assertEquals(trader_plus_di($this->High, $this->Low, $this->Close, 14), Trader::plus_di($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_plus_di($this->High, $this->Low, $this->Close, 14), Trader::plus_di($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_plus_dm()
     {
-        $this->assertEquals(trader_plus_dm($this->High, $this->Low, 14), Trader::plus_dm($this->High, $this->Low, 14));
+        self::assertEquals(trader_plus_dm($this->High, $this->Low, 14), Trader::plus_dm($this->High, $this->Low, 14));
     }
 
     public function testInterfaceFunctions_ppo()
     {
-        $this->assertEquals(trader_ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_roc()
     {
-        $this->assertEquals(trader_roc($this->Close, 10), Trader::roc($this->Close, 10));
+        self::assertEquals(trader_roc($this->Close, 10), Trader::roc($this->Close, 10));
     }
 
     public function testInterfaceFunctions_rocp()
     {
-        $this->assertEquals(trader_rocp($this->Close, 10), Trader::rocp($this->Close, 10));
+        self::assertEquals(trader_rocp($this->Close, 10), Trader::rocp($this->Close, 10));
     }
 
     public function testInterfaceFunctions_rocr100()
     {
-        $this->assertEquals(trader_rocr100($this->Close, 10), Trader::rocr100($this->Close, 10));
+        self::assertEquals(trader_rocr100($this->Close, 10), Trader::rocr100($this->Close, 10));
     }
 
     public function testInterfaceFunctions_rocr()
     {
-        $this->assertEquals(trader_rocr($this->Close, 10), Trader::rocr($this->Close, 10));
+        self::assertEquals(trader_rocr($this->Close, 10), Trader::rocr($this->Close, 10));
     }
 
     public function testInterfaceFunctions_rsi()
     {
-        $this->assertEquals(trader_rsi($this->Close, 14), Trader::rsi($this->Close, 14));
+        self::assertEquals(trader_rsi($this->Close, 14), Trader::rsi($this->Close, 14));
     }
 
     public function testInterfaceFunctions_sar()
     {
-        $this->assertEquals(trader_sar($this->Close, $this->Low, 0.02, 0.2), Trader::sar($this->Close, $this->Low, 0.02, 0.2));
+        self::assertEquals(trader_sar($this->Close, $this->Low, 0.02, 0.2), Trader::sar($this->Close, $this->Low, 0.02, 0.2));
     }
 
     public function testInterfaceFunctions_sarext()
     {
-        $this->assertEquals(trader_sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2), Trader::sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2));
+        self::assertEquals(trader_sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2), Trader::sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2));
     }
 
     public function testInterfaceFunctions_sin()
     {
-        $this->assertEquals(trader_sin($this->Close), Trader::sin($this->Close));
+        self::assertEquals(trader_sin($this->Close), Trader::sin($this->Close));
     }
 
     public function testInterfaceFunctions_sinh()
     {
-        $this->assertEquals(trader_sinh($this->Close), Trader::sinh($this->Close));
+        self::assertEquals(trader_sinh($this->Close), Trader::sinh($this->Close));
     }
 
     public function testInterfaceFunctions_sma()
     {
-        $this->assertEquals(trader_sma($this->Close, 30), Trader::sma($this->Close, 30));
+        self::assertEquals(trader_sma($this->Close, 30), Trader::sma($this->Close, 30));
     }
 
     public function testInterfaceFunctions_sqrt()
     {
-        $this->assertEquals(trader_sqrt($this->Close), Trader::sqrt($this->Close));
+        self::assertEquals(trader_sqrt($this->Close), Trader::sqrt($this->Close));
     }
 
     public function testInterfaceFunctions_stddev()
     {
-        $this->assertEquals(trader_stddev($this->Close, 5, 1.0), Trader::stddev($this->Close, 5, 1.0));
+        self::assertEquals(trader_stddev($this->Close, 5, 1.0), Trader::stddev($this->Close, 5, 1.0));
     }
 
     public function testInterfaceFunctions_stoch()
     {
-        $this->assertEquals(trader_stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA), Trader::stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA), Trader::stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_stochf()
     {
-        $this->assertEquals(trader_stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_stochrsi()
     {
-        $this->assertEquals(trader_stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testInterfaceFunctions_sub()
     {
-        $this->assertEquals(trader_sub($this->High, $this->Low), Trader::sub($this->High, $this->Low));
+        self::assertEquals(trader_sub($this->High, $this->Low), Trader::sub($this->High, $this->Low));
     }
 
     public function testInterfaceFunctions_sum()
     {
-        $this->assertEquals(trader_sum($this->High, 30), Trader::sum($this->High, 30));
+        self::assertEquals(trader_sum($this->High, 30), Trader::sum($this->High, 30));
     }
 
     public function testInterfaceFunctions_t3()
     {
-        $this->assertEquals(trader_t3($this->High, 5, 0.7), Trader::t3($this->High, 5, 0.7));
+        self::assertEquals(trader_t3($this->High, 5, 0.7), Trader::t3($this->High, 5, 0.7));
     }
 
     public function testInterfaceFunctions_tan()
     {
-        $this->assertEquals(trader_tan($this->Close), Trader::tan($this->Close));
+        self::assertEquals(trader_tan($this->Close), Trader::tan($this->Close));
     }
 
     public function testInterfaceFunctions_tanh()
     {
-        $this->assertEquals(trader_tanh($this->Close), Trader::tanh($this->Close));
+        self::assertEquals(trader_tanh($this->Close), Trader::tanh($this->Close));
     }
 
     public function testInterfaceFunctions_tema()
     {
-        $this->assertEquals(trader_tema($this->Close, 30), Trader::tema($this->Close, 30));
+        self::assertEquals(trader_tema($this->Close, 30), Trader::tema($this->Close, 30));
     }
 
     public function testInterfaceFunctions_trange()
     {
-        $this->assertEquals(trader_trange($this->High, $this->Low, $this->Close), Trader::trange($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_trange($this->High, $this->Low, $this->Close), Trader::trange($this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_trima()
     {
-        $this->assertEquals(trader_trima($this->Close, 30), Trader::trima($this->Close, 30));
+        self::assertEquals(trader_trima($this->Close, 30), Trader::trima($this->Close, 30));
     }
 
     public function testInterfaceFunctions_trix()
     {
-        $this->assertEquals(trader_trix($this->Close, 30), Trader::trix($this->Close, 30));
+        self::assertEquals(trader_trix($this->Close, 30), Trader::trix($this->Close, 30));
     }
 
     public function testInterfaceFunctions_tsf()
     {
-        $this->assertEquals(trader_tsf($this->Close, 14), Trader::tsf($this->Close, 14));
+        self::assertEquals(trader_tsf($this->Close, 14), Trader::tsf($this->Close, 14));
     }
 
     public function testInterfaceFunctions_typprice()
     {
-        $this->assertEquals(trader_typprice($this->High, $this->Low, $this->Close), Trader::typprice($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_typprice($this->High, $this->Low, $this->Close), Trader::typprice($this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_ultosc()
     {
-        $this->assertEquals(trader_ultosc($this->High, $this->Low, $this->Close, 7, 14, 28), Trader::ultosc($this->High, $this->Low, $this->Close, 7, 14, 28));
+        self::assertEquals(trader_ultosc($this->High, $this->Low, $this->Close, 7, 14, 28), Trader::ultosc($this->High, $this->Low, $this->Close, 7, 14, 28));
     }
 
     public function testInterfaceFunctions_var()
     {
-        $this->assertEquals(trader_var($this->Close, 5, 1.0), Trader::var($this->Close, 5, 1.0));
+        self::assertEquals(trader_var($this->Close, 5, 1.0), Trader::var($this->Close, 5, 1.0));
     }
 
     public function testInterfaceFunctions_wclprice()
     {
-        $this->assertEquals(trader_wclprice($this->High, $this->Low, $this->Close), Trader::wclprice($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_wclprice($this->High, $this->Low, $this->Close), Trader::wclprice($this->High, $this->Low, $this->Close));
     }
 
     public function testInterfaceFunctions_willr()
     {
-        $this->assertEquals(trader_willr($this->High, $this->Low, $this->Close, 14), Trader::willr($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_willr($this->High, $this->Low, $this->Close, 14), Trader::willr($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testInterfaceFunctions_wma()
     {
-        $this->assertEquals(trader_wma($this->Close, 30), Trader::wma($this->Close, 30));
+        self::assertEquals(trader_wma($this->Close, 30), Trader::wma($this->Close, 30));
     }
 
     //</editor-fold>
@@ -1262,792 +1262,792 @@ class TraderTest extends TestCase
 
     public function testFriendlyFunctions_acos()
     {
-        $this->assertEquals(trader_acos(array_map('cos', $this->Close)), Trader::mathArcCosine(array_map('cos', $this->Close)));
+        self::assertEquals(trader_acos(array_map('cos', $this->Close)), Trader::mathArcCosine(array_map('cos', $this->Close)));
     }
 
     public function testFriendlyFunctions_ad()
     {
-        $this->assertEquals(trader_ad($this->High, $this->Low, $this->Close, $this->Volume), Trader::chaikinAccumulationDistributionLine($this->High, $this->Low, $this->Close, $this->Volume));
+        self::assertEquals(trader_ad($this->High, $this->Low, $this->Close, $this->Volume), Trader::chaikinAccumulationDistributionLine($this->High, $this->Low, $this->Close, $this->Volume));
     }
 
     public function testFriendlyFunctions_add()
     {
-        $this->assertEquals(trader_add($this->High, $this->Low), Trader::mathAddition($this->High, $this->Low));
+        self::assertEquals(trader_add($this->High, $this->Low), Trader::mathAddition($this->High, $this->Low));
     }
 
     public function testFriendlyFunctions_adosc()
     {
-        $this->assertEquals(trader_adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10), Trader::chaikinAccumulationDistributionOscillator($this->High, $this->Low, $this->Close, $this->Volume, 3, 10));
+        self::assertEquals(trader_adosc($this->High, $this->Low, $this->Close, $this->Volume, 3, 10), Trader::chaikinAccumulationDistributionOscillator($this->High, $this->Low, $this->Close, $this->Volume, 3, 10));
     }
 
     public function testFriendlyFunctions_adx()
     {
-        $this->assertEquals(trader_adx($this->High, $this->Low, $this->Close, 14), Trader::averageDirectionalMovementIndex($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_adx($this->High, $this->Low, $this->Close, 14), Trader::averageDirectionalMovementIndex($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_adxr()
     {
-        $this->assertEquals(trader_adxr($this->High, $this->Low, $this->Close, 14), Trader::averageDirectionalMovementIndexRating($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_adxr($this->High, $this->Low, $this->Close, 14), Trader::averageDirectionalMovementIndexRating($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_apo()
     {
-        $this->assertEquals(trader_apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::absolutePriceOscillator($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_apo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::absolutePriceOscillator($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_aroon()
     {
-        $this->assertEquals(trader_aroon($this->High, $this->Low, 14), Trader::aroonIndicator($this->High, $this->Low, 14));
+        self::assertEquals(trader_aroon($this->High, $this->Low, 14), Trader::aroonIndicator($this->High, $this->Low, 14));
     }
 
     public function testFriendlyFunctions_arronosc()
     {
-        $this->assertEquals(trader_aroonosc($this->High, $this->Low, 14), Trader::arronOscillator($this->High, $this->Low, 14));
+        self::assertEquals(trader_aroonosc($this->High, $this->Low, 14), Trader::arronOscillator($this->High, $this->Low, 14));
     }
 
     public function testFriendlyFunctions_asin()
     {
-        $this->assertEquals(trader_asin(array_map('sin', $this->Close)), Trader::mathArcSine(array_map('sin', $this->Close)));
+        self::assertEquals(trader_asin(array_map('sin', $this->Close)), Trader::mathArcSine(array_map('sin', $this->Close)));
     }
 
     public function testFriendlyFunctions_atan()
     {
-        $this->assertEquals(trader_atan(array_map('tan', $this->Close)), Trader::mathArcTangent(array_map('tan', $this->Close)));
+        self::assertEquals(trader_atan(array_map('tan', $this->Close)), Trader::mathArcTangent(array_map('tan', $this->Close)));
     }
 
     public function testFriendlyFunctions_atr()
     {
-        $this->assertEquals(trader_atr($this->High, $this->Low, $this->Close, 14), Trader::averageTrueRange($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_atr($this->High, $this->Low, $this->Close, 14), Trader::averageTrueRange($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_avgprice()
     {
-        $this->assertEquals(trader_avgprice($this->Open, $this->High, $this->Low, $this->Close), Trader::averagePrice($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_avgprice($this->Open, $this->High, $this->Low, $this->Close), Trader::averagePrice($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_bbands()
     {
-        $this->assertEquals(trader_bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA), Trader::bollingerBands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_bbands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA), Trader::bollingerBands($this->Close, 5, 2.0, 2.0, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_beta()
     {
-        $this->assertEquals(trader_beta($this->Open, $this->Close, 5), Trader::betaVolatility($this->Open, $this->Close, 5));
+        self::assertEquals(trader_beta($this->Open, $this->Close, 5), Trader::betaVolatility($this->Open, $this->Close, 5));
     }
 
     public function testFriendlyFunctions_bop()
     {
-        $this->assertEquals(trader_bop($this->Open, $this->High, $this->Low, $this->Close), Trader::balanceOfPower($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_bop($this->Open, $this->High, $this->Low, $this->Close), Trader::balanceOfPower($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cci()
     {
-        $this->assertEquals(trader_cci($this->High, $this->Low, $this->Close, 14), Trader::commodityChannelIndex($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_cci($this->High, $this->Low, $this->Close, 14), Trader::commodityChannelIndex($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_cdl2crows()
     {
-        $this->assertEquals(trader_cdl2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTwoCrows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTwoCrows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3blackcrows()
     {
-        $this->assertEquals(trader_cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeBlackCrows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3blackcrows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeBlackCrows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3inside()
     {
-        $this->assertEquals(trader_cdl3inside($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeInsideUpDown($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3inside($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeInsideUpDown($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3linestrike()
     {
-        $this->assertEquals(trader_cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeLineStrike($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3linestrike($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeLineStrike($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3outside()
     {
-        $this->assertEquals(trader_cdl3outside($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeOutsideUpDown($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3outside($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeOutsideUpDown($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3starsinsouth()
     {
-        $this->assertEquals(trader_cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeStarsInTheSouth($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3starsinsouth($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeStarsInTheSouth($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdl3whitesoldiers()
     {
-        $this->assertEquals(trader_cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeWhiteSoldiers($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdl3whitesoldiers($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThreeWhiteSoldiers($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlabandonedbaby()
     {
-        $this->assertEquals(trader_cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close), Trader::candleAbandonedBaby($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlabandonedbaby($this->Open, $this->High, $this->Low, $this->Close), Trader::candleAbandonedBaby($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdladvanceblock()
     {
-        $this->assertEquals(trader_cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close), Trader::candleAdvanceBlock($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdladvanceblock($this->Open, $this->High, $this->Low, $this->Close), Trader::candleAdvanceBlock($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlbelthold()
     {
-        $this->assertEquals(trader_cdlbelthold($this->Open, $this->High, $this->Low, $this->Close), Trader::candleBeltHold($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlbelthold($this->Open, $this->High, $this->Low, $this->Close), Trader::candleBeltHold($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlbreakaway()
     {
-        $this->assertEquals(trader_cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close), Trader::candleBreakaway($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlbreakaway($this->Open, $this->High, $this->Low, $this->Close), Trader::candleBreakaway($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlclosingmarubozu()
     {
-        $this->assertEquals(trader_cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::candleClosingMarubozu($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlclosingmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::candleClosingMarubozu($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlconcealbabyswall()
     {
-        $this->assertEquals(trader_cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close), Trader::candleConcealingBabySwallow($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlconcealbabyswall($this->Open, $this->High, $this->Low, $this->Close), Trader::candleConcealingBabySwallow($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlcounterattack()
     {
-        $this->assertEquals(trader_cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close), Trader::candleCounterattack($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlcounterattack($this->Open, $this->High, $this->Low, $this->Close), Trader::candleCounterattack($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdldarkcloudcover()
     {
-        $this->assertEquals(trader_cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::candleDarkCloudCover($this->Open, $this->High, $this->Low, $this->Close, 0.5));
+        self::assertEquals(trader_cdldarkcloudcover($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::candleDarkCloudCover($this->Open, $this->High, $this->Low, $this->Close, 0.5));
     }
 
     public function testFriendlyFunctions_cdldoji()
     {
-        $this->assertEquals(trader_cdldoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdldojistar()
     {
-        $this->assertEquals(trader_cdldojistar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDojiStar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldojistar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDojiStar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdldragonflydoji()
     {
-        $this->assertEquals(trader_cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDragonflyDoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdldragonflydoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleDragonflyDoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlengulfing()
     {
-        $this->assertEquals(trader_cdlengulfing($this->Open, $this->High, $this->Low, $this->Close), Trader::candleEngulfingPattern($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlengulfing($this->Open, $this->High, $this->Low, $this->Close), Trader::candleEngulfingPattern($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdleveningdojistar()
     {
-        $this->assertEquals(trader_cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleEveningDojiStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdleveningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleEveningDojiStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testFriendlyFunctions_cdleveningstar()
     {
-        $this->assertEquals(trader_cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleEveningStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdleveningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleEveningStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testFriendlyFunctions_cdlgapsidesidewhite()
     {
-        $this->assertEquals(trader_cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpDownGapsSideBySideWhiteLines($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlgapsidesidewhite($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpDownGapsSideBySideWhiteLines($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlgravestonedoji()
     {
-        $this->assertEquals(trader_cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleGravestoneDoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlgravestonedoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleGravestoneDoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhammer()
     {
-        $this->assertEquals(trader_cdlhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHammer($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHammer($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhangingman()
     {
-        $this->assertEquals(trader_cdlhangingman($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHangingMan($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhangingman($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHangingMan($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlharami()
     {
-        $this->assertEquals(trader_cdlharami($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHarami($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlharami($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHarami($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlharamicross()
     {
-        $this->assertEquals(trader_cdlharamicross($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHaramiCross($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlharamicross($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHaramiCross($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhighwave()
     {
-        $this->assertEquals(trader_cdlhighwave($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHighWave($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhighwave($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHighWave($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhikkake()
     {
-        $this->assertEquals(trader_cdlhikkake($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHikkake($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhikkake($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHikkake($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhikkakemod()
     {
-        $this->assertEquals(trader_cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close), Trader::candleModifiedHikkake($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhikkakemod($this->Open, $this->High, $this->Low, $this->Close), Trader::candleModifiedHikkake($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlhomingpigeon()
     {
-        $this->assertEquals(trader_cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHomingPigeon($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlhomingpigeon($this->Open, $this->High, $this->Low, $this->Close), Trader::candleHomingPigeon($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlidentical3crows()
     {
-        $this->assertEquals(trader_cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleIdenticalThreeCrows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlidentical3crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleIdenticalThreeCrows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlinneck()
     {
-        $this->assertEquals(trader_cdlinneck($this->Open, $this->High, $this->Low, $this->Close), Trader::candleInNeck($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlinneck($this->Open, $this->High, $this->Low, $this->Close), Trader::candleInNeck($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlinvertedhammer()
     {
-        $this->assertEquals(trader_cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::candleInvertedHammer($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlinvertedhammer($this->Open, $this->High, $this->Low, $this->Close), Trader::candleInvertedHammer($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlkicking()
     {
-        $this->assertEquals(trader_cdlkicking($this->Open, $this->High, $this->Low, $this->Close), Trader::candleKicking($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlkicking($this->Open, $this->High, $this->Low, $this->Close), Trader::candleKicking($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlkickingbylength()
     {
-        $this->assertEquals(trader_cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close), Trader::candleKickingByLength($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlkickingbylength($this->Open, $this->High, $this->Low, $this->Close), Trader::candleKickingByLength($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlladderbottom()
     {
-        $this->assertEquals(trader_cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLadderBottom($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlladderbottom($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLadderBottom($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdllongleggeddoji()
     {
-        $this->assertEquals(trader_cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLongLeggedDoji($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdllongleggeddoji($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLongLeggedDoji($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdllongline()
     {
-        $this->assertEquals(trader_cdllongline($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLongLine($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdllongline($this->Open, $this->High, $this->Low, $this->Close), Trader::candleLongLine($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlmarubozu()
     {
-        $this->assertEquals(trader_cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::candleMarubozu($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlmarubozu($this->Open, $this->High, $this->Low, $this->Close), Trader::candleMarubozu($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlmatchinglow()
     {
-        $this->assertEquals(trader_cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close), Trader::candleMatchingLow($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlmatchinglow($this->Open, $this->High, $this->Low, $this->Close), Trader::candleMatchingLow($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlmathold()
     {
-        $this->assertEquals(trader_cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::candleMatHold($this->Open, $this->High, $this->Low, $this->Close, 0.5));
+        self::assertEquals(trader_cdlmathold($this->Open, $this->High, $this->Low, $this->Close, 0.5), Trader::candleMatHold($this->Open, $this->High, $this->Low, $this->Close, 0.5));
     }
 
     public function testFriendlyFunctions_cdlmorningdojistar()
     {
-        $this->assertEquals(trader_cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleMorningDojiStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdlmorningdojistar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleMorningDojiStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testFriendlyFunctions_cdlmorningstar()
     {
-        $this->assertEquals(trader_cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleMorningStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
+        self::assertEquals(trader_cdlmorningstar($this->Open, $this->High, $this->Low, $this->Close, 0.3), Trader::candleMorningStar($this->Open, $this->High, $this->Low, $this->Close, 0.3));
     }
 
     public function testFriendlyFunctions_cdlonneck()
     {
-        $this->assertEquals(trader_cdlonneck($this->Open, $this->High, $this->Low, $this->Close), Trader::candleOnNeck($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlonneck($this->Open, $this->High, $this->Low, $this->Close), Trader::candleOnNeck($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlpiercing()
     {
-        $this->assertEquals(trader_cdlpiercing($this->Open, $this->High, $this->Low, $this->Close), Trader::candlePiercing($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlpiercing($this->Open, $this->High, $this->Low, $this->Close), Trader::candlePiercing($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlrickshawman()
     {
-        $this->assertEquals(trader_cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close), Trader::candleRickshawMan($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlrickshawman($this->Open, $this->High, $this->Low, $this->Close), Trader::candleRickshawMan($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlrisefall3methods()
     {
-        $this->assertEquals(trader_cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::candleRisingFallingThreeMethods($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlrisefall3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::candleRisingFallingThreeMethods($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlseparatinglines()
     {
-        $this->assertEquals(trader_cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close), Trader::candleSeparatingLines($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlseparatinglines($this->Open, $this->High, $this->Low, $this->Close), Trader::candleSeparatingLines($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlshootingstar()
     {
-        $this->assertEquals(trader_cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleShootingStar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlshootingstar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleShootingStar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlshortline()
     {
-        $this->assertEquals(trader_cdlshortline($this->Open, $this->High, $this->Low, $this->Close), Trader::candleShortLine($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlshortline($this->Open, $this->High, $this->Low, $this->Close), Trader::candleShortLine($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlspinningtop()
     {
-        $this->assertEquals(trader_cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close), Trader::candleSpinningTop($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlspinningtop($this->Open, $this->High, $this->Low, $this->Close), Trader::candleSpinningTop($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlstalledpattern()
     {
-        $this->assertEquals(trader_cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close), Trader::candleStalled($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlstalledpattern($this->Open, $this->High, $this->Low, $this->Close), Trader::candleStalled($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlsticksandwich()
     {
-        $this->assertEquals(trader_cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close), Trader::candleStickSandwich($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlsticksandwich($this->Open, $this->High, $this->Low, $this->Close), Trader::candleStickSandwich($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdltakuri()
     {
-        $this->assertEquals(trader_cdltakuri($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTakuri($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltakuri($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTakuri($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdltasukigap()
     {
-        $this->assertEquals(trader_cdltasukigap($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTasukiGap($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltasukigap($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTasukiGap($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlthrusting()
     {
-        $this->assertEquals(trader_cdlthrusting($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThrusting($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlthrusting($this->Open, $this->High, $this->Low, $this->Close), Trader::candleThrusting($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdltristar()
     {
-        $this->assertEquals(trader_cdltristar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTristar($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdltristar($this->Open, $this->High, $this->Low, $this->Close), Trader::candleTristar($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlunique3river()
     {
-        $this->assertEquals(trader_cdlunique3river($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUniqueThreeRiver($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlunique3river($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUniqueThreeRiver($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlupsidegap2crows()
     {
-        $this->assertEquals(trader_cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpsideGapTwoCrows($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlupsidegap2crows($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpsideGapTwoCrows($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_cdlxsidegap3methods()
     {
-        $this->assertEquals(trader_cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpsideDownsideGapThreeMethods($this->Open, $this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_cdlxsidegap3methods($this->Open, $this->High, $this->Low, $this->Close), Trader::candleUpsideDownsideGapThreeMethods($this->Open, $this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_ceil()
     {
-        $this->assertEquals(trader_ceil($this->Close), Trader::mathCeiling($this->Close));
+        self::assertEquals(trader_ceil($this->Close), Trader::mathCeiling($this->Close));
     }
 
     public function testFriendlyFunctions_cmo()
     {
-        $this->assertEquals(trader_cmo($this->Close, 14), Trader::chandeMomentumOscillator($this->Close, 14));
+        self::assertEquals(trader_cmo($this->Close, 14), Trader::chandeMomentumOscillator($this->Close, 14));
     }
 
     public function testFriendlyFunctions_correl()
     {
-        $this->assertEquals(trader_correl($this->Open, $this->Close, 30), Trader::pearsonCorrelationCoefficient($this->Open, $this->Close, 30));
+        self::assertEquals(trader_correl($this->Open, $this->Close, 30), Trader::pearsonCorrelationCoefficient($this->Open, $this->Close, 30));
     }
 
     public function testFriendlyFunctions_cos()
     {
-        $this->assertEquals(trader_cos($this->Close), Trader::mathCosine($this->Close));
+        self::assertEquals(trader_cos($this->Close), Trader::mathCosine($this->Close));
     }
 
     public function testFriendlyFunctions_cosh()
     {
-        $this->assertEquals(trader_cosh($this->Close), Trader::mathHyperbolicCosine($this->Close));
+        self::assertEquals(trader_cosh($this->Close), Trader::mathHyperbolicCosine($this->Close));
     }
 
     public function testFriendlyFunctions_dema()
     {
-        $this->assertEquals(trader_dema($this->Close, 30), Trader::doubleExponentialMovingAverage($this->Close, 30));
+        self::assertEquals(trader_dema($this->Close, 30), Trader::doubleExponentialMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_div()
     {
-        $this->assertEquals(trader_div($this->Open, $this->Close), Trader::mathDivision($this->Open, $this->Close));
+        self::assertEquals(trader_div($this->Open, $this->Close), Trader::mathDivision($this->Open, $this->Close));
     }
 
     public function testFriendlyFunctions_dx()
     {
-        $this->assertEquals(trader_dx($this->High, $this->Low, $this->Close, 14), Trader::directionalMovementIndex($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_dx($this->High, $this->Low, $this->Close, 14), Trader::directionalMovementIndex($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_ema()
     {
-        $this->assertEquals(trader_ema($this->Close, 30), Trader::exponentialMovingAverage($this->Close, 30));
+        self::assertEquals(trader_ema($this->Close, 30), Trader::exponentialMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_exp()
     {
-        $this->assertEquals(trader_exp($this->Close), Trader::mathExponent($this->Close));
+        self::assertEquals(trader_exp($this->Close), Trader::mathExponent($this->Close));
     }
 
     public function testFriendlyFunctions_floor()
     {
-        $this->assertEquals(trader_floor($this->Close), Trader::mathFloor($this->Close));
+        self::assertEquals(trader_floor($this->Close), Trader::mathFloor($this->Close));
     }
 
     public function testFriendlyFunctions_ht_dcperiod()
     {
-        $this->assertEquals(trader_ht_dcperiod($this->Close), Trader::hilbertTransformDominantCyclePeriod($this->Close));
+        self::assertEquals(trader_ht_dcperiod($this->Close), Trader::hilbertTransformDominantCyclePeriod($this->Close));
     }
 
     public function testFriendlyFunctions_ht_dcphase()
     {
-        $this->assertEquals(trader_ht_dcphase($this->Close), Trader::hilbertTransformDominantCyclePhase($this->Close));
+        self::assertEquals(trader_ht_dcphase($this->Close), Trader::hilbertTransformDominantCyclePhase($this->Close));
     }
 
     public function testFriendlyFunctions_ht_phasor()
     {
-        $this->assertEquals(trader_ht_phasor($this->Close), Trader::hilbertTransformPhasorComponents($this->Close));
+        self::assertEquals(trader_ht_phasor($this->Close), Trader::hilbertTransformPhasorComponents($this->Close));
     }
 
     public function testFriendlyFunctions_ht_sine()
     {
-        $this->assertEquals(trader_ht_sine($this->Close), Trader::hilbertTransformSineWave($this->Close));
+        self::assertEquals(trader_ht_sine($this->Close), Trader::hilbertTransformSineWave($this->Close));
     }
 
     public function testFriendlyFunctions_ht_trendline()
     {
-        $this->assertEquals(trader_ht_trendline($this->Close), Trader::hilbertTransformInstantaneousTrendLine($this->Close));
+        self::assertEquals(trader_ht_trendline($this->Close), Trader::hilbertTransformInstantaneousTrendLine($this->Close));
     }
 
     public function testFriendlyFunctions_ht_trendmode()
     {
-        $this->assertEquals(trader_ht_trendmode($this->Close), Trader::hilbertTransformTrendVsCycleMode($this->Close));
+        self::assertEquals(trader_ht_trendmode($this->Close), Trader::hilbertTransformTrendVsCycleMode($this->Close));
     }
 
     public function testFriendlyFunctions_kama()
     {
-        $this->assertEquals(trader_kama($this->Close, 30), Trader::kaufmanAdaptiveMovingAverage($this->Close, 30));
+        self::assertEquals(trader_kama($this->Close, 30), Trader::kaufmanAdaptiveMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_linearreg_angle()
     {
-        $this->assertEquals(trader_linearreg_angle($this->Close, 14), Trader::linearRegressionAngle($this->Close, 14));
+        self::assertEquals(trader_linearreg_angle($this->Close, 14), Trader::linearRegressionAngle($this->Close, 14));
     }
 
     public function testFriendlyFunctions_linearreg_intercept()
     {
-        $this->assertEquals(trader_linearreg_intercept($this->Close, 14), Trader::linearRegressionIntercept($this->Close, 14));
+        self::assertEquals(trader_linearreg_intercept($this->Close, 14), Trader::linearRegressionIntercept($this->Close, 14));
     }
 
     public function testFriendlyFunctions_linearreg_slope()
     {
-        $this->assertEquals(trader_linearreg_slope($this->Close, 14), Trader::linearRegressionSlope($this->Close, 14));
+        self::assertEquals(trader_linearreg_slope($this->Close, 14), Trader::linearRegressionSlope($this->Close, 14));
     }
 
     public function testFriendlyFunctions_linearreg()
     {
-        $this->assertEquals(trader_linearreg($this->Close, 14), Trader::linearRegression($this->Close, 14));
+        self::assertEquals(trader_linearreg($this->Close, 14), Trader::linearRegression($this->Close, 14));
     }
 
     public function testFriendlyFunctions_ln()
     {
-        $this->assertEquals(trader_ln($this->Close), Trader::mathLogarithmNatural($this->Close));
+        self::assertEquals(trader_ln($this->Close), Trader::mathLogarithmNatural($this->Close));
     }
 
     public function testFriendlyFunctions_log10()
     {
-        $this->assertEquals(trader_log10($this->Close), Trader::mathLogarithmBase10($this->Close));
+        self::assertEquals(trader_log10($this->Close), Trader::mathLogarithmBase10($this->Close));
     }
 
     public function testFriendlyFunctions_ma()
     {
-        $this->assertEquals(trader_ma($this->Close, 30, TRADER_MA_TYPE_SMA), Trader::movingAverage($this->Close, 30, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_ma($this->Close, 30, TRADER_MA_TYPE_SMA), Trader::movingAverage($this->Close, 30, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_macd()
     {
-        $this->assertEquals(trader_macd($this->Close, 12, 26, 9), Trader::movingAverageConvergenceDivergence($this->Close, 12, 26, 9));
+        self::assertEquals(trader_macd($this->Close, 12, 26, 9), Trader::movingAverageConvergenceDivergence($this->Close, 12, 26, 9));
     }
 
     public function testFriendlyFunctions_macdext()
     {
-        $this->assertEquals(trader_macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9), Trader::movingAverageConvergenceDivergenceExtended($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9));
+        self::assertEquals(trader_macdext($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9), Trader::movingAverageConvergenceDivergenceExtended($this->Close, 12, TRADER_MA_TYPE_SMA, 26, TRADER_MA_TYPE_SMA, 9));
     }
 
     public function testFriendlyFunctions_macdfix()
     {
-        $this->assertEquals(trader_macdfix($this->Close, 9), Trader::movingAverageConvergenceDivergenceFixed($this->Close, 9));
+        self::assertEquals(trader_macdfix($this->Close, 9), Trader::movingAverageConvergenceDivergenceFixed($this->Close, 9));
     }
 
     public function testFriendlyFunctions_mama()
     {
-        $this->assertEquals(trader_mama($this->Close, 0.5, 0.05), Trader::mesaAdaptiveMovingAverage($this->Close, 0.5, 0.05));
+        self::assertEquals(trader_mama($this->Close, 0.5, 0.05), Trader::mesaAdaptiveMovingAverage($this->Close, 0.5, 0.05));
     }
 
     public function testFriendlyFunctions_mavp()
     {
-        $this->assertEquals(trader_mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA), Trader::movingAverageVariablePeriod($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_mavp($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA), Trader::movingAverageVariablePeriod($this->Close, $this->Open, 2, 30, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_max()
     {
-        $this->assertEquals(trader_max($this->Close, 30), Trader::mathMax($this->Close, 30));
+        self::assertEquals(trader_max($this->Close, 30), Trader::mathMax($this->Close, 30));
     }
 
     public function testFriendlyFunctions_maxindex()
     {
-        $this->assertEquals(trader_maxindex($this->Close, 30), Trader::mathMaxIndex($this->Close, 30));
+        self::assertEquals(trader_maxindex($this->Close, 30), Trader::mathMaxIndex($this->Close, 30));
     }
 
     public function testFriendlyFunctions_medprice()
     {
-        $this->assertEquals(trader_medprice($this->High, $this->Low), Trader::mathMedianPrice($this->High, $this->Low));
+        self::assertEquals(trader_medprice($this->High, $this->Low), Trader::mathMedianPrice($this->High, $this->Low));
     }
 
     public function testFriendlyFunctions_mfi()
     {
-        $this->assertEquals(trader_mfi($this->High, $this->Low, $this->Close, $this->Volume, 14), Trader::moneyFlowIndex($this->High, $this->Low, $this->Close, $this->Volume, 14));
+        self::assertEquals(trader_mfi($this->High, $this->Low, $this->Close, $this->Volume, 14), Trader::moneyFlowIndex($this->High, $this->Low, $this->Close, $this->Volume, 14));
     }
 
     public function testFriendlyFunctions_midpoint()
     {
-        $this->assertEquals(trader_midpoint($this->Close, 14), Trader::middlePoint($this->Close, 14));
+        self::assertEquals(trader_midpoint($this->Close, 14), Trader::middlePoint($this->Close, 14));
     }
 
     public function testFriendlyFunctions_midprice()
     {
-        $this->assertEquals(trader_midprice($this->High, $this->Low, 14), Trader::middlePointPrice($this->High, $this->Low, 14));
+        self::assertEquals(trader_midprice($this->High, $this->Low, 14), Trader::middlePointPrice($this->High, $this->Low, 14));
     }
 
     public function testFriendlyFunctions_min()
     {
-        $this->assertEquals(trader_min($this->High, 30), Trader::mathMin($this->High, 30));
+        self::assertEquals(trader_min($this->High, 30), Trader::mathMin($this->High, 30));
     }
 
     public function testFriendlyFunctions_minindex()
     {
-        $this->assertEquals(trader_minindex($this->High, 30), Trader::mathMinIndex($this->High, 30));
+        self::assertEquals(trader_minindex($this->High, 30), Trader::mathMinIndex($this->High, 30));
     }
 
     public function testFriendlyFunctions_minmax()
     {
-        $this->assertEquals(trader_minmax($this->High, 30), Trader::mathMinMax($this->High, 30));
+        self::assertEquals(trader_minmax($this->High, 30), Trader::mathMinMax($this->High, 30));
     }
 
     public function testFriendlyFunctions_minmaxindex()
     {
-        $this->assertEquals(trader_minmaxindex($this->High, 30), Trader::mathMinMaxIndex($this->High, 30));
+        self::assertEquals(trader_minmaxindex($this->High, 30), Trader::mathMinMaxIndex($this->High, 30));
     }
 
     public function testFriendlyFunctions_minus_di()
     {
-        $this->assertEquals(trader_minus_di($this->High, $this->Low, $this->Close, 14), Trader::minusDirectionalIndicator($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_minus_di($this->High, $this->Low, $this->Close, 14), Trader::minusDirectionalIndicator($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_minus_dmi()
     {
-        $this->assertEquals(trader_minus_dm($this->High, $this->Low, 14), Trader::minusDirectionalMovement($this->High, $this->Low, 14));
+        self::assertEquals(trader_minus_dm($this->High, $this->Low, 14), Trader::minusDirectionalMovement($this->High, $this->Low, 14));
     }
 
     public function testFriendlyFunctions_mom()
     {
-        $this->assertEquals(trader_mom($this->High, 10), Trader::momentum($this->High, 10));
+        self::assertEquals(trader_mom($this->High, 10), Trader::momentum($this->High, 10));
     }
 
     public function testFriendlyFunctions_mult()
     {
-        $this->assertEquals(trader_mult($this->Open, $this->Close), Trader::mathMultiply($this->Open, $this->Close));
+        self::assertEquals(trader_mult($this->Open, $this->Close), Trader::mathMultiply($this->Open, $this->Close));
     }
 
     public function testFriendlyFunctions_natr()
     {
-        $this->assertEquals(trader_natr($this->High, $this->Low, $this->Close, 14), Trader::normalizedAverageTrueRange($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_natr($this->High, $this->Low, $this->Close, 14), Trader::normalizedAverageTrueRange($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_obv()
     {
-        $this->assertEquals(trader_obv($this->Close, $this->Volume), Trader::onBalanceVolume($this->Close, $this->Volume));
+        self::assertEquals(trader_obv($this->Close, $this->Volume), Trader::onBalanceVolume($this->Close, $this->Volume));
     }
 
     public function testFriendlyFunctions_plus_di()
     {
-        $this->assertEquals(trader_plus_di($this->High, $this->Low, $this->Close, 14), Trader::plusDirectionalIndicator($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_plus_di($this->High, $this->Low, $this->Close, 14), Trader::plusDirectionalIndicator($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_plus_dm()
     {
-        $this->assertEquals(trader_plus_dm($this->High, $this->Low, 14), Trader::plusDirectionalMovement($this->High, $this->Low, 14));
+        self::assertEquals(trader_plus_dm($this->High, $this->Low, 14), Trader::plusDirectionalMovement($this->High, $this->Low, 14));
     }
 
     public function testFriendlyFunctions_ppo()
     {
-        $this->assertEquals(trader_ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::percentagePriceOscillator($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_ppo($this->Close, 12, 26, TRADER_MA_TYPE_SMA), Trader::percentagePriceOscillator($this->Close, 12, 26, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_roc()
     {
-        $this->assertEquals(trader_roc($this->Close, 10), Trader::rateOfChange($this->Close, 10));
+        self::assertEquals(trader_roc($this->Close, 10), Trader::rateOfChange($this->Close, 10));
     }
 
     public function testFriendlyFunctions_rocp()
     {
-        $this->assertEquals(trader_rocp($this->Close, 10), Trader::rateOfChangePercentage($this->Close, 10));
+        self::assertEquals(trader_rocp($this->Close, 10), Trader::rateOfChangePercentage($this->Close, 10));
     }
 
     public function testFriendlyFunctions_rocr100()
     {
-        $this->assertEquals(trader_rocr100($this->Close, 10), Trader::rateOfChangeRatio100($this->Close, 10));
+        self::assertEquals(trader_rocr100($this->Close, 10), Trader::rateOfChangeRatio100($this->Close, 10));
     }
 
     public function testFriendlyFunctions_rocr()
     {
-        $this->assertEquals(trader_rocr($this->Close, 10), Trader::rateOfChangeRatio($this->Close, 10));
+        self::assertEquals(trader_rocr($this->Close, 10), Trader::rateOfChangeRatio($this->Close, 10));
     }
 
     public function testFriendlyFunctions_rsi()
     {
-        $this->assertEquals(trader_rsi($this->Close, 14), Trader::relativeStrengthIndex($this->Close, 14));
+        self::assertEquals(trader_rsi($this->Close, 14), Trader::relativeStrengthIndex($this->Close, 14));
     }
 
     public function testFriendlyFunctions_sar()
     {
-        $this->assertEquals(trader_sar($this->Close, $this->Low, 0.02, 0.2), Trader::parabolicSAR($this->Close, $this->Low, 0.02, 0.2));
+        self::assertEquals(trader_sar($this->Close, $this->Low, 0.02, 0.2), Trader::parabolicSAR($this->Close, $this->Low, 0.02, 0.2));
     }
 
     public function testFriendlyFunctions_sarext()
     {
-        $this->assertEquals(trader_sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2), Trader::parabolicSARExtended($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2));
+        self::assertEquals(trader_sarext($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2), Trader::parabolicSARExtended($this->Close, $this->Low, 0.0, 0.0, 0.02, 0.02, 0.2, 0.02, 0.02, 0.2));
     }
 
     public function testFriendlyFunctions_sin()
     {
-        $this->assertEquals(trader_sin($this->Close), Trader::mathSine($this->Close));
+        self::assertEquals(trader_sin($this->Close), Trader::mathSine($this->Close));
     }
 
     public function testFriendlyFunctions_sinh()
     {
-        $this->assertEquals(trader_sinh($this->Close), Trader::mathHyperbolicSine($this->Close));
+        self::assertEquals(trader_sinh($this->Close), Trader::mathHyperbolicSine($this->Close));
     }
 
     public function testFriendlyFunctions_sma()
     {
-        $this->assertEquals(trader_sma($this->Close, 30), Trader::simpleMovingAverage($this->Close, 30));
+        self::assertEquals(trader_sma($this->Close, 30), Trader::simpleMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_sqrt()
     {
-        $this->assertEquals(trader_sqrt($this->Close), Trader::mathSquareRoot($this->Close));
+        self::assertEquals(trader_sqrt($this->Close), Trader::mathSquareRoot($this->Close));
     }
 
     public function testFriendlyFunctions_stddev()
     {
-        $this->assertEquals(trader_stddev($this->Close, 5, 1.0), Trader::standardDeviation($this->Close, 5, 1.0));
+        self::assertEquals(trader_stddev($this->Close, 5, 1.0), Trader::standardDeviation($this->Close, 5, 1.0));
     }
 
     public function testFriendlyFunctions_stoch()
     {
-        $this->assertEquals(trader_stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA), Trader::stochastic($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stoch($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA), Trader::stochastic($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_stochf()
     {
-        $this->assertEquals(trader_stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochasticFast($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stochf($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochasticFast($this->High, $this->Low, $this->Close, 5, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_stochrsi()
     {
-        $this->assertEquals(trader_stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochasticRelativeStrengthIndex($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA));
+        self::assertEquals(trader_stochrsi($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA), Trader::stochasticRelativeStrengthIndex($this->Close, 14, 5, 3, TRADER_MA_TYPE_SMA));
     }
 
     public function testFriendlyFunctions_sub()
     {
-        $this->assertEquals(trader_sub($this->High, $this->Low), Trader::mathSubtraction($this->High, $this->Low));
+        self::assertEquals(trader_sub($this->High, $this->Low), Trader::mathSubtraction($this->High, $this->Low));
     }
 
     public function testFriendlyFunctions_sum()
     {
-        $this->assertEquals(trader_sum($this->High, 30), Trader::mathSummation($this->High, 30));
+        self::assertEquals(trader_sum($this->High, 30), Trader::mathSummation($this->High, 30));
     }
 
     public function testFriendlyFunctions_t3()
     {
-        $this->assertEquals(trader_t3($this->High, 5, 0.7), Trader::tripleExponentialMovingAverageT3($this->High, 5, 0.7));
+        self::assertEquals(trader_t3($this->High, 5, 0.7), Trader::tripleExponentialMovingAverageT3($this->High, 5, 0.7));
     }
 
     public function testFriendlyFunctions_tan()
     {
-        $this->assertEquals(trader_tan($this->Close), Trader::mathTangent($this->Close));
+        self::assertEquals(trader_tan($this->Close), Trader::mathTangent($this->Close));
     }
 
     public function testFriendlyFunctions_tanh()
     {
-        $this->assertEquals(trader_tanh($this->Close), Trader::mathHyperbolicTangent($this->Close));
+        self::assertEquals(trader_tanh($this->Close), Trader::mathHyperbolicTangent($this->Close));
     }
 
     public function testFriendlyFunctions_tema()
     {
-        $this->assertEquals(trader_tema($this->Close, 30), Trader::tripleExponentialMovingAverage($this->Close, 30));
+        self::assertEquals(trader_tema($this->Close, 30), Trader::tripleExponentialMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_trange()
     {
-        $this->assertEquals(trader_trange($this->High, $this->Low, $this->Close), Trader::trueRange($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_trange($this->High, $this->Low, $this->Close), Trader::trueRange($this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_trima()
     {
-        $this->assertEquals(trader_trima($this->Close, 30), Trader::triangularMovingAverage($this->Close, 30));
+        self::assertEquals(trader_trima($this->Close, 30), Trader::triangularMovingAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_trix()
     {
-        $this->assertEquals(trader_trix($this->Close, 30), Trader::tripleExponentialAverage($this->Close, 30));
+        self::assertEquals(trader_trix($this->Close, 30), Trader::tripleExponentialAverage($this->Close, 30));
     }
 
     public function testFriendlyFunctions_tsf()
     {
-        $this->assertEquals(trader_tsf($this->Close, 14), Trader::timeSeriesForecast($this->Close, 14));
+        self::assertEquals(trader_tsf($this->Close, 14), Trader::timeSeriesForecast($this->Close, 14));
     }
 
     public function testFriendlyFunctions_typprice()
     {
-        $this->assertEquals(trader_typprice($this->High, $this->Low, $this->Close), Trader::typicalPrice($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_typprice($this->High, $this->Low, $this->Close), Trader::typicalPrice($this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_ultosc()
     {
-        $this->assertEquals(trader_ultosc($this->High, $this->Low, $this->Close, 7, 14, 28), Trader::ultimateOscillator($this->High, $this->Low, $this->Close, 7, 14, 28));
+        self::assertEquals(trader_ultosc($this->High, $this->Low, $this->Close, 7, 14, 28), Trader::ultimateOscillator($this->High, $this->Low, $this->Close, 7, 14, 28));
     }
 
     public function testFriendlyFunctions_var()
     {
-        $this->assertEquals(trader_var($this->Close, 5, 1.0), Trader::variance($this->Close, 5, 1.0));
+        self::assertEquals(trader_var($this->Close, 5, 1.0), Trader::variance($this->Close, 5, 1.0));
     }
 
     public function testFriendlyFunctions_wclprice()
     {
-        $this->assertEquals(trader_wclprice($this->High, $this->Low, $this->Close), Trader::weightedClosePrice($this->High, $this->Low, $this->Close));
+        self::assertEquals(trader_wclprice($this->High, $this->Low, $this->Close), Trader::weightedClosePrice($this->High, $this->Low, $this->Close));
     }
 
     public function testFriendlyFunctions_willr()
     {
-        $this->assertEquals(trader_willr($this->High, $this->Low, $this->Close, 14), Trader::williamsR($this->High, $this->Low, $this->Close, 14));
+        self::assertEquals(trader_willr($this->High, $this->Low, $this->Close, 14), Trader::williamsR($this->High, $this->Low, $this->Close, 14));
     }
 
     public function testFriendlyFunctions_wma()
     {
-        $this->assertEquals(trader_wma($this->Close, 30), Trader::weightedMovingAverage($this->Close, 30));
+        self::assertEquals(trader_wma($this->Close, 30), Trader::weightedMovingAverage($this->Close, 30));
     }
 
     //</editor-fold>
