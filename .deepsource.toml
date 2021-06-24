@@ -1,5 +1,7 @@
 version = 1
 
+test_patterns = ["Tests/*Test.php"]
+
 [[analyzers]]
 name = "php"
 enabled = true
